@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
-  background-color: rgba(26, 27, 34, 1);
   min-height: 100vh;
+  background-image: url(../src/images/background-logo.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
