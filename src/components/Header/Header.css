@@ -1,0 +1,36 @@
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid grey;
+  }
+
+  .Header__buttons {
+    
+
+  }
+  
+  .Home__button {
+    background: none;
+    color: white;
+    border: none;
+  }
+
+  .Home__button:hover {
+    cursor: pointer;
+  }
+
+  .SignIn__button {
+    background: none;
+    color: white;
+    border-radius: 10px;
+  }
+  .SignIn__button:hover {
+    cursor: pointer;
+  }
+  
+
+  
