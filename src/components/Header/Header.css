@@ -1,36 +1,47 @@
-  .Header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 30px;
-    color: white;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-bottom: 1px solid grey;
-  }
+.Header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-bottom: 1px solid grey;
+}
 
-  .Header__buttons {
-    
+.Header__title {
+  width: 200px;
+  height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Roboto Slab", sans-serif;
+}
+.Header__buttons {
+}
 
-  }
-  
-  .Home__button {
-    background: none;
-    color: white;
-    border: none;
-  }
+.Home__button {
+  background: none;
+  color: white;
+  border: none;
+  width: 49px;
+  height: 24px;
+  padding-top: 30px;
+  padding-right: 322px;
+  padding-bottom: 26px;
+}
 
-  .Home__button:hover {
-    cursor: pointer;
-  }
+.Home__button:hover {
+  cursor: pointer;
+}
 
-  .SignIn__button {
-    background: none;
-    color: white;
-    border-radius: 10px;
-  }
-  .SignIn__button:hover {
-    cursor: pointer;
-  }
-  
-
-  
+.SignIn__button {
+  background: none;
+  color: white;
+  border-radius: 25px;
+  width: 176px;
+  height: 48px;
+  border: 1px solid white;
+}
+.SignIn__button:hover {
+  cursor: pointer;
+}
