@@ -1,9 +1,13 @@
 .App {
-  min-height: 50vh;
-  background-image: url(../src/images/background-logo.svg);
+  
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
    
+}
+
+.Search {
+  background-image: url(../src/images/background-logo.svg);
+  min-height: 50vh;
 }
