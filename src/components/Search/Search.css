@@ -1,0 +1,22 @@
+.Searches {
+  margin-top: 80px;
+  margin-left: 416px;
+}
+
+.Search__title {
+  color: white;
+}
+
+.Search__description {
+  color: white;
+  margin: 0;
+}
+
+.Search__bar-input {
+  width: 608px;
+  height: 64px;
+  border: 1px;
+  background-color: white;
+  border-radius: 32px;
+  margin: 0;
+}
