@@ -3,9 +3,8 @@
   justify-content: space-between;
   font-size: 30px;
   color: white;
-  padding-left: 50px;
-  padding-right: 50px;
   border-bottom: 1px solid grey;
+  
 }
 
 .Header__title {
@@ -15,8 +14,11 @@
   font-size: 20px;
   line-height: 24px;
   font-family: "Roboto Slab", sans-serif;
+  margin-left: 104px;
+  margin-top: 30px;
 }
 .Header__buttons {
+  margin-top: 19px
 }
 
 .Home__button {
@@ -25,13 +27,21 @@
   border: none;
   width: 49px;
   height: 24px;
-  padding-top: 30px;
-  padding-right: 322px;
-  padding-bottom: 26px;
+  padding: 0;
+  margin-right: 42px;
+  font-family: "Roboto Slab", sans-serif;
+  
 }
 
 .Home__button:hover {
   cursor: pointer;
+}
+
+.Home__button-border-bottom {
+  border-bottom: 1px solid rgba(255,255,255,1);
+  border-width: medium;
+  width: 68px;
+  height: 3px;
 }
 
 .SignIn__button {
@@ -41,6 +51,9 @@
   width: 176px;
   height: 48px;
   border: 1px solid white;
+  padding: 0;
+  margin-right: 104px;
+  font-family: "Roboto Slab", sans-serif;
 }
 .SignIn__button:hover {
   cursor: pointer;
