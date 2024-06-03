@@ -5,11 +5,18 @@
 
 .Search__title {
   color: white;
+  margin: 0;
+  width: 608px;
+  height: 128px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
 }
 
 .Search__description {
   color: white;
-  margin: 0;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 
 .Search__bar-input {
@@ -18,5 +25,6 @@
   border: 1px;
   background-color: white;
   border-radius: 32px;
-  margin: 0;
+  margin-top: 88px;
+  padding: 0;
 }
