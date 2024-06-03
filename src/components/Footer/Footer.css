@@ -1,0 +1,63 @@
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Copyright {
+    margin-top: 32px;
+    margin-left: 104px;
+    margin-bottom: 26px;
+    color: rgba(182, 188, 191, 1);
+}
+
+.Footer-buttons {
+    margin-right: 106px
+}
+
+.Footer-home__button {
+    width: 49px;
+    height: 24px;
+    border: none;
+    background-color: rgba(255,255,255,1);
+    margin-right: 40px;
+}
+
+.Footer-home__button:hover {
+    cursor: pointer;
+}
+
+.Footer-TripleTen__button {
+    width: 74px;
+    height: 24px;
+    border: none;
+    background-color: rgba(255,255,255,1);
+    margin-right: 40px;
+}
+
+.Footer-TripleTen__button {
+    cursor: pointer;
+}
+
+.Github__button {
+    background-image: url(../../images/github-image.svg);
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 24px;
+}
+
+.Github__button {
+    cursor: pointer;
+}
+
+.Facebook__button {
+    background-image: url(../../images/Facebook-image.svg);
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+.Facebook__button {
+    cursor: pointer;
+}
