@@ -1,4 +1,28 @@
+.About {
+    display: flex;
+}
+
+.About-author {
+    margin-left: 56px;
+    margin-top: 131px;
+}
+
 .About-author__image {
     width: 464px;
     height: 464px;
+    display: flex;
+    background-image: url(../../images/about-author-image.svg);
+    margin-top: 80px;
+    margin-left: 104px;
+    border: none;
+}
+
+.About-author__title {
+    margin: 0;
+    
+}
+
+.About-author__description {
+    margin-top: 10px;
+    margin-bottom: 0;
 }
