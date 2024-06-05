@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SignInModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
@@ -36,7 +37,7 @@ const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
             name="email"
             minLength="1"
             maxLength="50"
-            placeholder="Email"
+            placeholder="Enter Email"
             id="email"
             value={email}
             onChange={handleEmailChange}
@@ -50,7 +51,7 @@ const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
             <input className="input"
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Enter Password"
             id="password"
             minLength="1"
             maxLength="50"
@@ -65,7 +66,7 @@ const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
         <button className="modal-form-submit" type="submit">
             {isLoading ? "Signing In..." : "Sign In"}
         </button>
-        <button className="modal__signin" type="button" onClick={openRegisterModal}>
+        <button className="modal__signup" type="button" onClick={openRegisterModal}>
             or Sing Up
         </button>
       </div>
