@@ -1,7 +1,7 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
 
-const SignUpModal = (onClose, openSignInModal, isLoading, registerUser) => {
+const SignUpModal = (onClose, openSignInModal, isLoading, SignUpUser) => {
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -12,98 +12,88 @@ const SignUpModal = (onClose, openSignInModal, isLoading, registerUser) => {
     setPassword(e.target.value);
   };
 
-  const [name, setName] = useState("");
-  const handleNameChange = (e) => {
-    setName(e.target.value);
+  const [Username, setUsername] = useState("");
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
   };
 
-  const onRegister = (e) => {
+  const onSignUp = (e) => {
     e.preventDefault();
-    registerUser({ email, password, name });
+    SignUpUser({ email, password, Username });
   };
 
   return (
     <ModalWithForm
-      name="register"
+      name="SignUp"
       title="Sign Up"
       onClose={onClose}
       buttonText="Sign Up"
-      onSubmit={onRegister}
+      onSubmit={onSignUp}
     >
-      <div>
-        <label className="modal__input-title" htmlFor="email">
+      <ul className="inputs">
+        <label className="input-header" htmlFor="email">
           Email*
         </label>
-        <input
-          id="email"
-          className="input"
-          type="email"
-          name="email"
-          placeholder="Email"
-          minLength="1"
-          maxLength="50"
-          required
-          value={email}
-          onChange={handleEmailChange}
-        ></input>
-      </div>
+        <li>
+          <input
+            id="email"
+            className="input"
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            minLength="1"
+            maxLength="50"
+            required
+            value={email}
+            onChange={handleEmailChange}
+          />
+        </li>
 
-      <div>
-        <label className="modal__input-title" htmlFor="password">
+        <label className="input-header" htmlFor="password">
           Password
         </label>
-        <input
-          id="password"
-          className="input"
-          type="password"
-          name="password"
-          placeholder="Password"
-          minLength="1"
-          maxLength="50"
-          required
-          value={password}
-          onChange={handlePasswordChange}
-        ></input>
-      </div>
+        <li>
+          <input
+            id="password"
+            className="input"
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            minLength="1"
+            maxLength="50"
+            required
+            value={password}
+            onChange={handlePasswordChange}
+          />
+        </li>
 
-      <div>
-        <label className="modal__input-title" htmlFor="name">
-          Name
-        </label>
-        <input
-          id="name"
-          className="input"
-          tpye="text"
-          name="name"
-          placeholder="Name"
-          minLength="1"
-          maxLength="50"
-          required
-          value={name}
-          onChange={handleNameChange}
-        ></input>
-      </div>
-
-      <div>
-        <label className="modal__input-title" htmlFor="avatar">
-          Avatar URL
-        </label>
-        <input
-          id="avatar"
-          className="input"
-          type="url"
-          name="url"
-          placeholder="Avatar URL"
-          required
-          value={avatar}
-          onChange={handleAvatarChange}
-        ></input>
-      </div>
+        <li>
+          <label className="input-header" htmlFor="name">
+            Username
+          </label>
+          <input
+            id="name"
+            className="input"
+            tpye="text"
+            name="name"
+            placeholder="Etner Username"
+            minLength="1"
+            maxLength="50"
+            required
+            value={Username}
+            onChange={handleUsernameChange}
+          />
+        </li>
+      </ul>
       <div className="modal-form-buttons">
         <button className="modal-form-submit" type="submit">
           {isLoading ? "Submitting..." : "Sign Up"}
         </button>
-        <button className="modal__login" type="button" onClick={openLoginModal}>
+        <button
+          className="modal__login"
+          type="button"
+          onClick={openSignInModal}
+        >
           Or Log In
         </button>
       </div>

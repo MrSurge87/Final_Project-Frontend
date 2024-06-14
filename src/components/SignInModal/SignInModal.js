@@ -2,22 +2,21 @@ import React, { useState } from "react";
 import "./SignInModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
+const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
+  const [email, changeEmail] = useState("");
+  const handleEmailChange = (e) => {
+    changeEmail(e.target.value);
+  };
 
-    const [email, changeEmail ] = useState("");
-    const handleEmailChange = (e) => {
-        changeEmail(e.target.value);
-    }
+  const [password, changePassword] = useState("");
+  const handlePasswordChange = (e) => {
+    changePassword(e.target.value);
+  };
 
-    const [password, changePassword] = useState("");
-    const handlePasswordChange = (e) => {
-        changePassword(e.target.value)
-    }
-
-    const onSignIn = (e) => {
-        e.preventDefault();
-        signInUser({ email, password })
-    }
+  const onSignIn = (e) => {
+    e.preventDefault();
+    signInUser({ email, password });
+  };
   return (
     <ModalWithForm
       title="Sign In"
@@ -45,10 +44,11 @@ const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
           />
         </li>
         <label className="input-header" htmlFor="password">
-            Password
+          Password
         </label>
         <li>
-            <input className="input"
+          <input
+            className="input"
             type="password"
             name="password"
             placeholder="Enter Password"
@@ -58,16 +58,19 @@ const SignInModal = ({ onClose, openRegisterModal, isLoading, signInUser }) => {
             value={password}
             onChange={handlePasswordChange}
             requried
-            
-            required />
+          />
         </li>
       </ul>
       <div className="modal-form-buttons">
         <button className="modal-form-submit" type="submit">
-            {isLoading ? "Signing In..." : "Sign In"}
+          {isLoading ? "Signing In..." : "Sign In"}
         </button>
-        <button className="modal__signup" type="button" onClick={openRegisterModal}>
-            or Sing Up
+        <button
+          className="modal__signup"
+          type="button"
+          onClick={openSignUpModal}
+        >
+          or Sing Up
         </button>
       </div>
     </ModalWithForm>

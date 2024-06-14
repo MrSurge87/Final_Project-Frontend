@@ -5,22 +5,29 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Search from "./components/Search/Search";
 import SignInModal from "./components/SignInModal/SignInModal";
+import SignUpModal from "./components/SignUpModal/SignUpModal";
 
-//React Imports
+// CONTEXT IMPORTS
+
+// REACT IMPORTS
 import { useEffect, useState } from "react";
+
+// UTILITY IMPORTS
+
+// MODAL IMPORTS
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
 
   const handleCreateModal = () => {
     setActiveModal("create");
-  }
+  };
   const handleOpenSignInModal = () => {
     setActiveModal("SignIn");
   };
 
-  const handleOpenRegisterModal = () => {
-    setActiveModal("register");
+  const handleOpenSignUpModal = () => {
+    setActiveModal("SignUp");
   };
 
   const handleCloseModal = () => {
@@ -32,14 +39,22 @@ function App() {
       <div className="Search">
         <Header
           onSignIn={handleOpenSignInModal}
-          onRegister={handleOpenRegisterModal}
+          onSignUp={handleOpenSignUpModal}
           onCreateModal={handleCreateModal}
         />
         {activeModal === "SignIn" && (
           <SignInModal
             onClose={handleCloseModal}
             openSignInModal={handleOpenSignInModal}
-            openRegisterModal={handleOpenRegisterModal}
+            openSignUpModal={handleOpenSignUpModal}
+          />
+        )}
+
+        {activeModal === "SignUp" && (
+          <SignUpModal
+            onClose={handleCloseModal}
+            openSignInModal={handleOpenSignInModal}
+            openSignUpModal={handleOpenSignUpModal}
           />
         )}
         <Search />
