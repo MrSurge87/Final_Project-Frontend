@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./SignInModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
+
 const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
   const [email, changeEmail] = useState("");
   const handleEmailChange = (e) => {
@@ -19,11 +20,11 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
   };
   return (
     <ModalWithForm
+      name="SignIn"
       title="Sign In"
       onClose={onClose}
       onSubmit={onSignIn}
       buttonText="Sign In"
-      name="SignIn"
     >
       <ul className="inputs">
         <label className="input-header" htmlFor="email">

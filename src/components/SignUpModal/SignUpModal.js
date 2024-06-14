@@ -2,7 +2,7 @@ import "./SignUpModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
 
-const SignUpModal = (onClose, openSignInModal, isLoading, SignUpUser) => {
+const SignUpModal = ({ onClose, openSignInModal, isLoading, SignUpUser }) => {
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -28,8 +28,8 @@ const SignUpModal = (onClose, openSignInModal, isLoading, SignUpUser) => {
       name="SignUp"
       title="Sign Up"
       onClose={onClose}
-      buttonText="Sign Up"
       onSubmit={onSignUp}
+      buttonText="Sign Up"
     >
       <ul className="inputs">
         <label className="input-header" htmlFor="email">
@@ -75,9 +75,9 @@ const SignUpModal = (onClose, openSignInModal, isLoading, SignUpUser) => {
           <input
             id="name"
             className="input"
-            tpye="text"
+            type="text"
             name="name"
-            placeholder="Etner Username"
+            placeholder="Enter Username"
             minLength="1"
             maxLength="50"
             required

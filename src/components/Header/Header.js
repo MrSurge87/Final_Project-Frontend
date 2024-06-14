@@ -1,6 +1,6 @@
 import "./Header.css";
 
-const Header = ({ onSignIn}) => {
+const Header = ({ onSignIn }) => {
   return (
     <header className="Header">
       <p className="Header__title">News Explorer</p>
