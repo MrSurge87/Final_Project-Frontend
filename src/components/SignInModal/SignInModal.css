@@ -1,4 +1,4 @@
-.modal__signup {
+.modal__signUp {
     width: 358px;
     height: 20px;
     border: none;
@@ -7,6 +7,6 @@
     padding: 0;
 }
 
-.modal__signup:hover {
+.modal__signUp:hover {
     cursor: pointer;
 }

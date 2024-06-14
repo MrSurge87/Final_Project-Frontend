@@ -103,7 +103,7 @@
   flex-direction: column;
 }
 
-.modal__login {
+.modal__signIn {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.5);
   font-family: "Cabinet Grotesk", sans-serif;

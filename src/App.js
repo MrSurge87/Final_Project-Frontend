@@ -53,8 +53,8 @@ function App() {
         {activeModal === "SignUp" && (
           <SignUpModal
             onClose={handleCloseModal}
-            openSignInModal={handleOpenSignInModal}
             openSignUpModal={handleOpenSignUpModal}
+            openSignInModal={handleOpenSignInModal}
           />
         )}
         <Search />

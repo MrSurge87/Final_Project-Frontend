@@ -66,11 +66,11 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           {isLoading ? "Signing In..." : "Sign In"}
         </button>
         <button
-          className="modal__signup"
+          className="modal__signUp"
           type="button"
           onClick={openSignUpModal}
         >
-          or Sing Up
+          or Sign Up
         </button>
       </div>
     </ModalWithForm>

@@ -1,3 +1,4 @@
+import "./SignUpModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
 
@@ -32,7 +33,7 @@ const SignUpModal = (onClose, openSignInModal, isLoading, SignUpUser) => {
     >
       <ul className="inputs">
         <label className="input-header" htmlFor="email">
-          Email*
+          Email
         </label>
         <li>
           <input
@@ -90,11 +91,11 @@ const SignUpModal = (onClose, openSignInModal, isLoading, SignUpUser) => {
           {isLoading ? "Submitting..." : "Sign Up"}
         </button>
         <button
-          className="modal__login"
+          className="modal__signIn"
           type="button"
           onClick={openSignInModal}
         >
-          Or Log In
+          Or Sign In
         </button>
       </div>
     </ModalWithForm>

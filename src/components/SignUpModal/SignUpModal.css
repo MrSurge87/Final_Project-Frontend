@@ -1,0 +1,12 @@
+.modal__signIn {
+    width: 358px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    color: rgba(47,113,229,1);
+    padding: 0;
+}
+
+.modal__signIn:hover {
+    cursor: pointer;
+}
