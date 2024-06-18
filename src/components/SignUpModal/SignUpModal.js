@@ -32,7 +32,7 @@ const SignUpModal = ({ onClose, openSignInModal, isLoading, SignUpUser }) => {
       buttonText="Sign Up"
       className="signUp__Modal"
     >
-      
+      <form className="signUp__Form">
       <ul className="inputs">
         <label className="input-header" htmlFor="email">
           Email
@@ -100,7 +100,7 @@ const SignUpModal = ({ onClose, openSignInModal, isLoading, SignUpUser }) => {
           Or Sign In
         </button>
       </div>
-      
+      </form>
     </ModalWithForm>
   );
 };

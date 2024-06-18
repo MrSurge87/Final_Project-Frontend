@@ -26,7 +26,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
       buttonText="Sign In"
       className="signIn__Modal"
     >
-      
+      <form className="signIn__Form">
       <ul className="inputs">
         <label className="input-header" htmlFor="email">
           Email
@@ -75,7 +75,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           or Sign Up
         </button>
       </div>
-      
+      </form>
     </ModalWithForm>
   );
 };
