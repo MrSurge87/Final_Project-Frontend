@@ -9,11 +9,16 @@ const Search = () => {
           Find the latest news on any topic and save them in your personal
           account
         </p>
-        <input className="Search__bar-input" placeholder="Enter Topic"/>
-        <button type="button" className="search-button">
-          Search
-        </button>
-        
+        <div className="Search__input">
+          <input
+            className="Search__bar-input"
+            placeholder="Enter Topic"
+          ></input>
+          <button type="button" className="search-button">
+            {" "}
+            Search
+          </button>
+        </div>
       </div>
     </div>
   );

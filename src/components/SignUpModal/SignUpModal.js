@@ -30,7 +30,9 @@ const SignUpModal = ({ onClose, openSignInModal, isLoading, SignUpUser }) => {
       onClose={onClose}
       onSubmit={onSignUp}
       buttonText="Sign Up"
+      className="signUp__Modal"
     >
+      
       <ul className="inputs">
         <label className="input-header" htmlFor="email">
           Email
@@ -98,6 +100,7 @@ const SignUpModal = ({ onClose, openSignInModal, isLoading, SignUpUser }) => {
           Or Sign In
         </button>
       </div>
+      
     </ModalWithForm>
   );
 };
