@@ -4,8 +4,6 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import Search from "./components/Search/Search";
-import SignInModal from "./components/SignInModal/SignInModal";
-import SignUpModal from "./components/SignUpModal/SignUpModal";
 
 // CONTEXT IMPORTS
 
@@ -15,6 +13,9 @@ import { useEffect, useState } from "react";
 // UTILITY IMPORTS
 
 // MODAL IMPORTS
+import SignInModal from "./components/SignInModal/SignInModal";
+import SignUpModal from "./components/SignUpModal/SignUpModal";
+
 
 function App() {
   const [activeModal, setActiveModal] = useState("");

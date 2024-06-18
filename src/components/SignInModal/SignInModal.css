@@ -1,6 +1,5 @@
 .signUp__Modal {
-    width: 430px;
-    height: 458px;
+    max-height: 383px;
 }
 
 .signIn__Modal {
