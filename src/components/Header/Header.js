@@ -3,7 +3,7 @@ import "./Header.css";
 const Header = ({ onSignIn }) => {
   return (
     <header className="Header">
-      <p className="Header__title">News Explorers</p>
+      <p className="Header__title">News Explorer</p>
       
       <div className="Header__buttons">
         <button className="Home__button" type="button" >Home</button>
