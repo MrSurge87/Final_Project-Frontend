@@ -1,0 +1,34 @@
+
+.About {
+    display: flex;
+}
+
+.About-author {
+    margin-left: 56px;
+    margin-top: 131px;
+}
+
+.About-author__image {
+    width: 464px;
+    height: 464px;
+    display: flex;
+    background-image: url(../../images/about-author-image.svg);
+    margin-top: 80px;
+    margin-left: 104px;
+    border: none;
+}
+
+.About-author__title {
+    margin: 0;
+    font-family: "Roboto-Slab", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+.About-author__description {
+    margin-top: 10px;
+    margin-bottom: 0;
+}

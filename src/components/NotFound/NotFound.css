@@ -1,0 +1,30 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f6f7;
+    align-items: center;
+    padding: 86px 0 80px;
+}
+
+.not-found__image{
+    height: 82px;
+    width: 82px;
+}
+
+.not-found__header {
+    font-family: "Roboto-Slab", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    color: black;
+    margin: 31.5px 0 16px;
+}
+
+.not-found__description {
+    font-family: "Roboto-Slab", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #b6bcbf;
+    margin: 0px;
+}

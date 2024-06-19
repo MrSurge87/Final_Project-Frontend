@@ -59,3 +59,33 @@
 .SignIn__button:hover {
   cursor: pointer;
 }
+
+.saved-articles__button {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  max-height: 80px;
+  width: 178px;
+}
+
+.Header__title-active {
+  border-bottom: 3px solid;
+}
+
+.Header__button-signedIn {
+  background-color: transparent;
+  border: 1px solid;
+  max-height: 48px;
+  border-radius: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 19px;
+  gap: 20px;
+  color: white;
+  cursor: pointer;
+}

@@ -67,3 +67,10 @@
 .search-button:hover {
   cursor: pointer;
 }
+
+.searchForm__invalid {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ff0000;
+  margin-left: 20px;
+}
