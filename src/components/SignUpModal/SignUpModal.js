@@ -2,7 +2,8 @@ import "./SignUpModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
 
-const SignUpModal = ({ onClose, openSignInModal, isLoading, SignUpUser }) => {
+const SignUpModal = ({ onClose, SignUpUser, openSignInModal, isLoading,  }) => {
+  
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
