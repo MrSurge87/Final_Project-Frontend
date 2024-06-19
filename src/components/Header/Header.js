@@ -26,7 +26,7 @@ const Header = ({ onSignIn, signedIn }) => {
         <button className="SignIn__button" type="button" onClick={onSignIn}>Sign In</button>
         <div className="Home__button-border-bottom"></div>
       </div>
-      )};
+      )}
     </header>
   );
 };
