@@ -1,9 +1,10 @@
 import "./SignUpModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState } from "react";
+import { useNavgate } from "react-router-dom";
 
 const SignUpModal = ({ onClose, SignUpUser, openSignInModal, isLoading,  }) => {
-  
+
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
