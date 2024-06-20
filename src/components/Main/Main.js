@@ -4,7 +4,7 @@ const Main = () => {
   return (
     <div className="Main">
       <div className="About">
-        <img className="About-author__image" />
+        <img className="About-author__image" alt="author"/>
         <div className="About-author">
           <h1 className="About-author__title">About The Author</h1>
           <p className="About-author__description">

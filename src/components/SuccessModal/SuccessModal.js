@@ -5,7 +5,7 @@ const SuccessModal = ({
     onClose, 
     onSubmit,
     handleSignInModal, 
-    handleOverly,
+    handleOverlay,
 }) => {
     return (
         <div className="success-modal" onClick={handleOverlay}>
@@ -15,7 +15,7 @@ const SuccessModal = ({
             onClick={onClose}
             className="success-modal__close-button"
           />
-          <form className="success-modal__form" onSubmit={handleLoginModal}>
+          <form className="success-modal__form" onSubmit={handleSignInModal}>
             <h3 className="success-modal__title">
               Registration successfully completed!
             </h3>
@@ -32,3 +32,5 @@ const SuccessModal = ({
       </div>
     )
 }
+
+export default SuccessModal;

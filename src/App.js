@@ -6,10 +6,11 @@ import Footer from "./components/Footer/Footer";
 import Search from "./components/Search/Search";
 
 // CONTEXT IMPORTS
+import { CurrentUserContext } from "./context/CurrentUserContext.js";
 
 // REACT IMPORTS
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 // UTILITY IMPORTS
 import { checkToken, signUp } from "./utils/Auth.js";
@@ -17,7 +18,9 @@ import { checkToken, signUp } from "./utils/Auth.js";
 // MODAL IMPORTS
 import SignInModal from "./components/SignInModal/SignInModal";
 import SignUpModal from "./components/SignUpModal/SignUpModal";
-
+import SuccessModal from "./components/SuccessModal/SuccessModal.js";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.js";
+import Profile from "./components/Profile/Profile.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -42,6 +45,22 @@ function App() {
     setActiveModal("");
   };
 
+  const handleSuccessModal = () => {
+    setActiveModal("successModal");
+  };
+
+  // Function To Register User
+  const handleSignUpUser = (values) => {
+    const makeRequest = () => {
+      return signUp(values).then((user) => {
+        if (user) {
+          handleSuccessModal();
+        }
+      });
+    };
+    handleSubmit(makeRequest);
+  };
+
   useEffect(() => {
     if (!activeModal) return;
 
@@ -59,27 +78,27 @@ function App() {
   function handleSubmit(request) {
     setIsLoading(true);
     request()
-    .then(handleCloseModal)
-    .catch(console.error)
-    .finally(() => setIsLoading(false));
+      .then(handleCloseModal)
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   }
 
   const signInUser = (user) => {
     setIsLoading(true);
     return signInUser(user)
-    .then((res) => {
-      checkSignedIn(res.token);
-      setToken(res.token);
-      localStorage.setItem("jwt", res.token);
-      handleCloseModal();
-      navigate.push("/profile");
-    })
-    .catch((err) => {
-      console.error(err);
-    })
-    .finally(() => {
-      setIsLoading(false);
-    });
+      .then((res) => {
+        checkSignedIn(res.token);
+        setToken(res.token);
+        localStorage.setItem("jwt", res.token);
+        handleCloseModal();
+        navigate.push("/profile");
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const signUpUser = (values) => {
@@ -88,45 +107,60 @@ function App() {
 
   function checkSignedIn(token) {
     return checkToken(token)
-    .then((res) => {
-      setSignedIn(true);
-      setCurrentUser(res.data);
-    })
-    .catch((e) => {
-      console.error(e);
-    });
+      .then((res) => {
+        setSignedIn(true);
+        setCurrentUser(res.data);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
   }
 
   return (
-    <div className="App">
-      <div className="Search">
-        <Header
-          onSignIn={handleOpenSignInModal}
-          onSignUp={handleOpenSignUpModal}
-          onCreateModal={handleCreateModal}
-        />
-        {activeModal === "SignIn" && (
-          <SignInModal
-            onClose={handleCloseModal}
-            signInUser={signInUser}
-            openSignInModal={handleOpenSignInModal}
-            openSignUpModal={handleOpenSignUpModal}
-          />
-        )}
-
-        {activeModal === "SignUp" && (
-          <SignUpModal
-            onClose={handleCloseModal}
+    <CurrentUserContext.Provider value={currentUser}>
+      <div className="App">
+        <div className="Search">
+          <Header
+            onSignIn={handleOpenSignInModal}
+            onSignUp={handleOpenSignUpModal}
+            onCreateModal={handleCreateModal}
             signUpUser={signUpUser}
-            openSignUpModal={handleOpenSignUpModal}
-            openSignInModal={handleOpenSignInModal}
           />
-        )}
-        <Search />
+
+        
+          {activeModal === "SignIn" && (
+            <SignInModal
+              onClose={handleCloseModal}
+              signInUser={signInUser}
+              openSignInModal={handleOpenSignInModal}
+              openSignUpModal={handleOpenSignUpModal}
+              isLoading={isLoading}
+              signUpUser={signUpUser}
+            />
+          )}
+
+          {activeModal === "SignUp" && (
+            <SignUpModal
+              onClose={handleCloseModal}
+              signUpUser={signUpUser}
+              handleSignUpUser={handleSignUpUser}
+              onSubmit={handleOpenSignInModal}
+            />
+          )}
+          {activeModal === "successModal" && (
+            <SuccessModal
+              isOpen={activeModal === "create"}
+              onClose={handleCloseModal}
+              onSubmit={handleOpenSignInModal}
+            />
+          )}
+
+          <Search />
+        </div>
+        <Main />
+        <Footer />
       </div>
-      <Main />
-      <Footer />
-    </div>
+    </CurrentUserContext.Provider>
   );
 }
 
