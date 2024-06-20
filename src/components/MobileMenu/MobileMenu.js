@@ -7,7 +7,7 @@ import { CurrentPageContext } from "../../context/CurrentPageContext";
 import signOutWhite from "../../images/signout-white.svg";
 import signOutBlack from "../../images/signout-black.svg";
 
-const MobileMenu =({ onSignin, onSignOut }) => {
+const MobileMenu =({ onSignIn, onSignOut }) => {
     const { isSignedIn, currentUser } = useContext(CurrentUserContext);
     const { currentPage } = useContext{CurrentPageContext};
 
