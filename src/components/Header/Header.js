@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import NewsExplorerWhtie from "../../images/NewsExplorer-White.svg";
 import HomeWhite from "../../images/Home-White.svg";
-import ProfileLogoWhite from "../../images/Profile-Logo-White.svg";
+import ProfileLogoRectangleWhite from "../../images/Profile-Logo-White.svg";
 
 const Header = ({ onSignIn, signedIn }) => {
 const currentUser = useContext(CurrentUserContext);
@@ -12,7 +12,7 @@ const currentUser = useContext(CurrentUserContext);
   return (
     <header className="Header">
       <Link to="/" className="Header__title">
-      <img src={NewsExplorerWhtie} alt="logo" />
+      <img src={NewsExplorerWhtie} alt="Header Logo" />
       </Link>
      
       {signedIn  ? (
@@ -21,7 +21,7 @@ const currentUser = useContext(CurrentUserContext);
         <img src={HomeWhite} alt="home" />
         </Link>
         <Link to="/profile">
-        <img src={ProfileLogoWhite} alt="profile logo" className="SignIn__button"/>
+        <img src={ProfileLogoRectangleWhite} alt="profile logo" className="SignIn__button"/>
         </Link>
         <div className="Home__button-border-bottom"></div>
       </div>

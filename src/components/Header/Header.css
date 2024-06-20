@@ -18,7 +18,8 @@
   margin-top: 30px;
 }
 .Header__buttons {
-  margin-top: 19px
+  margin-top: 19px;
+  align-items: center;
 }
 
 .Home__button {
@@ -57,4 +58,10 @@
 }
 .SignIn__button:hover {
   cursor: pointer;
+}
+
+.Profile__logo {
+  padding: 0;
+  margin-right: 104px;
+ 
 }
