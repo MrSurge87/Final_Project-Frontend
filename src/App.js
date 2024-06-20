@@ -102,6 +102,7 @@ function App() {
   };
 
   const signUpUser = (values) => {
+    console.table(values);
     handleSubmit(() => signUp(values).then(() => signInUser(values)));
   };
 
@@ -125,9 +126,9 @@ function App() {
             onSignUp={handleOpenSignUpModal}
             onCreateModal={handleCreateModal}
             signUpUser={signUpUser}
+            signedIn={signedIn}
           />
 
-        
           {activeModal === "SignIn" && (
             <SignInModal
               onClose={handleCloseModal}

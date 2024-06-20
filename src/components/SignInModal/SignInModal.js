@@ -3,7 +3,6 @@ import "./SignInModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
-  
   const [email, changeEmail] = useState("");
   const handleEmailChange = (e) => {
     changeEmail(e.target.value);
@@ -60,7 +59,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
               maxLength="50"
               value={password}
               onChange={handlePasswordChange}
-              requried
+              required
             />
           </li>
         </ul>

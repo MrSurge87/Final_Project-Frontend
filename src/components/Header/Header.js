@@ -6,8 +6,11 @@ import NewsExplorerWhtie from "../../images/NewsExplorer-White.svg";
 import HomeWhite from "../../images/Home-White.svg";
 import ProfileLogoRectangleWhite from "../../images/Profile-Logo-White.svg";
 
+import signOutWhite from "../../images/signout-white.svg";
+
 const Header = ({ onSignIn, signedIn }) => {
-const currentUser = useContext(CurrentUserContext);
+const {currentUser, isSignedIn} = useContext(CurrentUserContext);
+console.log(currentUser);
 
   return (
     <header className="Header">
@@ -22,6 +25,8 @@ const currentUser = useContext(CurrentUserContext);
         </Link>
         <Link to="/profile">
         <img src={ProfileLogoRectangleWhite} alt="profile logo" className="SignIn__button"/>
+        <p>Sergio</p>
+        <img src={signOutWhite} alt="signOutWhite" />
         </Link>
         <div className="Home__button-border-bottom"></div>
       </div>

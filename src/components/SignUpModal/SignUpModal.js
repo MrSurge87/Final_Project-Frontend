@@ -114,7 +114,7 @@ import { useNavigate } from "react-router-dom";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import "./SignUpModal.css";
 
-const SignUpModal = ({ onClose, SignUpUser, openSignInModal, isLoading }) => {
+const SignUpModal = ({ onClose, signUpUser, openSignInModal, isLoading }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -135,7 +135,7 @@ const SignUpModal = ({ onClose, SignUpUser, openSignInModal, isLoading }) => {
 
   const onSignUp = async (e) => {
     e.preventDefault();
-    const result = await SignUpUser({ email, password, username });
+    const result = await signUpUser({ email, password, username });
     
     // Check if registration is successful
     if (result.success) {
