@@ -14,7 +14,6 @@ const Header = ({ onSignIn, signedIn }) => {
 
   
   return (
-    
     <header className="Header">
       <Link to="/" className="Header__title">
       <img src={NewsExplorerWhtie} alt="Header Logo" />

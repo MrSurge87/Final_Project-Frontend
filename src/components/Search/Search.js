@@ -2,7 +2,7 @@ import "./Search.css";
 
 const Search = () => {
   return (
-    <form className="searchForm">
+    <div className="searchForm">
       <section className="Search__box">
         <h1 className="Search__title">What's going on in the world?</h1>
         <p className="Search__description">
@@ -17,7 +17,7 @@ const Search = () => {
           Search
         </button>
       </section>
-    </form>
+    </div>
   );
 };
 

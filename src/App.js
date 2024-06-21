@@ -146,6 +146,7 @@ function App() {
               signUpUser={signUpUser}
               handleSignUpUser={handleSignUpUser}
               onSubmit={handleOpenSignInModal}
+              openSignInModal={handleOpenSignInModal}
             />
           )}
           {activeModal === "successModal" && (
