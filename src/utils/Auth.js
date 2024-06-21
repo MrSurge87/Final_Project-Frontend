@@ -1,14 +1,10 @@
 import { processServerResponse } from "./Api";
 
-// const baseUrl =
-//   process.env.NODE_ENV === "production"
-//     ? "http://google.com"
-//     : "http://localhost:3001";
 
 const baseUrl = "http://localhost:3001";
 
 export const signUp = ({ email, password, username }) => {
-  return fetch(`${baseUrl}/sugnup`, {
+  return fetch(`${baseUrl}/signUp`, {
     method: "POST",
     headers: {
       Accept: "application/json",

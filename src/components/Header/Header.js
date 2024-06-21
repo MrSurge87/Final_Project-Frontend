@@ -9,10 +9,12 @@ import ProfileLogoRectangleWhite from "../../images/Profile-Logo-White.svg";
 import signOutWhite from "../../images/signout-white.svg";
 
 const Header = ({ onSignIn, signedIn }) => {
-const {currentUser, isSignedIn} = useContext(CurrentUserContext);
-console.log(currentUser);
+//const {currentUser, isSignedIn} = useContext(CurrentUserContext);
+//console.log(currentUser);
 
+  
   return (
+    
     <header className="Header">
       <Link to="/" className="Header__title">
       <img src={NewsExplorerWhtie} alt="Header Logo" />
@@ -40,7 +42,10 @@ console.log(currentUser);
       </div>
       )}
     </header>
+    
   );
 };
+  
+
 
 export default Header;
