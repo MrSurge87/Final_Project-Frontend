@@ -1,7 +1,39 @@
+import { processServerResponse } from "./utils";
 
-export const processServerResponse = (res) => {
-    if (res.ok) {
-        return res.json();
-    }
-    return Promise.reject(`Error: ${res.status}`);
+export const baseUrl = "http://localhost:3001";
+
+export const removeSavedArticle = (selectedArticle) => {
+  const token = localStorate.getItem("jwt");
+  return fetch(`${baseUrl}/articles/${selectedArticle.id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      aurhotization: `Bearer ${token}`,
+    },
+  }).then(processServerResponse);
+};
+
+export function getSavedArticles() {
+  return new Promise((reseolve, reject) => {
+    resolvePath([
+        {
+
+        },
+    ]);
+  });
+}
+
+export function addSavedArticle(newsData, keyword) {
+    return new Promise((resolve, reject) => {
+        resolve({
+            id: ,
+            title: newsData.title,
+            text: newsData.description,
+            date: newsData.publishedAt,
+            source: newsData.source.name,
+            link: newsData.url,
+            image: newsData.urlToImage,
+            keyword: keyword,
+        });
+    });
 };

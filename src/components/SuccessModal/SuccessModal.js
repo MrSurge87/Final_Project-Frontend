@@ -15,7 +15,7 @@ const SuccessModal = ({
             onClick={onClose}
             className="success-modal__close-button"
           />
-          <form className="success-modal__form" onSubmit={handleSignInModal}>
+          <div className="success-modal__form" onSubmit={handleSignInModal}>
             <h3 className="success-modal__title">
               Registration successfully completed!
             </h3>
@@ -27,7 +27,7 @@ const SuccessModal = ({
             >
               Sign in
             </button>
-          </form>
+          </div>
         </div>
       </div>
     )
