@@ -17,8 +17,25 @@ export function getSavedArticles() {
   return new Promise((reseolve, reject) => {
     resolvePath([
         {
-
+            id: ,
+            author: , 
+            description: ,
+            link: ,
+            urlToImage: ,
+            publishedAt: ,
+            content: ,
+            keyword: ,
         },
+        {
+            id: ,
+            author: , 
+            description: ,
+            link: ,
+            urlToImage: ,
+            publishedAt: ,
+            content: ,
+            keyword: ,
+        }
     ]);
   });
 }
