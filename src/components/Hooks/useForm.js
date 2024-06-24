@@ -21,7 +21,7 @@ export function useFormWithValidation(defaults) {
         const value = target.value;
         setValues({ ...values, [name]: value });
         setErrors({ ...errors, [name]: target.validationMessage});
-        setisValid(target.closet("form").checkValidity();)
+        setisValid(target.closet("form").checkValidity());
     };
 
     const resetForm = useCallback (
