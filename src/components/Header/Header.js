@@ -1,18 +1,31 @@
 import "./Header.css";
+import MobileMenu from "../MobileMenu/MobileMenu";
+
+//Import React-Router-Dom
 import {Link} from "react-router-dom";
+
+//Import Context
 import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
+import { CurrentPageContext } from "../../context/CurrentPageContext";
+import { MobileContext } from "../../context/MobileContext";
+
+// Import Logos
 import NewsExplorerWhtie from "../../images/NewsExplorer-White.svg";
+import NewsExplorerBlack from "../../images/NewsExplorer-Black.svg";
+import SignOutWhite from "../../images/signout-white.svg";
+import SignOutBlack from "../../images/signout-black.svg";
 import HomeWhite from "../../images/Home-White.svg";
 import ProfileLogoRectangleWhite from "../../images/Profile-Logo-White.svg";
 
-import signOutWhite from "../../images/signout-white.svg";
 
 const Header = ({ onSignIn, signedIn }) => {
-//const {currentUser, isSignedIn} = useContext(CurrentUserContext);
-//console.log(currentUser);
+  // const { currentPage, activeModal } = useContext(CurrentPageContext);
+  // const { currentUser, isSignedIn } = useContext(CurrentUserContext);
+  // const { mobileMenuOpen, openMobileMenu, closeMobileMenu } = useContext(MobileContext);
 
-  
+
+
   return (
     <header className="Header">
       <Link to="/" className="Header__title">
@@ -27,7 +40,7 @@ const Header = ({ onSignIn, signedIn }) => {
         <Link to="/profile">
         <img src={ProfileLogoRectangleWhite} alt="profile logo" className="SignIn__button"/>
         <p>Sergio</p>
-        <img src={signOutWhite} alt="signOutWhite" />
+        <img src={SignOutWhite} alt="signOutWhite" />
         </Link>
         <div className="Home__button-border-bottom"></div>
       </div>

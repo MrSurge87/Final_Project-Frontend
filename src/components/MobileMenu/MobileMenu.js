@@ -9,7 +9,7 @@ import signOutBlack from "../../images/signout-black.svg";
 
 const MobileMenu =({ onSignIn, onSignOut }) => {
     const { isSignedIn, currentUser } = useContext(CurrentUserContext);
-    const { currentPage } = useContext{CurrentPageContext};
+    const { currentPage } = useContext(CurrentPageContext);
 
     return isSignedIn && currentPage === "/" ? (
         <div className="mobile">
@@ -23,7 +23,7 @@ const MobileMenu =({ onSignIn, onSignOut }) => {
                     </Link>
                 </nav>
                 <button className="mobile__button-signedIn" onClick={onSignOut}>
-                    <p className="mobile__username-signedIn">{currentUser.name}</p>
+                    <p className="mobile__username-signedIn">{currentUser.username}</p>
                     <img src={signOutWhite} alt="signOut" className="mobile__signOut"/>
                 </button>
             </div>
@@ -40,7 +40,7 @@ const MobileMenu =({ onSignIn, onSignOut }) => {
                     </Link>
                 </nav>
                 <button className="mobile__button-savedNews" onClick={onSignOut}>
-                    <p className="mobile__username-savedNews">{currentUser.name}</p>
+                    <p className="mobile__username-savedNews">{currentUser.username}</p>
                     <img src={signOutBlack} alt="signout" className="mobile__signOut-savedNews" />
                 </button>
             </div>
