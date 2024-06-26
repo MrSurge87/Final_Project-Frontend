@@ -5,18 +5,18 @@
     
 }
 
-.Copyright {
+.footer__text {
     margin-top: 32px;
     margin-left: 104px;
     margin-bottom: 26px;
     color: rgba(182, 188, 191, 1);
 }
 
-.Footer-buttons {
+.footer__links {
     margin-right: 106px
 }
 
-.Footer-home__button {
+.footer__button-home {
     width: 49px;
     height: 24px;
     border: none;
@@ -24,11 +24,11 @@
     margin-right: 40px;
 }
 
-.Footer-home__button:hover {
+.footer__button-home:hover {
     cursor: pointer;
 }
 
-.Footer-TripleTen__button {
+.footer__button-tripleten {
     width: 74px;
     height: 24px;
     border: none;
@@ -40,25 +40,24 @@
     cursor: pointer;
 }
 
-.Github__button {
-    background-image: url(../../images/github-image.svg);
+.footer__button-github {
+    
     border: none;
     width: 20px;
     height: 20px;
     margin-right: 24px;
 }
 
-.Github__button {
+.footer__button-github {
     cursor: pointer;
 }
 
-.Facebook__button {
-    background-image: url(../../images/Facebook-image.svg);
+.footer__button-facebook {
     border: none;
     width: 20px;
     height: 20px;
 }
 
-.Facebook__button {
+.footer__button-facebook:hover {
     cursor: pointer;
 }
