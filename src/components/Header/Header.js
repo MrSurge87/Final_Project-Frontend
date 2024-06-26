@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { CurrentPageContext } from "../../context/CurrentPageContext";
-import { MobileContext } from "../../context/MobileContext";
+
 
 // Import Logos
 import NewsExplorerWhtie from "../../images/NewsExplorer-White.svg";
@@ -20,11 +20,7 @@ import ProfileLogoRectangleWhite from "../../images/Profile-Logo-White.svg";
 
 
 const Header = ({ onSignIn, signedIn }) => {
-  // const { currentPage, activeModal } = useContext(CurrentPageContext);
-  // const { currentUser, isSignedIn } = useContext(CurrentUserContext);
-  // const { mobileMenuOpen, openMobileMenu, closeMobileMenu } = useContext(MobileContext);
-
-
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <header className="Header">
@@ -39,7 +35,7 @@ const Header = ({ onSignIn, signedIn }) => {
         </Link>
         <Link to="/profile">
         <img src={ProfileLogoRectangleWhite} alt="profile logo" className="SignIn__button"/>
-        <p>Sergio</p>
+        <p>{currentUser.username}</p>
         <img src={SignOutWhite} alt="signOutWhite" />
         </Link>
         <div className="Home__button-border-bottom"></div>
@@ -56,6 +52,9 @@ const Header = ({ onSignIn, signedIn }) => {
     </header>
     
   );
+
+
+
 };
   
 
