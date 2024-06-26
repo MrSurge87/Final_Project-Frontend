@@ -10,7 +10,7 @@ export const authorize = (email, password ) => {
 
 export const checkToken = ( token ) => {
   return new Promise((resolve, reject) => {
-    reseolve({ data: { name: "fake user", email: "fake@example.com", id: "fake-id" },
+    resolve({ data: { name: "fake user", email: "fake@example.com", id: "fake-id" },
     });
   });
 };
