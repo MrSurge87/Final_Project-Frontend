@@ -4,7 +4,7 @@
   color: white;
   border-bottom: 1px solid grey;
   align-items: center;
-  
+
 }
 
 .Header__title {
@@ -17,10 +17,15 @@
   margin-left: 104px;
   margin-top: 30px;
 }
+
 .Header__buttons {
   margin-top: 19px;
   display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,1);
+  border-width: medium;
 }
+
 
 .Home__button {
   background: none;
@@ -31,19 +36,12 @@
   padding: 0;
   margin-right: 42px;
   font-family: "Roboto Slab", sans-serif;
-  
 }
 
 .Home__button:hover {
   cursor: pointer;
 }
 
-.Home__button-border-bottom {
-  border-bottom: 1px solid rgba(255,255,255,1);
-  border-width: medium;
-  width: 68px;
-  height: 3px;
-}
 
 .SignIn__button {
   background: none;
@@ -55,6 +53,7 @@
   padding: 0;
   margin-right: 104px;
   font-family: "Roboto Slab", sans-serif;
+  margin-bottom: 13px;
 }
 .SignIn__button:hover {
   cursor: pointer;
