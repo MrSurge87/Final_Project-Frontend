@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import Search from "./components/Search/Search";
+import SearchForm from "./components/SearchForm/SearchForm.js";
 
 // CONTEXT IMPORTS
 import { CurrentUserContext } from "./context/CurrentUserContext.js";
@@ -171,7 +171,7 @@ function App() {
             />
           )}
 
-          <Search />
+          <SearchForm />
         </div>
         <Main />
         <Footer />

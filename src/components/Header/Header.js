@@ -21,6 +21,7 @@ import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 const Header = ({ onSignIn, signedIn, onSignOut }) => {
   const currentUser = useContext(CurrentUserContext);
   console.log(currentUser);
+ 
 
   return (
     <header className="Header">
@@ -37,12 +38,11 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           <Link to="/saved-news">
             <img src={SavedArticlesWhite} className="profile__savedArticles" />
           </Link>
-          
           <div className="profile">
             <Link to="/profile" className="profile__logo">
               {/* <img src={ProfileLogoRectangleWhite} alt="profile logo" /> */}
               <img src={Rectangle} className="profile__rectangle" />
-              <p className="profile__username">{currentUser.username}Sergio</p>
+              <p className="profile__username">{currentUser.name}</p>
               <img src={SignOutWhite} alt="Sign Out Button" onClick={onSignOut} className="profile__signOut"/>
             </Link>
           </div>
