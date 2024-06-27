@@ -2,7 +2,7 @@ import { processServerResponse } from "./utils";
 
 const baseUrl = "http://localhost:3001";
 
-export const authorize = (email, password ) => {
+export const authorization = (email, password ) => {
   return new Promise((resolve, reject) => {
     resolve({ token: "a fake token" });
   });

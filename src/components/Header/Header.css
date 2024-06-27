@@ -1,9 +1,9 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
   color: white;
   border-bottom: 1px solid grey;
+  align-items: center;
   
 }
 
@@ -19,7 +19,7 @@
 }
 .Header__buttons {
   margin-top: 19px;
-  align-items: center;
+  display: flex;
 }
 
 .Home__button {
@@ -60,8 +60,44 @@
   cursor: pointer;
 }
 
-.Profile__logo {
+.profile {
+display:flex;
+}
+
+.profile__logo {
   padding: 0;
   margin-right: 104px;
  
+}
+
+.profile__username {
+  color: white;
+  margin: 0;
+  font-family: "Roboto-slab", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  position: relative;
+  bottom:40px;
+  left:10px;
+}
+
+.profile__rectangle {
+  width: 112px;
+  height: 48px;
+}
+
+.profile__savedArticles {
+  font-family: "Roboto-slab", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.profile__signOut {
+  width: 24px;
+  height: 24px;
+  position:relative;
+  left:80px;
+  bottom: 65px;
 }

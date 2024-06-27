@@ -13,14 +13,14 @@ import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 // UTILITY IMPORTS
-import { checkToken, signUp } from "./utils/Auth.js";
+import { checkToken, signUp, authorization } from "./utils/Auth.js";
 
 // MODAL IMPORTS
 import SignInModal from "./components/SignInModal/SignInModal";
 import SignUpModal from "./components/SignUpModal/SignUpModal";
 import SuccessModal from "./components/SuccessModal/SuccessModal.js";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.js";
-import Profile from "./components/Profile/Profile.js";
+
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -83,15 +83,20 @@ function App() {
       .finally(() => setIsLoading(false));
   }
 
+  //Sign In User
   const signInUser = (user) => {
     setIsLoading(true);
-    return signInUser(user)
+    authorization(user)
       .then((res) => {
-        checkSignedIn(res.token);
-        setToken(res.token);
-        localStorage.setItem("jwt", res.token);
+        if (res) {
+          localStorage.setItem("jwt", res.token);
+          checkToken(res.token).then((data) => {
+            setCurrentUser(data);
+            setSignedIn(true);
+            navigate("/profile");
+          });
+        }
         handleCloseModal();
-        navigate.push("/profile");
       })
       .catch((err) => {
         console.error(err);
@@ -99,6 +104,14 @@ function App() {
       .finally(() => {
         setIsLoading(false);
       });
+  };
+
+  const signOutUser = () => {
+    setIsLoading(true);
+    localStorage.removeItem("jwt");
+    setSignedIn(false);
+    setCurrentUser({});
+    navigate("/");
   };
 
   const signUpUser = (values) => {
@@ -127,6 +140,7 @@ function App() {
             onCreateModal={handleCreateModal}
             signUpUser={signUpUser}
             signedIn={signedIn}
+            onSignOut={signOutUser}
           />
 
           {activeModal === "SignIn" && (
