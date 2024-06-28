@@ -291,22 +291,26 @@ function App() {
 
                       {activeModal === "SignIn" && (
                         <SignInModal
+                        isOpen={activeModal === "create"}
                           onClose={handleCloseModal}
                           signInUser={signInUser}
+                          signUpUser={signUpUser}
                           openSignInModal={handleOpenSignInModal}
                           openSignUpModal={handleOpenSignUpModal}
                           isLoading={isLoading}
-                          signUpUser={signUpUser}
+                          
                         />
                       )}
 
                       {activeModal === "SignUp" && (
                         <SignUpModal
+                        isOpen={activeModal === "create"}
                           onClose={handleCloseModal}
                           signUpUser={signUpUser}
                           handleSignUpUser={handleSignUpUser}
                           onSubmit={handleOpenSignInModal}
                           openSignInModal={handleOpenSignInModal}
+                          isLoading={isLoading}
                         />
                       )}
                       {activeModal === "successModal" && (
