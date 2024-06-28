@@ -49,7 +49,7 @@ export function getSavedArticles() {
 }
 
 
-export function saveArticle(newsData, keyword) {
+export function addSavedArticle(newsData, keyword) {
     return new Promise((resolve, reject) => {
         resolve({
             id: "6678ec5339b48048c74ce6bb",

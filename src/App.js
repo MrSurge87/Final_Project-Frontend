@@ -14,6 +14,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 // UTILITY IMPORTS
 import { checkToken, signUp, authorization } from "./utils/Auth.js";
+import { getSavedArticles, addSavedArticle, removeSavedArticle } from "./utils/Api.js";
 
 // MODAL IMPORTS
 import SignInModal from "./components/SignInModal/SignInModal";
@@ -61,6 +62,8 @@ function App() {
     handleSubmit(makeRequest);
   };
 
+  // Use Effects
+
   useEffect(() => {
     if (!activeModal) return;
 
@@ -74,6 +77,27 @@ function App() {
       document.removeEventListener("keydown", handleEscapeClose);
     };
   }, [activeModal]);
+
+  useEffect(() => {
+    setCurrentPage(location.pathname);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const jwt = localStorage.getItem("jwt");
+    if(jwt) {
+      checkToken(jwt).then((res) => {
+        if (res && res.data) {
+          setCurrentUser(res.data);
+          setSignedIn(true);
+        }
+      })
+      .then(() => {
+        getSavedArtciles(jwt).then((articles) => {
+          setSavedArticles(articles);
+        });
+      })
+    }
+  }, [signedIn]);
 
   function handleSubmit(request) {
     setIsLoading(true);
