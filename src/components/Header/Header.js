@@ -90,7 +90,7 @@ import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 
 const Header = ({ onSignIn, signedIn, onSignOut }) => {
   const currentUser = useContext(CurrentUserContext);
-  console.log(currentUser);
+ 
 
   return (
     <header className="Header">
@@ -108,7 +108,7 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           </Link>
           <div className="profile">
             <Link to="/profile" className="profile__logo">
-              <img src={Rectangle} className="profile__rectangle" />
+            <img src={Rectangle}  />
               <p className="profile__username">{currentUser.name}</p>
               <img
                 src={SignOutWhite}
@@ -116,7 +116,9 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
                 onClick={onSignOut}
                 className="profile__signOut"
               />
+        
             </Link>
+            
           </div>
         </div>
       ) : (

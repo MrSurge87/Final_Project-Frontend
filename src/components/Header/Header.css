@@ -170,12 +170,14 @@ display:flex;
 
 .profile {
 display:flex;
+margin-right: 104px;
+margin-left: 64px;
 }
 
 .profile__logo {
-  padding: 0;
-  margin-right: 104px;
- 
+display: flex;
+align-items: center;;
+
 }
 
 .profile__username {
@@ -190,22 +192,18 @@ display:flex;
   left:10px;
 }
 
-.profile__rectangle {
-  width: 112px;
-  height: 48px;
-}
+
 
 .profile__savedArticles {
   font-family: "Roboto-slab", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
+  margin-left: 76px;
 }
 
 .profile__signOut {
   width: 24px;
   height: 24px;
-  position:relative;
-  left: 80px;
-  bottom: 65px;
+
 }
