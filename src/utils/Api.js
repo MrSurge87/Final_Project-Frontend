@@ -3,7 +3,7 @@ import { processServerResponse } from "./utils";
 export const baseUrl = "http://localhost:3001";
 
 export const removeSavedArticle = (selectedArticle) => {
-  const token = localStorate.getItem("jwt");
+  const token = localStorage.getItem("jwt");
   return fetch(`${baseUrl}/articles/${selectedArticle.id}`, {
     method: "DELETE",
     headers: {
