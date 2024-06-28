@@ -31,6 +31,7 @@ import SignInModal from "./components/SignInModal/SignInModal";
 import SignUpModal from "./components/SignUpModal/SignUpModal";
 import SuccessModal from "./components/SuccessModal/SuccessModal.js";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.js";
+import SavedNews from "./components/SavedNews/SavedNews.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -285,6 +286,8 @@ function App() {
                         <SavedNews handleRemoveArticle={handleRemoveArticle} /> 
                         </ProtectedRoute>
                       </Routes>
+                      <SearchForm />
+                      <Footer />
 
                       {activeModal === "SignIn" && (
                         <SignInModal
@@ -314,10 +317,10 @@ function App() {
                         />
                       )}
 
-                      <SearchForm />
+                      
                     </div>
 
-                    <Footer />
+                    
                   </div>
                 </KeyWordContext.Provider>
               </SavedArticlesContext.Provider>

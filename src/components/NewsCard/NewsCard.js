@@ -81,7 +81,7 @@ const NewsCard = ({
         ""
       )}
 
-      {!isSignedIN && (
+      {!isSignedIn && (
         <>
           <div
             className={`card__popup-text ${
@@ -109,7 +109,7 @@ const NewsCard = ({
         className="card__image"
       />
       <div className="card__text">
-        <p className="card__date-published"> {formattedDate}</p>
+        <p className="card__date-published"> {formatDate}</p>
         <h3 className="card__title">{newsData.title}</h3>
         <p className="card__content">{newsData.text || newsData.description}</p>
         {newsData.source && (
@@ -121,3 +121,5 @@ const NewsCard = ({
     </div>
   );
 };
+
+export default NewsCard;

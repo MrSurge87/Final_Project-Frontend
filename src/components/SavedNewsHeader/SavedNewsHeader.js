@@ -11,7 +11,7 @@ const SavedNewsHeader = () => {
     (article) => article.owner === currentUser._id
   );
 
-  const keyWordArray = useArticles.map((article) => article.keyword);
+  const keyWordArray = userArticles.map((article) => article.keyword);
   const firstLetterToCap = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
