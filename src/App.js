@@ -286,7 +286,7 @@ function App() {
                         </ProtectedRoute>} />
                      
                       </Routes>
-                      <SearchForm />
+                      
                      
                       
 
