@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
-import SearchForm from "./components/SearchForm/SearchForm.js";
 import About from "./components/About/About.js";
 
 // CONTEXT IMPORTS
@@ -284,7 +283,6 @@ function App() {
                        <Route exact path="/saved-news" element={ <ProtectedRoute path="/saved-news">
                         <SavedNews handleRemoveArticle={handleRemoveArticle} /> 
                         </ProtectedRoute>} />
-                     
                       </Routes>
                       
                      
