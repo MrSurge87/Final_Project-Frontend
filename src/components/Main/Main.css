@@ -19,10 +19,11 @@
 
 .About-author__title {
     margin: 0;
-    
+    color: rgba(255,255,255,1);
 }
 
 .About-author__description {
     margin-top: 10px;
     margin-bottom: 0;
+    color: rgba(255,255,255,1);
 }

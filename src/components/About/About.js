@@ -1,7 +1,7 @@
 import "./About.css";
 import AboutAuthorImage from "../../images/about-author-image.svg";
 
-const AboutAuthor = () => {
+const About = () => {
   return (
     <section className="about" id="about-section">
       <div className="about__container">
@@ -26,4 +26,4 @@ const AboutAuthor = () => {
   );
 };
 
-export default AboutAuthor;
+export default About;

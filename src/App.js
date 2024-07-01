@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import SearchForm from "./components/SearchForm/SearchForm.js";
+import About from "./components/About/About.js";
 
 // CONTEXT IMPORTS
 import { CurrentUserContext } from "./context/CurrentUserContext.js";
@@ -272,22 +273,22 @@ function App() {
                       />
 
                       <Routes>
-                        <Route exact path="/">
-                          <Main
-                            onSignUp={signUpUser}
-                            handleSaveArticle={handleSaveArticle}
-                            handleRemoveArticle={handleRemoveArticle}
-                            searchError={searchError}
-                            handleSearch={handleSearch}
-                          />
-                        </Route>
-
-                        <ProtectedRoute path="/saved-news">
+                        <Route exact path="/"
+                        element={<Main
+                          onSignUp={signUpUser}
+                          handleSaveArticle={handleSaveArticle}
+                          handleRemoveArticle={handleRemoveArticle}
+                          searchError={searchError}
+                          handleSearch={handleSearch}
+                        /> }/>
+                       <Route exact path="/saved-news" element={ <ProtectedRoute path="/saved-news">
                         <SavedNews handleRemoveArticle={handleRemoveArticle} /> 
-                        </ProtectedRoute>
+                        </ProtectedRoute>} />
+                     
                       </Routes>
                       <SearchForm />
-                      <Footer />
+                     
+                      
 
                       {activeModal === "SignIn" && (
                         <SignInModal
@@ -323,6 +324,8 @@ function App() {
 
                       
                     </div>
+                    <About />
+                    <Footer />
 
                     
                   </div>
