@@ -5,7 +5,7 @@ import { SearchResultContext } from "../../context/SearchResultContext";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 
 const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp }) => {
-  const [cardsShown, setCardShown] = useState(3);
+  const [cardsShown, setCardsShown] = useState(3);
   const { searchResults } = useContext(SearchResultContext);
   const { hasSearched } = useContext(HasSearchedContext);
 
