@@ -48,10 +48,13 @@ function App() {
   const [savedArticles, setSavedArticles] = useState([]);
   const location = useLocation();
   const navigate = useNavigate("");
+  
+
 
   const handleCreateModal = () => {
     setActiveModal("create");
   };
+
   const handleOpenSignInModal = () => {
     setActiveModal("SignIn");
   };
@@ -83,6 +86,10 @@ function App() {
   // Use Effects
 
   useEffect(() => {
+    setCurrentPage(location.pathname);
+  }, [location.pathname]);
+
+  useEffect(() => {
     if (!activeModal) return;
 
     const handleEscapeClose = (e) => {
@@ -96,9 +103,7 @@ function App() {
     };
   }, [activeModal]);
 
-  useEffect(() => {
-    setCurrentPage(location.pathname);
-  }, [location.pathname]);
+
 
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");

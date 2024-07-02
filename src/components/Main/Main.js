@@ -22,7 +22,7 @@ const Main = (
 
   return (
     <main className="main">
-      <SearchForm handleSearch={handleSearch} />
+      <SearchForm  handleSearch={handleSearch}/>
       <div>
         {hasSearched && searchResults.length > 0 ? (
           <NewsCardList
