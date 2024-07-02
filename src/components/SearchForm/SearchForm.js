@@ -1,5 +1,6 @@
 import "./SearchForm.css";
 import { useForm } from "react-hook-form";
+import { getSearchResults } from "../../utils/NewsApi";
 
 const SearchForm = ({ handleSearch }) => {
   const {
@@ -32,7 +33,7 @@ const SearchForm = ({ handleSearch }) => {
           {errors?.keyword && (
             <p className="searchForm__invalid">{errors.keyword.message}</p>
           )}
-          <button className="searchForm__searchbar-button" type="submit">
+          <button className="searchForm__searchbar-button" type="submit" onClick={getSearchResults}>
             Search
           </button>
         </div>
