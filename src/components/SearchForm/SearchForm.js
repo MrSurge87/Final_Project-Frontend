@@ -10,7 +10,7 @@ const SearchForm = ({ handleSearch }) => {
   } = useForm();
 
   const handleSearchSubmit = ({ keyword }) => {
-    handleSearch({ keyword });
+    getSearchResults({ keyword });
   };
 
   return (
@@ -33,7 +33,7 @@ const SearchForm = ({ handleSearch }) => {
           {errors?.keyword && (
             <p className="searchForm__invalid">{errors.keyword.message}</p>
           )}
-          <button className="searchForm__searchbar-button" type="submit" onClick={getSearchResults}>
+          <button className="searchForm__searchbar-button" type="submit" >
             Search
           </button>
         </div>
