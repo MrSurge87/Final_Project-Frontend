@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 import { SearchResultContext } from "../../context/SearchResultContext";
 
-const Main = (
+const Main = ({
   setSearchResults,
   handleSearch,
   onSignUp,
@@ -16,9 +16,13 @@ const Main = (
   handleRemoveArticle,
   searchError,
   isLoading
-) => {
+}) => {
+
+  //console.log('Main: handleSearch:', handleSearch);
+
   const { hasSearched } = useContext(HasSearchedContext);
   const { searchResults } = useContext(SearchResultContext);
+  
 
   return (
     <main className="main">

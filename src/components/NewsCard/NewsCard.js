@@ -5,6 +5,9 @@ import { CurrentPageContext } from "../../context/CurrentPageContext";
 import { KeyWordContext } from "../../context/KeyWordContext";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import NormalBookmark from "../../images/bookmark-normal.svg";
+import HoverBookmark from "../../images/bookmark-hover.svg";
+import SavedBookmark from "../../images/bookmark-saved.svg";
 
 const NewsCard = ({
   onSignUp,
@@ -99,7 +102,8 @@ const NewsCard = ({
             onMouseLeave={() => {
               setIsHovered(false);
             }}
-          ></button>
+          >
+          </button>
         </>
       )}
 

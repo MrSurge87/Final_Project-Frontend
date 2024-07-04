@@ -69,10 +69,11 @@
     position: absolute;
     top: 24px;
     right: 24px;
+    background-image: url("../../images/bookmark-normal.svg");
   }
   
   .card__button-bookmark:hover {
-    /* background: transparent url(../../images/bookmark-hover.svg); */
+    background-image: url("../../images/bookmark-hover.svg");
   }
   
   .card__button-bookmark_marked {

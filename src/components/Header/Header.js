@@ -90,7 +90,7 @@ import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 
 const Header = ({ onSignIn, signedIn, onSignOut }) => {
   const {currentUser} = useContext(CurrentUserContext);
-  console.log(currentUser);
+  //console.log(currentUser);
  
 
   return (

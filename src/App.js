@@ -189,7 +189,7 @@ function App() {
 
   //Search
   const handleSearch = (keyword) => {
-    console.log("From Appp", keyword);
+    //console.log('App: handleSearch called with keyword:', keyword);
     setKeyword(keyword);
     setSearching(true);
     getSearchResults(keyword)
@@ -198,6 +198,7 @@ function App() {
         setHasSearched(true);
         setSearching(false);
         setSearchError(false);
+        console.log(res.articles);
       })
       .catch((err) => {
         console.error(err);

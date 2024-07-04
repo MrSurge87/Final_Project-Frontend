@@ -14,6 +14,7 @@ const SearchForm = ({ handleSearch }) => {
 
   const handleSearchSubmit = () => {
     const { keyword } = getValues();
+    //console.log("from searchForm", handleSearch);
     handleSearch(keyword);
   };
 
