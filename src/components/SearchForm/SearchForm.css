@@ -1,6 +1,7 @@
 .searchForm {
     display: flex;
     margin-top: 80px;
+    margin-bottom: 160px;
     justify-content: center
 
   }
@@ -16,7 +17,7 @@
     line-height: 64px;
     font-weight: 400;
     color: white;
-    margin: 0 0 32px 0;
+    margin: 80px 0 32px 0;
   }
   
   .searchForm__description {
