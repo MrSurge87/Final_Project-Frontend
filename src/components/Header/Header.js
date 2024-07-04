@@ -89,7 +89,8 @@ import Rectangle from "../../images/Rectangle.svg";
 import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 
 const Header = ({ onSignIn, signedIn, onSignOut }) => {
-  const currentUser = useContext(CurrentUserContext);
+  const {currentUser} = useContext(CurrentUserContext);
+  console.log(currentUser);
  
 
   return (

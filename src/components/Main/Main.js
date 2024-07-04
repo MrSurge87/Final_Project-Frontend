@@ -8,8 +8,8 @@ import { useContext } from "react";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 import { SearchResultContext } from "../../context/SearchResultContext";
 
-
 const Main = (
+  setSearchResults,
   handleSearch,
   onSignUp,
   handleSaveArticle,
@@ -22,7 +22,10 @@ const Main = (
 
   return (
     <main className="main">
-      <SearchForm  handleSearch={handleSearch}/>
+      <SearchForm
+        handleSearch={handleSearch}
+        setSearchResults={setSearchResults}
+      />
       <div>
         {hasSearched && searchResults.length > 0 ? (
           <NewsCardList
@@ -43,7 +46,6 @@ const Main = (
           ""
         )}
       </div>
-      
     </main>
   );
 };

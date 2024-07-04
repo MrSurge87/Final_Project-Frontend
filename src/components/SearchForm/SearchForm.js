@@ -6,15 +6,19 @@ const SearchForm = ({ handleSearch }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // getValues,
   } = useForm();
 
-  const handleSearchSubmit = ({ keyword }) => {
-    getSearchResults({ keyword });
-  };
+  const onSubmit = (data, e) => console.log(data, e);
+  const onError = (errors, e) => console.log(errors, e);
+
+  // const handleSearchSubmit = () => {
+  //   const { keyword } = getValues();
+  //   handleSearch(keyword);
+  // };
 
   return (
-    <div className="searchForm" onSubmit={handleSubmit(handleSearchSubmit)}>
+    <form className="searchForm" onSubmit={handleSubmit(onSubmit, onError)}>
       <section className="searchForm__container">
         <h1 className="searchForm__title">What's Going On In The World?</h1>
         <p className="searchForm__description">
@@ -30,15 +34,15 @@ const SearchForm = ({ handleSearch }) => {
             placeholder="Enter Topic"
             {...register("keyword", { required: "Please enter a keyword" })}
           />
-          {errors?.keyword && (
-            <p className="searchForm__invalid">{errors.keyword.message}</p>
+          {onError?.keyword && (
+            <p className="searchForm__invalid">{onError.keyword.message}</p>
           )}
-          <button className="searchForm__searchbar-button" type="submit" >
+          <button className="searchForm__searchbar-button" type="submit">
             Search
           </button>
         </div>
       </section>
-    </div>
+    </form>
   );
 };
 

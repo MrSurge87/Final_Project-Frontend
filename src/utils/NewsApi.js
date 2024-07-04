@@ -1,13 +1,8 @@
 import { APIkey, parseCurrentDate, parsePreviousWeek } from "./constants";
 import { processServerResponse } from "./utils";
 
-
-export const getSearchResults = (keyword) => {
-  const newsApi =
-   fetch(
-    `https://newsapi.org/v2/everthing?q=${keyword}&pageSize=100&sortBy=popularity&apiKey=${APIkey}`
-  ).then((res) => {
-    return processServerResponse(res);
-  });
-  return newsApi;
+export const getSearchResults = ({ keyword }) => {
+  return fetch(
+    `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${APIkey}`
+  ).then((res) => processServerResponse(res));
 };

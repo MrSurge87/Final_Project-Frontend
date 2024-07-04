@@ -48,8 +48,6 @@ function App() {
   const [savedArticles, setSavedArticles] = useState([]);
   const location = useLocation();
   const navigate = useNavigate("");
-  
-
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -102,8 +100,6 @@ function App() {
       document.removeEventListener("keydown", handleEscapeClose);
     };
   }, [activeModal]);
-
-
 
   useEffect(() => {
     const jwt = localStorage.getItem("jwt");
@@ -192,7 +188,8 @@ function App() {
   }
 
   //Search
-  const handleSearch = ({ keyword }) => {
+  const handleSearch = (keyword) => {
+    console.log("From Appp", keyword);
     setKeyword(keyword);
     setSearching(true);
     getSearchResults(keyword)
@@ -242,13 +239,14 @@ function App() {
 
   //Remove Article From List
   const handleRemoveArticle = ({ newsData, token }) => {
-    removeSavedArticle(newsData, token).then(() => {
-      const removeNewsArticles = savedArticles.filter(
-        (article) => article._id !== newsData._id
-      );
-      setSavedArticles(removeNewsArticles);
-    })
-    .catch((err) => console.err(err));
+    removeSavedArticle(newsData, token)
+      .then(() => {
+        const removeNewsArticles = savedArticles.filter(
+          (article) => article._id !== newsData._id
+        );
+        setSavedArticles(removeNewsArticles);
+      })
+      .catch((err) => console.err(err));
   };
 
   return (
@@ -277,38 +275,48 @@ function App() {
                       />
 
                       <Routes>
-                        <Route exact path="/"
-                        element={<Main
-                          onSignUp={signUpUser}
-                          handleSaveArticle={handleSaveArticle}
-                          handleRemoveArticle={handleRemoveArticle}
-                          searchError={searchError}
-                          handleSearch={handleSearch}
-                        /> }/>
-                       <Route exact path="/saved-news" element={ <ProtectedRoute path="/saved-news">
-                        <SavedNews handleRemoveArticle={handleRemoveArticle} /> 
-                        </ProtectedRoute>} />
+                        <Route
+                          exact
+                          path="/"
+                          element={
+                            <Main
+                              setSearchResults={setSearchResults}
+                              onSignUp={signUpUser}
+                              handleSaveArticle={handleSaveArticle}
+                              handleRemoveArticle={handleRemoveArticle}
+                              searchError={searchError}
+                              handleSearch={handleSearch}
+                            />
+                          }
+                        />
+                        <Route
+                          exact
+                          path="/saved-news"
+                          element={
+                            <ProtectedRoute path="/saved-news">
+                              <SavedNews
+                                handleRemoveArticle={handleRemoveArticle}
+                              />
+                            </ProtectedRoute>
+                          }
+                        />
                       </Routes>
-                      
-                     
-                      
 
                       {activeModal === "SignIn" && (
                         <SignInModal
-                        isOpen={activeModal === "create"}
+                          isOpen={activeModal === "create"}
                           onClose={handleCloseModal}
                           signInUser={signInUser}
                           signUpUser={signUpUser}
                           openSignInModal={handleOpenSignInModal}
                           openSignUpModal={handleOpenSignUpModal}
                           isLoading={isLoading}
-                          
                         />
                       )}
 
                       {activeModal === "SignUp" && (
                         <SignUpModal
-                        isOpen={activeModal === "create"}
+                          isOpen={activeModal === "create"}
                           onClose={handleCloseModal}
                           signUpUser={signUpUser}
                           handleSignUpUser={handleSignUpUser}
@@ -324,13 +332,9 @@ function App() {
                           onSubmit={handleOpenSignInModal}
                         />
                       )}
-
-                      
                     </div>
                     <About />
                     <Footer />
-
-                    
                   </div>
                 </KeyWordContext.Provider>
               </SavedArticlesContext.Provider>

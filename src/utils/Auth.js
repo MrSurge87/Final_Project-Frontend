@@ -17,7 +17,7 @@ export const checkToken = ( token ) => {
 
 export const signUp = (email, password, username ) => {
   return new Promise((resolve, reject) => {
-    resolve({ data: { name: "fake user", email: "fake@example.com", id: "fake-id"},
+    resolve({ data: { name: "fake anem", email: "fake email", id: "fake-id"},
     });
   });
 };
