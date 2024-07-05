@@ -15,7 +15,8 @@ const Main = ({
   handleSaveArticle,
   handleRemoveArticle,
   searchError,
-  isLoading
+  isLoading,
+  signedIn
 }) => {
 
   //console.log('Main: handleSearch:', handleSearch);
@@ -30,6 +31,7 @@ const Main = ({
         handleSearch={handleSearch}
         setSearchResults={setSearchResults}
       />
+      
       <div>
         {hasSearched && searchResults.length > 0 ? (
           <NewsCardList

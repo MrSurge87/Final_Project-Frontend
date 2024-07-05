@@ -287,6 +287,7 @@ function App() {
                               handleRemoveArticle={handleRemoveArticle}
                               searchError={searchError}
                               handleSearch={handleSearch}
+                              signedIn={signedIn}
                             />
                           }
                         />
