@@ -171,7 +171,6 @@ function App() {
 
   //Sign Up User
   const signUpUser = (values) => {
-    console.table(values);
     handleSubmit(() => signUp(values).then(() => signInUser(values)));
   };
 
