@@ -110,7 +110,7 @@ const SignUpModal = ({
               className="modal-form-submit"
               type="submit"
               onClick={signUpUser}
-              style={{backgroundColor: allFieldsFilledIn ? "blue" : "gray" }}
+              style={{backgroundColor: allFieldsFilledIn ? 'rgba(47,113,229,1)' : 'rgba(230,232,252,1'}}
               disabled={!allFieldsFilledIn}
             >
               {isLoading ? "Submitting..." : "Sign Up"}

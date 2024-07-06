@@ -11,6 +11,11 @@
     cursor: pointer;
 }
 
-.modal__signIn:active {
+
+.activeButton {
     background-color: rgba(47, 113, 229, 1);
+}
+
+.inactiveButton {
+    background-color: rgba(230,232,235,1);
 }

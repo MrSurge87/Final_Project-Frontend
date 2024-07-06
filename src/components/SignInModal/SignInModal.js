@@ -4,19 +4,29 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
   const [email, changeEmail] = useState("");
+  const [password, changePassword] = useState("");
+
   const handleEmailChange = (e) => {
     changeEmail(e.target.value);
   };
 
-  const [password, changePassword] = useState("");
   const handlePasswordChange = (e) => {
     changePassword(e.target.value);
   };
 
+  const fieldsFilledIn = () => {
+    return email.trim() !== "" && password.trim() !== "";
+  };
+
   const onSignIn = (e) => {
     e.preventDefault();
-    signInUser({ email, password });
+    if (fieldsFilledIn()) {
+      signInUser({ email, password });
+    }
   };
+
+  const allFieldsFilledIn = fieldsFilledIn();
+
   return (
     <ModalWithForm
       name="SignIn"
@@ -64,7 +74,12 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           </li>
         </ul>
         <div className="modal-form-buttons">
-          <button className="modal-form-submit" type="submit">
+          <button
+            className="modal-form-submit"
+            type="submit"
+            style={{backgroundColor: allFieldsFilledIn ? 'rgba(47,113,229,1)' : 'rgba(230,232,252,1'}}
+            disabled={!allFieldsFilledIn}
+          >
             {isLoading ? "Signing In..." : "Sign In"}
           </button>
           <button
