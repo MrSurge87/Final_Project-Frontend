@@ -37,12 +37,7 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
             <img src={SavedArticlesWhite} className="profile__savedArticles" />
           </Link>
           <div className="profile">
-            <Link to="/" className="profile__logo">
-              {/* <img
-                src={Rectangle}
-                alt="Rectangle"
-                className="profile__rectangle"
-              /> */}
+            <Link to="/profile" className="profile__logo">
               <div className="profile__details">
                 <p className="profile__username">{currentUser.name}</p>
                 <img
