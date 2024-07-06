@@ -19,9 +19,8 @@ import Rectangle from "../../images/Rectangle.svg";
 import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 
 const Header = ({ onSignIn, signedIn, onSignOut }) => {
-  const {currentUser} = useContext(CurrentUserContext);
+  const { currentUser } = useContext(CurrentUserContext);
   //console.log(currentUser);
- 
 
   return (
     <header className="Header">
@@ -39,34 +38,36 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           </Link>
           <div className="profile">
             <Link to="/" className="profile__logo">
-            <img src={Rectangle}  />
-              <p className="profile__username">{currentUser.name}</p>
-              <img
-                src={SignOutWhite}
-                alt="Sign Out Button"
-                onClick={onSignOut}
-                className="profile__signOut"
-              />
-        
+              {/* <img
+                src={Rectangle}
+                alt="Rectangle"
+                className="profile__rectangle"
+              /> */}
+              <div className="profile__details">
+                <p className="profile__username">{currentUser.name}</p>
+                <img
+                  src={SignOutWhite}
+                  alt="Sign Out Button"
+                  onClick={onSignOut}
+                  className="profile__signOut"
+                />
+              </div>
             </Link>
-            
           </div>
         </div>
       ) : (
-       
-          <div className="Header__buttons">
-            <div className="Home__button__sect">
-              <div className="Home__button">
-                <Link to="/" >
-                  <img src={HomeWhite} alt="home" />
-                </Link>
-              </div>
-            </div>       
-            <button className="SignIn__button" type="button" onClick={onSignIn}>
-              Sign In
-            </button>
+        <div className="Header__buttons">
+          <div className="Home__button__sect">
+            <div className="Home__button">
+              <Link to="/">
+                <img src={HomeWhite} alt="home" />
+              </Link>
+            </div>
           </div>
-       
+          <button className="SignIn__button" type="button" onClick={onSignIn}>
+            Sign In
+          </button>
+        </div>
       )}
     </header>
   );

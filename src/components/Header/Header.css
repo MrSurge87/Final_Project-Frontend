@@ -1,111 +1,3 @@
-/* .Header {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  border-bottom: 1px solid grey;
-  align-items: center;
-
-}
-
-
-.Header__title {
-  width: 200px;
-  height: 24px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  font-family: "Roboto Slab", sans-serif;
-  margin-left: 104px;
-  margin-top: 30px;
-}
-
-.Header__buttons {
-  margin-top: 19px;
-  display: flex;
-  align-items: center;
-  
-
-}
-
-.Header__buttons:before {
- 
-}
-
-
-.Home__button {
-  background: none;
-  color: white;
-  border: none;
-  width: 49px;
-  height: 24px;
-  padding: 0;
-  margin-right: 42px;
-  font-family: "Roboto Slab", sans-serif;
-}
-
-.Home__button:hover {
-  cursor: pointer;
-}
-
-
-.SignIn__button {
-  background: none;
-  color: white;
-  border-radius: 25px;
-  width: 176px;
-  height: 48px;
-  border: 1px solid white;
-  padding: 0;
-  margin-right: 104px;
-  font-family: "Roboto Slab", sans-serif;
-  margin-bottom: 13px;
-}
-.SignIn__button:hover {
-  cursor: pointer;
-}
-
-.profile {
-display:flex;
-}
-
-.profile__logo {
-  padding: 0;
-  margin-right: 104px;
- 
-}
-
-.profile__username {
-  color: white;
-  margin: 0;
-  font-family: "Roboto-slab", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
-  position: relative;
-  bottom:40px;
-  left:10px;
-}
-
-.profile__rectangle {
-  width: 112px;
-  height: 48px;
-}
-
-.profile__savedArticles {
-  font-family: "Roboto-slab", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
-.profile__signOut {
-  width: 24px;
-  height: 24px;
-  position:relative;
-  left:80px;
-  bottom: 65px;
-} */
-
 .Header {
   display: flex;
   justify-content: space-between;
@@ -177,7 +69,10 @@ margin-left: 64px;
 .profile__logo {
 display: flex;
 align-items: center;;
-
+width: 112px;
+height: 48px;
+border: 1px solid white;
+border-radius: 56px;
 }
 
 .profile__username {
@@ -187,9 +82,7 @@ align-items: center;;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
-  position: relative;
-  bottom:40px;
-  left:10px;
+  padding-left: 19px;
 }
 
 
@@ -202,8 +95,19 @@ align-items: center;;
   margin-left: 76px;
 }
 
+.profile__rectangle {
+  height: 50px;
+  width: 150px;
+}
+
+.profile__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
 .profile__signOut {
   width: 24px;
   height: 24px;
-
 }
