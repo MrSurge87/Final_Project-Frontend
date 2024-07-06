@@ -290,6 +290,7 @@ function App() {
                             />
                           }
                         />
+
                         <Route
                           exact
                           path="/saved-news"
@@ -302,38 +303,39 @@ function App() {
                           }
                         />
                       </Routes>
-
-                      {activeModal === "SignIn" && (
-                        <SignInModal
-                          isOpen={activeModal === "create"}
-                          onClose={handleCloseModal}
-                          signInUser={signInUser}
-                          signUpUser={signUpUser}
-                          openSignInModal={handleOpenSignInModal}
-                          openSignUpModal={handleOpenSignUpModal}
-                          isLoading={isLoading}
-                        />
-                      )}
-
-                      {activeModal === "SignUp" && (
-                        <SignUpModal
-                          isOpen={activeModal === "create"}
-                          onClose={handleCloseModal}
-                          signUpUser={signUpUser}
-                          handleSignUpUser={handleSignUpUser}
-                          onSubmit={handleOpenSignInModal}
-                          openSignInModal={handleOpenSignInModal}
-                          isLoading={isLoading}
-                        />
-                      )}
-                      {activeModal === "successModal" && (
-                        <SuccessModal
-                          isOpen={activeModal === "create"}
-                          onClose={handleCloseModal}
-                          onSubmit={handleOpenSignInModal}
-                        />
-                      )}
                     </div>
+
+                    {activeModal === "SignIn" && (
+                      <SignInModal
+                        isOpen={activeModal === "create"}
+                        onClose={handleCloseModal}
+                        signInUser={signInUser}
+                        signUpUser={signUpUser}
+                        openSignInModal={handleOpenSignInModal}
+                        openSignUpModal={handleOpenSignUpModal}
+                        isLoading={isLoading}
+                      />
+                    )}
+
+                    {activeModal === "SignUp" && (
+                      <SignUpModal
+                        isOpen={activeModal === "create"}
+                        onClose={handleCloseModal}
+                        signUpUser={signUpUser}
+                        handleSignUpUser={handleSignUpUser}
+                        onSubmit={handleOpenSignInModal}
+                        openSignInModal={handleOpenSignInModal}
+                        isLoading={isLoading}
+                      />
+                    )}
+                    {activeModal === "successModal" && (
+                      <SuccessModal
+                        isOpen={activeModal === "create"}
+                        onClose={handleCloseModal}
+                        onSubmit={handleOpenSignInModal}
+                      />
+                    )}
+
                     <About />
                     <Footer />
                   </div>

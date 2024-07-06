@@ -5,7 +5,7 @@ import { CurrentUserContext } from "../../context/CurrentUserContext";
 const ProtectedRoute = ({ children, ...props}) => {
     const { signedIn } = useContext(CurrentUserContext);
     return (
-        <Route {...props}>{signedIn ? children : <Navigate to={"/"} />}</Route>
+        signedIn ? children : <Navigate to={"/"} />
     );
 }
 

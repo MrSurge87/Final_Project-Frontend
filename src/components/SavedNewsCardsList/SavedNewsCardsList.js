@@ -23,6 +23,7 @@ const SavedNewsCardsList = ({ handleRemoveArticle }) => {
           ))}
       </div>
     </section>
+    
   );
 };
 
