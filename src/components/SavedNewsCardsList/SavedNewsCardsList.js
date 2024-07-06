@@ -1,5 +1,5 @@
 import "./SavedNewsCardsList.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import NewsCard from "../NewsCard/NewsCard";
 
 import { SavedArticlesContext } from "../../context/SavedArticlesContext";
@@ -8,6 +8,8 @@ import { CurrentUserContext } from "../../context/CurrentUserContext";
 const SavedNewsCardsList = ({ handleRemoveArticle }) => {
   const { savedArticles } = useContext(SavedArticlesContext);
   const { currentUser } = useContext(CurrentUserContext);
+ 
+  
 
   return (
     <section className="savedNews__newsCards">
@@ -21,7 +23,9 @@ const SavedNewsCardsList = ({ handleRemoveArticle }) => {
               handleRemoveArticle={handleRemoveArticle}
             />
           ))}
+       
       </div>
+  
     </section>
     
   );
