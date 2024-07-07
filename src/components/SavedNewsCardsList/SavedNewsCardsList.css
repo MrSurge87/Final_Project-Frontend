@@ -11,7 +11,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin-left: 104px;
-    
   }
 
- 
+  .newsCards__button {
+    background-color: rgba(255,255,255,1);
+    margin-top: 64px;
+  }
