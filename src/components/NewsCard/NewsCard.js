@@ -8,6 +8,8 @@ import { useLocation } from "react-router-dom";
 import NormalBookmark from "../../images/bookmark-normal.svg";
 import HoverBookmark from "../../images/bookmark-hover.svg";
 import SavedBookmark from "../../images/bookmark-saved.svg";
+import RemoveBookmark from "../../images/RemoveBookmark.svg";
+import RemoveBookmarkHover from "../../images/RemoveBookmark-hover.svg";
 
 const NewsCard = ({
   onSignUp,
@@ -86,13 +88,13 @@ const NewsCard = ({
 
       {!isSignedIn && (
         <>
-          <div
+          {/* <div
             className={`card__popup-text ${
               isHovered ? "" : "card__popup-text_hidden"
             }`}
           >
             Sign In To Save Articles
-          </div>
+          </div> */}
           <button
             className="card__button-bookmark"
             onClick={onSignUp}
