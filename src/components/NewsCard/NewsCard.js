@@ -28,13 +28,27 @@ const NewsCard = ({
     setCurrentPage(location.pathname);
   }, [location.pathname, setCurrentPage]);
 
-  const formatDate = new Date(
-    newsData.publishedAt || newsData.date
-  ).toLocaleString("default", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+  if (newsData) {
+    const publishedAt = newsData.publishedAt || "No Date Available";
+    const formatDate = new Date(
+      newsData.publihsedAt || newsData.date || Date.now()
+    ).toLocaleString("default", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    console.log(publishedAt, formatDate);
+  } else {
+    console.error("newsData is undefined");
+  }
+
+  // const formatDate = new Date(
+  //   newsData?.publishedAt || newsData.date
+  // ).toLocaleString("default", {
+  //   month: "long",
+  //   day: "numeric",
+  //   year: "numeric",
+  // });
 
   const handleBookmarkClick = () => {
     const token = localStorage.getItem("jwt");
@@ -115,7 +129,7 @@ const NewsCard = ({
         className="card__image"
       />
       <div className="card__text">
-        <p className="card__date-published"> {formatDate}</p>
+        <p className="card__date-published"> { newsData.formatDate} </p>
         <h3 className="card__title">{newsData.title}</h3>
         <p className="card__content">{newsData.text || newsData.description}</p>
         {newsData.source && (

@@ -33,6 +33,7 @@ import SuccessModal from "./components/SuccessModal/SuccessModal.js";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.js";
 import SavedNews from "./components/SavedNews/SavedNews.js";
 import SearchForm from "./components/SearchForm/SearchForm.js";
+import NewsCard from "./components/NewsCard/NewsCard.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -198,7 +199,6 @@ function App() {
         setHasSearched(true);
         setSearching(false);
         setSearchError(false);
-        console.log(res.articles);
       })
       .catch((err) => {
         console.error(err);
@@ -304,11 +304,21 @@ function App() {
                           }
                         />
 
-                        <Route exact path="/profile" element={
-                        <ProtectedRoute path="/profile">
-                          <SearchForm />
-                        </ProtectedRoute>
-                        }
+                        <Route
+                          exact
+                          path="/profile"
+                          element={
+                            <ProtectedRoute path="/profile">
+                              <SearchForm
+                                handleSearch={handleSearch}
+                                setSearchResults={setSearchResults}
+                                handleSaveArticle={handleSaveArticle}
+                                searchError={searchError}
+                                signedIn={signedIn}
+                              />
+                              <NewsCard />
+                            </ProtectedRoute>
+                          }
                         />
                       </Routes>
                     </div>
