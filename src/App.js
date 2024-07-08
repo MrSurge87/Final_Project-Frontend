@@ -32,6 +32,7 @@ import SignUpModal from "./components/SignUpModal/SignUpModal";
 import SuccessModal from "./components/SuccessModal/SuccessModal.js";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.js";
 import SavedNews from "./components/SavedNews/SavedNews.js";
+import SearchForm from "./components/SearchForm/SearchForm.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -301,6 +302,13 @@ function App() {
                               />
                             </ProtectedRoute>
                           }
+                        />
+
+                        <Route exact path="/profile" element={
+                        <ProtectedRoute path="/profile">
+                          <SearchForm />
+                        </ProtectedRoute>
+                        }
                         />
                       </Routes>
                     </div>

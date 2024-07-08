@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./SignInModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
@@ -77,11 +78,16 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           <button
             className="modal-form-submit"
             type="submit"
-            style={{backgroundColor: allFieldsFilledIn ? 'rgba(47,113,229,1)' : 'rgba(230,232,252,1'}}
+            style={{
+              backgroundColor: allFieldsFilledIn
+                ? "rgba(47,113,229,1)"
+                : "rgba(230,232,252,1",
+            }}
             disabled={!allFieldsFilledIn}
           >
             {isLoading ? "Signing In..." : "Sign In"}
           </button>
+
           <button
             className="modal__signUp"
             type="button"

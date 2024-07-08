@@ -6,12 +6,6 @@ import { useState, useContext } from "react"
 
 
 const SavedNews = ({ handleRemoveArticle }) => {
-
-  const [ cardsShown, setCardsShown ] = useState(3);
-  const { searchResults } = useContext(SearchResultContext);
-  const increaseShownCards = () => {
-    setCardsShown(cardsShown);
-  }
     
     return (
         <section className="saved-article">
