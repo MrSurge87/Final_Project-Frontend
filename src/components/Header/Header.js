@@ -30,14 +30,14 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
 
       {signedIn ? (
         <div className="Header__buttons">
-          <Link to="/profile" className="Home__button">
+          <Link to="/" className="Home__button">
             <img src={HomeWhite} alt="home" />
           </Link>
           <Link to="/saved-news">
             <img src={SavedArticlesWhite} className="profile__savedArticles" />
           </Link>
           <div className="profile">
-            <Link to="/profile" className="profile__logo">
+            <Link to="/" className="profile__logo">
               <div className="profile__details">
                 <p className="profile__username">{currentUser.name}</p>
                 <img

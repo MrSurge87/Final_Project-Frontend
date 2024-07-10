@@ -304,22 +304,7 @@ function App() {
                           }
                         />
 
-                        <Route
-                          exact
-                          path="/profile"
-                          element={
-                            <ProtectedRoute path="/profile">
-                              <SearchForm
-                                handleSearch={handleSearch}
-                                setSearchResults={setSearchResults}
-                                handleSaveArticle={handleSaveArticle}
-                                searchError={searchError}
-                                signedIn={signedIn}
-                              />
-                              <NewsCard />
-                            </ProtectedRoute>
-                          }
-                        />
+                    
                       </Routes>
                     </div>
 

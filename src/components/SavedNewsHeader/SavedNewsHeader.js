@@ -2,6 +2,7 @@ import "./SavedNewsHeader.css";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { SavedArticlesContext } from "../../context/SavedArticlesContext";
+import Header from "../Header/Header";
 
 const SavedNewsHeader = () => {
   const { currentUser } = useContext(CurrentUserContext);
