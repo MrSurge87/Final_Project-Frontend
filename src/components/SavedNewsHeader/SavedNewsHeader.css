@@ -1,6 +1,6 @@
 .saved-articles {
     padding: 40px 104px 56px;
-    background-color: rgba(245,246,247,1);
+    background-color: rgba(255,255,255,1);
   }
   
   .saved-articles__container {
@@ -43,4 +43,9 @@
   .saved-articles__keywords {
     margin-left: 3px;
     font-weight: 600;
+  }
+
+  .Header--saved {
+    background-color: rgba(255,255,255,1);
+    
   }

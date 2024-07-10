@@ -1,7 +1,7 @@
 .savedNews__newsCards {
     display: flex;
     flex-direction: column;
-    background-color: #f5f6f7;
+    background-color: rgba(245,246,247,1);
     padding: 62px 102px;
     margin-bottom: 40px;
   }

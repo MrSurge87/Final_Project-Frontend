@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./SignInModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
@@ -75,6 +76,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           </li>
         </ul>
         <div className="modal-form-buttons">
+         
           <button
             className="modal-form-submit"
             type="submit"
@@ -87,7 +89,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           >
             {isLoading ? "Signing In..." : "Sign In"}
           </button>
-
+          
           <button
             className="modal__signUp"
             type="button"
@@ -95,6 +97,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           >
             or Sign Up
           </button>
+          
         </div>
       </div>
     </ModalWithForm>

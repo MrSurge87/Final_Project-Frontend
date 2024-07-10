@@ -74,7 +74,7 @@ const NewsCard = ({
           </div>
           <button
             className="card__button-delete"
-            onClickl={handleRemoveClick}
+            onClick={handleRemoveClick}
             onMouseEnter={() => {
               setIsHovered(true);
             }}

@@ -2,7 +2,7 @@ import "./Header.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 //Import React-Router-Dom
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 //Import Context
 import { useContext } from "react";
@@ -15,33 +15,59 @@ import NewsExplorerBlack from "../../images/NewsExplorer-Black.svg";
 import SignOutWhite from "../../images/signout-white.svg";
 import SignOutBlack from "../../images/signout-black.svg";
 import HomeWhite from "../../images/Home-White.svg";
+import HomeBlack from "../../images/Home-Black.svg";
 import Rectangle from "../../images/Rectangle.svg";
 import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
+import SavedArticlesBlack from "../../images/Saved-Articles-Black.svg";
 
 const Header = ({ onSignIn, signedIn, onSignOut }) => {
   const { currentUser } = useContext(CurrentUserContext);
-  //console.log(currentUser);
+  const location = useLocation();
+  const isSavedNewsHeader = location.pathname === "/saved-news";
 
   return (
-    <header className="Header">
+    <header
+      className={`Header ${
+        isSavedNewsHeader ? "Header--saved" : "Header--main"
+      }`}
+    >
       <Link to="/" className="Header__title">
-        <img src={NewsExplorerWhtie} alt="Header Logo" />
+        <img
+          src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhtie}
+          alt="News Explorer"
+        />
       </Link>
 
       {signedIn ? (
         <div className="Header__buttons">
           <Link to="/" className="Home__button">
-            <img src={HomeWhite} alt="home" />
+            <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
           </Link>
           <Link to="/saved-news">
-            <img src={SavedArticlesWhite} className="profile__savedArticles" />
+            <img
+              src={isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite}
+              alt="Saved Articles Title"
+              className="profile__savedArticles"
+            />
           </Link>
           <div className="profile">
-            <Link to="/" className="profile__logo">
+            <Link
+              to="/"
+              className={` ${
+                isSavedNewsHeader ? "profile__logo-savedNews" : "profile__logo"
+              }`}
+            >
               <div className="profile__details">
-                <p className="profile__username">{currentUser.name}</p>
+                {isSavedNewsHeader ? (
+                  <p className="profile__username-savedNews">
+                    {currentUser.name}
+                  </p>
+                ) : (
+                  <p className="profile__username">{currentUser.name}</p>
+                )}
+
                 <img
-                  src={SignOutWhite}
+                  src={isSavedNewsHeader ? SignOutBlack : SignOutWhite}
                   alt="Sign Out Button"
                   onClick={onSignOut}
                   className="profile__signOut"

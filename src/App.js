@@ -265,16 +265,17 @@ function App() {
                 value={{ savedArticles, setSavedArticles }}
               >
                 <KeyWordContext.Provider value={{ keyword, setKeyword }}>
-                  <div className="App">
-                    <div className="Search">
-                      <Header
-                        onSignIn={handleOpenSignInModal}
-                        onSignUp={handleOpenSignUpModal}
-                        signUpUser={signUpUser}
-                        signedIn={signedIn}
-                        onSignOut={signOutUser}
-                      />
-
+                <div className="App">
+                <div className="Search">
+                  <Header
+                    onSignIn={handleOpenSignInModal}
+                    onSignUp={handleOpenSignUpModal}
+                    signUpUser={signUpUser}
+                    signedIn={signedIn}
+                    onSignOut={signOutUser}
+                  />
+                  
+                 
                       <Routes>
                         <Route
                           exact
@@ -303,8 +304,6 @@ function App() {
                             </ProtectedRoute>
                           }
                         />
-
-                    
                       </Routes>
                     </div>
 
