@@ -149,7 +149,7 @@ function App() {
           checkToken(res.token).then((data) => {
             setCurrentUser(data);
             setSignedIn(true);
-            navigate("/profile");
+            navigate("/");
           });
         }
         handleCloseModal();

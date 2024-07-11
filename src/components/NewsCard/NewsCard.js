@@ -23,6 +23,7 @@ const NewsCard = ({
   const { savedArticles } = useContext(SavedArticlesContext);
   const location = useLocation();
   const [isHovered, setIsHovered] = useState(false);
+  const [isBookmarked, setIsBookmarked] = useState(false);
 
   useEffect(() => {
     setCurrentPage(location.pathname);
@@ -37,22 +38,15 @@ const NewsCard = ({
       day: "numeric",
       year: "numeric",
     });
-    console.log(publishedAt, formatDate);
   } else {
     console.error("newsData is undefined");
   }
 
-  // const formatDate = new Date(
-  //   newsData?.publishedAt || newsData.date
-  // ).toLocaleString("default", {
-  //   month: "long",
-  //   day: "numeric",
-  //   year: "numeric",
-  // });
 
   const handleBookmarkClick = () => {
     const token = localStorage.getItem("jwt");
     handleSaveArticle({ newsData, keyword, token });
+    setIsBookmarked(!isBookmarked);
   };
 
   const handleRemoveClick = () => {
@@ -84,6 +78,7 @@ const NewsCard = ({
           ></button>
         </>
       )}
+      .
 
       {isSignedIn && currentPage === "/" ? (
         <button
@@ -91,26 +86,23 @@ const NewsCard = ({
             savedArticles.some(
               (savedArtcile) => savedArticles.link === newsData.url
             )
-              ? "card__button-bookmark_marked"
+              ? <img src={SavedBookmark}/>
               : ""
           }`}
-          onClick={handleBookmarkClick}
+          onClick={!isBookmarked ? handleBookmarkClick : handleRemoveClick}
         ></button>
       ) : (
         ""
       )}
 
+        
+    
+
       {!isSignedIn && (
         <>
-          {/* <div
-            className={`card__popup-text ${
-              isHovered ? "" : "card__popup-text_hidden"
-            }`}
-          >
-            Sign In To Save Articles
-          </div> */}
+        
           <button
-            className="card__button-bookmark"
+            className="card__button-bookmark-notSignedIn"
             onClick={onSignUp}
             onMouseEnter={() => {
               setIsHovered(true);

@@ -59,7 +59,6 @@
   }
   
   .card__button-bookmark {
-    /* background: transparent url(../../images/bookmark-normal.svg); */
     width: 40px;
     height: 40px;
     border: none;
@@ -71,13 +70,26 @@
     right: 24px;
     background-image: url("../../images/RemoveBookmark.svg");
   }
+
+  .card__button-bookmark-notSignedIn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background-image: url("../../images/bookmark-normal.svg");
+  }
   
-  .card__button-bookmark:hover {
-    background-image: url("../../images/RemoveBookmark-hover.svg");
+  .card__button-bookmark-notSignedIn:hover {
+    background-image: url("../../images//bookmark-hover.svg");
   }
   
   .card__button-bookmark_marked {
-    /* background: transparent url(../../images/bookmark-clicked.svg); */
+    background-image: url("../../images//bookmark-saved.svg");
   }
   
   .card__image {
