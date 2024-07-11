@@ -25,10 +25,6 @@ const SignUpModal = ({
     setUsername(e.target.value);
   };
 
-  console.log("Email:", email);
-  console.log("Password", password);
-  console.log("Username", username);
-
   const filedsFilledIn = () => {
     return email.trim() !== "" && password.trim() !== "" && username.trim() !=="";
   };

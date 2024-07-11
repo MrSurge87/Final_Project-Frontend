@@ -24,7 +24,7 @@ const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp }) => 
                 <NewsCard
                   newsData={result}
                   key={result.url}
-                  handleSaveArtcile={handleSaveArticle}
+                  handleSaveArticle={handleSaveArticle}
                   handleRemovearticle={handleRemoveArticle}
                   onSignUp={onSignUp}
                 />

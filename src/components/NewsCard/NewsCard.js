@@ -18,7 +18,7 @@ const NewsCard = ({
   handleRemoveArticle,
 }) => {
   const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
-  const { isSignedIn } = useContext(CurrentUserContext);
+  const { signedIn } = useContext(CurrentUserContext);
   const { keyword } = useContext(KeyWordContext);
   const { savedArticles } = useContext(SavedArticlesContext);
   const location = useLocation();
@@ -43,7 +43,7 @@ const NewsCard = ({
   }
 
   useEffect(() => {
-    const isSaved = savedArticles.some(article => article.link === newsData.url);
+    const isSaved = savedArticles.some(article =>  newsData.url);
     setIsBookmarked(isSaved);
     console.log('Initial isBookmarked state:', isSaved);
   }, [savedArticles, newsData.url]);
@@ -89,31 +89,44 @@ const NewsCard = ({
             onMouseLeave={() => {
               setIsHovered(false);
             }}
-          ></button>
+          
+          ><img src={RemoveBookmark}alt="Remove bookmark" /></button>
         </>
       )}
       .
 
-      {isSignedIn && currentPage === "/" ? (
+      {signedIn && currentPage === "/" ? (
         <button
           className={`card__button-bookmark ${isBookmarked ? 'card__button-bookmark_marked' : ''}`}
           onClick={handleBookmarkClick}
-        ><img src={isBookmarked ? SavedBookmark : NormalBookmark} alt="Bookmark"/></button>
+        >
+          <img src={isBookmarked ? SavedBookmark : NormalBookmark} alt="Bookmark"/>
+          </button>
       ) : (
-        !isSignedIn && (
+        !signedIn && (
           <button className="card__button-bookmark-notSignedIn" onClick={onSignUp} onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)} >
-            <img src={NormalBookmark} alt="Bookmark not Signed In"/>
+
           </button>
         )
       )}
 
+      {/* {signedIn && currentPage === "/" ? (
+        <button className={`card__button-bookmark ${savedArticles.some(
+          (savedArticle) => savedArticles.link === newsData.url
+        )? "card__button-bookmark_marked" : ""}`}
+        onClick={handleBookmarkClick}></button>
+      ) :( "") } */}
         
-    
-
-      {/* {!isSignedIn && (
+      {!signedIn &&  (
         <>
-        
+         <div
+            className={`card__popup-text ${
+              isHovered ? "" : "card__popup-text_hidden"
+            }`}
+          >
+            Sign in to save articles
+          </div>
           <button
             className="card__button-bookmark-notSignedIn"
             onClick={onSignUp}
@@ -124,10 +137,10 @@ const NewsCard = ({
             onMouseLeave={() => {
               setIsHovered(false);
             }}
-          >
+          > 
           </button>
         </>
-      )} */}
+      )}
 
       <img
         src={newsData.image || newsData.urlToImage}
