@@ -42,11 +42,25 @@ const NewsCard = ({
     console.error("newsData is undefined");
   }
 
+  useEffect(() => {
+    const isSaved = savedArticles.some(article => article.link === newsData.url);
+    setIsBookmarked(isSaved);
+    console.log('Initial isBookmarked state:', isSaved);
+  }, [savedArticles, newsData.url]);
+
 
   const handleBookmarkClick = () => {
     const token = localStorage.getItem("jwt");
-    handleSaveArticle({ newsData, keyword, token });
-    setIsBookmarked(!isBookmarked);
+    if(token) {
+      console.log("Token is present:", token);
+      handleSaveArticle({ newsData, keyword, token });
+      setIsBookmarked(prev => {
+        console.log("Setting isBookmkared to:", !prev);
+        return !prev;
+      });
+    } else {
+      console.log("User not signed in");
+    }
   };
 
   const handleRemoveClick = () => {
@@ -82,28 +96,28 @@ const NewsCard = ({
 
       {isSignedIn && currentPage === "/" ? (
         <button
-          className={`card__button-bookmark ${
-            savedArticles.some(
-              (savedArtcile) => savedArticles.link === newsData.url
-            )
-              ? <img src={SavedBookmark}/>
-              : ""
-          }`}
-          onClick={!isBookmarked ? handleBookmarkClick : handleRemoveClick}
-        ></button>
+          className={`card__button-bookmark ${isBookmarked ? 'card__button-bookmark_marked' : ''}`}
+          onClick={handleBookmarkClick}
+        ><img src={isBookmarked ? SavedBookmark : NormalBookmark} alt="Bookmark"/></button>
       ) : (
-        ""
+        !isSignedIn && (
+          <button className="card__button-bookmark-notSignedIn" onClick={onSignUp} onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)} >
+            <img src={NormalBookmark} alt="Bookmark not Signed In"/>
+          </button>
+        )
       )}
 
         
     
 
-      {!isSignedIn && (
+      {/* {!isSignedIn && (
         <>
         
           <button
             className="card__button-bookmark-notSignedIn"
             onClick={onSignUp}
+            
             onMouseEnter={() => {
               setIsHovered(true);
             }}
@@ -113,7 +127,7 @@ const NewsCard = ({
           >
           </button>
         </>
-      )}
+      )} */}
 
       <img
         src={newsData.image || newsData.urlToImage}
