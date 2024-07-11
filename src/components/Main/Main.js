@@ -16,7 +16,8 @@ const Main = ({
   handleRemoveArticle,
   searchError,
   isLoading,
-  signedIn
+  signedIn,
+  handleOpenSignUpModal
 }) => {
 
   //console.log('Main: handleSearch:', handleSearch);
@@ -38,6 +39,7 @@ const Main = ({
             onSignUp={onSignUp}
             handleSaveArticle={handleSaveArticle}
             handleRemoveArticle={handleRemoveArticle}
+            handleOpenSignUpModal={handleOpenSignUpModal}
           />
         ) : hasSearched && searchResults.length === 0 ? (
           <NothingFound />

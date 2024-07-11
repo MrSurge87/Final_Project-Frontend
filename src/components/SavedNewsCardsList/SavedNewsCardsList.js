@@ -6,7 +6,7 @@ import { SavedArticlesContext } from "../../context/SavedArticlesContext";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { SearchResultContext } from "../../context/SearchResultContext";
 
-const SavedNewsCardsList = ({ handleRemoveArticle }) => {
+const SavedNewsCardsList = ({ handleRemoveArticle, handleOpenSignUpModal }) => {
   const { savedArticles } = useContext(SavedArticlesContext);
   const { currentUser } = useContext(CurrentUserContext);
 
@@ -28,6 +28,7 @@ const SavedNewsCardsList = ({ handleRemoveArticle }) => {
               newsData={article}
               key={article.link}
               handleRemoveArticle={handleRemoveArticle}
+              handleOpenSignUpModal={handleOpenSignUpModal}
             />
           ))}
          

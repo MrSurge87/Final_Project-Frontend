@@ -289,6 +289,7 @@ function App() {
                               searchError={searchError}
                               handleSearch={handleSearch}
                               signedIn={signedIn}
+                              handleOpenSignUpModal={handleOpenSignUpModal}
                             />
                           }
                         />
@@ -300,6 +301,7 @@ function App() {
                             <ProtectedRoute path="/saved-news">
                               <SavedNews
                                 handleRemoveArticle={handleRemoveArticle}
+                                handleOpenSignUpModal={handleOpenSignUpModal}
                               />
                             </ProtectedRoute>
                           }

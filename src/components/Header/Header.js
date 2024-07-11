@@ -52,7 +52,7 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           </Link>
           <div className="profile">
             <Link
-              to="/"
+              to="/saved-news"
               className={` ${
                 isSavedNewsHeader ? "profile__logo-savedNews" : "profile__logo"
               }`}

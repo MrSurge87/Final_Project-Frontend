@@ -16,6 +16,7 @@ const NewsCard = ({
   newsData,
   handleSaveArticle,
   handleRemoveArticle,
+  handleOpenSignUpModal
 }) => {
   const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
   const { signedIn } = useContext(CurrentUserContext);
@@ -129,7 +130,7 @@ const NewsCard = ({
           </div>
           <button
             className="card__button-bookmark-notSignedIn"
-            onClick={onSignUp}
+            onClick={handleOpenSignUpModal}
             
             onMouseEnter={() => {
               setIsHovered(true);

@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { SearchResultContext } from "../../context/SearchResultContext";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
 
-const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp }) => {
+const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp, handleOpenSignUpModal}) => {
   const [cardsShown, setCardsShown] = useState(3);
   const { searchResults } = useContext(SearchResultContext);
   const { hasSearched } = useContext(HasSearchedContext);
@@ -27,6 +27,7 @@ const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp }) => 
                   handleSaveArticle={handleSaveArticle}
                   handleRemovearticle={handleRemoveArticle}
                   onSignUp={onSignUp}
+                  handleOpenSignUpModal={handleOpenSignUpModal}
                 />
               );
             })}
