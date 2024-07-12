@@ -68,7 +68,11 @@
     position: absolute;
     top: 24px;
     right: 24px;
-    background-image: url("../../images/RemoveBookmark.svg");
+    background-image: url('../../images//bookmark-normal.svg');
+  }
+
+  .card__button-bookmark:hover {
+    background-image: url('../../images/bookmark-hover.svg');
   }
 
   .card__button-bookmark-notSignedIn {

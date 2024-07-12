@@ -213,8 +213,9 @@ function App() {
       addSavedArticle(newsData, keyword, token)
         .then((data) => {
           setSavedArticles([data.data, ...savedArticles]);
-          const savedArticleId = data.data._id;
-          const newArticle = { ...newsData, _id: savedArticleId };
+          console.log(data.id);
+          const savedArticleId = data.data.id;
+          const newArticle = { ...newsData, id: savedArticleId };
           const newSearchResults = searchResults.map((article) =>
             article.url === newsData.url ? newArticle : article
           );
@@ -225,10 +226,10 @@ function App() {
       removeSavedArticle(newsData, token)
         .then(() => {
           const removeNewsArticles = savedArticles.filter(
-            (article) => article._id !== newsData._id
+            (article) => article.id !== newsData.id
           );
           setSavedArticles(removeNewsArticles);
-          const newArticle = { ...newsData, _id: "" };
+          const newArticle = { ...newsData, id: "" };
           const newSearchResults = searchResults.map((article) =>
             article.url === newsData.url ? newArticle : article
           );
@@ -243,7 +244,7 @@ function App() {
     removeSavedArticle(newsData, token)
       .then(() => {
         const removeNewsArticles = savedArticles.filter(
-          (article) => article._id !== newsData._id
+          (article) => article.id !== newsData.id
         );
         setSavedArticles(removeNewsArticles);
       })
