@@ -40,15 +40,16 @@
   width: 40px;
   border: none;
   padding: 0;
-  position: fixed;
+  position: relative;
   overflow: hidden;
-  top: 500px;
-  right: 1030px;
-}
-
-.close__button:hover {
+  top: -40px;
+  right: -40px;
+  display: flex;
+  margin-left: auto;
   cursor: pointer;
 }
+
+
 
 .inputs {
   list-style-type: none;

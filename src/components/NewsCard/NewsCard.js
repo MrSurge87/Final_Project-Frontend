@@ -118,12 +118,7 @@ const NewsCard = ({
           ></button>
         )
       )}
-      {/* {signedIn && currentPage === "/" ? (
-        <button className={`card__button-bookmark ${savedArticles.some(
-          (savedArticle) => savedArticles.link === newsData.url
-        )? "card__button-bookmark_marked" : ""}`}
-        onClick={handleBookmarkClick}></button>
-      ) :( "") } */}
+
       {!signedIn && (
         <>
           <div
