@@ -212,9 +212,8 @@ function App() {
     if (!savedArticles.some((article) => article.link === newsData.url)) {
       addSavedArticle(newsData, keyword, token)
         .then((data) => {
-          setSavedArticles([data.data, ...savedArticles]);
-          console.log(data.id);
-          const savedArticleId = data.data.id;
+          setSavedArticles([data, ...savedArticles]);
+          const savedArticleId = data.id;
           const newArticle = { ...newsData, id: savedArticleId };
           const newSearchResults = searchResults.map((article) =>
             article.url === newsData.url ? newArticle : article
