@@ -72,16 +72,23 @@ function App() {
   };
 
   // Function To Register User
-  const handleSignUpUser = (values) => {
-    const makeRequest = () => {
-      return signUp(values).then((user) => {
-        if (user) {
-          handleSuccessModal();
-        }
-      });
+  // const handleSignUpUser = (values) => {
+  //   const makeRequest = () => {
+  //     return signUp(values).then((user) => {
+  //       if (user) {
+  //         handleSuccessModal();
+  //       }
+  //     });
+  //   };
+  //   handleSubmit(makeRequest);
+  // };
+
+    //Sign Up User
+    const signUpUser = (values) => {
+      handleSubmit(() => signUp(values).then(() => signInUser(values)));
+      handleSuccessModal();
+      console.log("success modal open");
     };
-    handleSubmit(makeRequest);
-  };
 
   // Use Effects
 
@@ -171,10 +178,7 @@ function App() {
     navigate("/");
   };
 
-  //Sign Up User
-  const signUpUser = (values) => {
-    handleSubmit(() => signUp(values).then(() => signInUser(values)));
-  };
+
 
   //Check Sign In Token
   function checkSignedIn(token) {
@@ -326,19 +330,20 @@ function App() {
                         isOpen={activeModal === "create"}
                         onClose={handleCloseModal}
                         signUpUser={signUpUser}
-                        handleSignUpUser={handleSignUpUser}
+                        // handleSignUpUser={handleSignUpUser}
                         onSubmit={handleOpenSignInModal}
                         openSignInModal={handleOpenSignInModal}
                         isLoading={isLoading}
+                        handleSuccessModal={handleSuccessModal}
                       />
                     )}
-                    {activeModal === "successModal" && (
+                    
                       <SuccessModal
-                        isOpen={activeModal === "create"}
+                        isOpen={activeModal === "successModal"}
                         onClose={handleCloseModal}
                         onSubmit={handleOpenSignInModal}
                       />
-                    )}
+                     
 
                     <About />
                     <Footer />

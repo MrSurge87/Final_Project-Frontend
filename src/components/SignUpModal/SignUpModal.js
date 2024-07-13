@@ -8,6 +8,7 @@ const SignUpModal = ({
   openSignInModal,
   isLoading,
   serverError,
+  handleSuccessModal,
 }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,6 +34,7 @@ const SignUpModal = ({
     e.preventDefault();
     if (filedsFilledIn()) {
       signUpUser({ email, password, username });
+      
     }
   };
 
@@ -106,6 +108,7 @@ const SignUpModal = ({
               className="modal-form-submit"
               type="submit"
               onClick={signUpUser}
+              onSubmit={handleSuccessModal}
               style={{backgroundColor: allFieldsFilledIn ? 'rgba(47,113,229,1)' : 'rgba(230,232,252,1'}}
               disabled={!allFieldsFilledIn}
             >
