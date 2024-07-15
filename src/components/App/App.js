@@ -1,39 +1,39 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
-import About from "./components/About/About.js";
+import Header from "../Header/Header.js";
+import Main from "../Main/Main.js";
+import Footer from "../Footer/Footer.js";
+import About from "../About/About.js";
 
 // CONTEXT IMPORTS
-import { CurrentUserContext } from "./context/CurrentUserContext.js";
-import { CurrentPageContext } from "./context/CurrentPageContext.js";
-import { HasSearchedContext } from "./context/HasSearchedContext.js";
-import { SearchResultContext } from "./context/SearchResultContext.js";
-import { SavedArticlesContext } from "./context/SavedArticlesContext.js";
-import { KeyWordContext } from "./context/KeyWordContext.js";
+import { CurrentUserContext } from "../../context/CurrentUserContext.js";
+import { CurrentPageContext } from "../../context/CurrentPageContext.js";
+import { HasSearchedContext } from "../../context/HasSearchedContext.js";
+import { SearchResultContext } from "../../context/SearchResultContext.js";
+import { SavedArticlesContext } from "../../context/SavedArticlesContext.js";
+import { KeyWordContext } from "../../context/KeyWordContext.js";
 
 // REACT IMPORTS
 import { useEffect, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 
 // UTILITY IMPORTS
-import { checkToken, signUp, authorization } from "./utils/Auth.js";
+import { checkToken, signUp, authorization } from "../../utils/Auth.js";
 import {
   getSavedArticles,
   addSavedArticle,
   removeSavedArticle,
-} from "./utils/Api.js";
-import { getSearchResults } from "./utils/NewsApi.js";
+} from "../../utils/Api.js";
+import { getSearchResults } from "../../utils/NewsApi.js";
 
 // MODAL IMPORTS
-import SignInModal from "./components/SignInModal/SignInModal";
-import SignUpModal from "./components/SignUpModal/SignUpModal";
-import SuccessModal from "./components/SuccessModal/SuccessModal.js";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute.js";
-import SavedNews from "./components/SavedNews/SavedNews.js";
-import SearchForm from "./components/SearchForm/SearchForm.js";
-import NewsCard from "./components/NewsCard/NewsCard.js";
+import SignInModal from "../SignInModal/SignInModal.js";
+import SignUpModal from "../SignUpModal/SignUpModal.js";
+import SuccessModal from "../SuccessModal/SuccessModal.js";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.js";
+import SavedNews from "../SavedNews/SavedNews.js";
+import SearchForm from "../SearchForm/SearchForm.js";
+import NewsCard from "../NewsCard/NewsCard.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
