@@ -48,21 +48,21 @@ const NewsCard = ({
       (article) => article.id === newsData.url
     );
     setIsBookmarked(isSaved);
-    console.log("Initial isBookmarked state:", isSaved);
+    
   }, [savedArticles, newsData.url]);
 
 
   const handleBookmarkClick = () => {
     const token = localStorage.getItem("jwt");
     if (token) {
-      console.log("Token is present:", token);
+     
       handleSaveArticle({ newsData, keyword, token });
       setIsBookmarked((prev) => {
-        console.log("Setting isBookmkared to:", !prev);
+        
         return !prev;
       });
     } else {
-      console.log("User not signed in");
+     
     }
   };
 

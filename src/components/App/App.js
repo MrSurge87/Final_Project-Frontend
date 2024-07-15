@@ -146,7 +146,7 @@ function App() {
       })
       .catch(console.error)
       .finally(() => setIsLoading(false));
-      console.log("success modal open");
+      
   }
 
   //Sign In User
