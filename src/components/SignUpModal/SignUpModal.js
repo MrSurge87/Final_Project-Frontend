@@ -104,6 +104,7 @@ const SignUpModal = ({
             </li>
           </ul>
           <div className="modal-form-buttons">
+            
             <button
               className="modal-form-submit"
               type="submit"

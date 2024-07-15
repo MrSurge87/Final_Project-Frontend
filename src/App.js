@@ -86,8 +86,7 @@ function App() {
     //Sign Up User
     const signUpUser = (values) => {
       handleSubmit(() => signUp(values).then(() => signInUser(values)));
-      handleSuccessModal();
-      console.log("success modal open");
+      
     };
 
   // Use Effects
@@ -141,9 +140,13 @@ function App() {
   function handleSubmit(request) {
     setIsLoading(true);
     request()
-      .then(handleCloseModal)
+      .then(() => {
+        handleCloseModal();
+        return handleSuccessModal();
+      })
       .catch(console.error)
       .finally(() => setIsLoading(false));
+      console.log("success modal open");
   }
 
   //Sign In User
@@ -330,7 +333,6 @@ function App() {
                         isOpen={activeModal === "create"}
                         onClose={handleCloseModal}
                         signUpUser={signUpUser}
-                        // handleSignUpUser={handleSignUpUser}
                         onSubmit={handleOpenSignInModal}
                         openSignInModal={handleOpenSignInModal}
                         isLoading={isLoading}
