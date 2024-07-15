@@ -1,5 +1,5 @@
 {
-  "homepage": "http://MrSurge87.github.io/Final_Project-Frontend",
+  "homepage": "https://mrsurge87.github.io/Final_Project-Frontend/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predelpoy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
