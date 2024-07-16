@@ -40,18 +40,16 @@
     background-color: white;
     border-radius: 20px;
     position: relative;
-    font-family: "Inter", Arial, sans-serif;
+    font-family: "Inter400", sans-serif;
     font-size: 12px;
     line-height: 14.52px;
-    font-weight: 400;
     color: rgba(47, 113, 229, 1);
   }
   
   .success-modal__title {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto900", sans-serif;
     font-size: 24px;
     line-height: 28.13px;
-    font-weight: 900;
     color: black;
     margin: 0px 0px 22px;
   }
@@ -62,4 +60,14 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  @font-face {
+    font-family: "Inter400";
+    src: local("Inter400"), url(../../vendor/Fonts/inter-400-regular.woff);
+  }
+
+  @font-face {
+    font-family: "Roboto900";
+    src: local("Roboto900"), url(../../vendor/Fonts/roboto-900.woff);
   }
