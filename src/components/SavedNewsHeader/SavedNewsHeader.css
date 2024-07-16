@@ -10,26 +10,24 @@
   }
   
   .saved-articles__title {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
     color: rgba(26, 27, 34, 0.5);
   }
   
   .saved-articles__header {
     margin: 0;
-    font-family: "Roboto-Slab", Arial, sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 40px;
     line-height: 46px;
-    font-weight: 400;
     color: rgba(26, 27, 34, 1);
   }
   
   .saved-articles__keywords_container {
     display: flex;
     align-items: center;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 18px;
     line-height: 24px;
     color: rgba(26, 27, 34, 1);
@@ -37,15 +35,25 @@
   }
   
   .saved-articles__keywords_title {
+    font-family: "Roboto400";
     font-weight: 400;
   }
   
   .saved-articles__keywords {
     margin-left: 3px;
-    font-weight: 600;
+    font-family: "Roboto700";
   }
 
   .Header--saved {
-    background-color: rgba(255,255,255,1);
-    
+    background-color: rgba(255,255,255,1); 
+  }
+
+  @font-face {
+    font-family: "Roboto400";
+    src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
+  }
+
+  @font-face {
+    font-family: "Roboto700";
+    src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
   }
