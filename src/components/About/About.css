@@ -26,10 +26,9 @@
 }
 
 .about__text-author {
-  font-family: "Roboto400", sans-serif;
+  font-family: "RobotoSlab400", sans-serif;
   font-size: 40px;
   line-height: 46px;
-  font-weight: 400;
 }
 
 .about__text-description {
@@ -40,6 +39,6 @@
 }
 
 @font-face {
-  font-family: "Roboto400";
-  src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
+  font-family: "RobotoSlab400";
+  src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
 }

@@ -18,7 +18,7 @@
   
   .saved-articles__header {
     margin: 0;
-    font-family: "Roboto400", sans-serif;
+    font-family: "RobotoSlab400", sans-serif;
     font-size: 40px;
     line-height: 46px;
     color: rgba(26, 27, 34, 1);
@@ -56,4 +56,9 @@
   @font-face {
     font-family: "Roboto700";
     src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
+  }
+
+  @font-face {
+    font-family: "RobotoSlab400";
+    src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
   }
