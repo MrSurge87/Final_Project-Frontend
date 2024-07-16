@@ -12,19 +12,22 @@
   }
 
   .nothing_found__header {
-    font-family: "Roboto-Slab", Arial, sans-serif;
+    font-family: "Roboto400", Arial, sans-serif;
     font-size: 26px;
     line-height: 30px;
-    font-weight: 400;
     color: black;
     margin: 31.5px 0 16px;
   }
   
   .nothing_found__text {
-    font-family: "Roboto-Slab", Arial, sans-serif;
+    font-family: "Roboto400", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
     color: #b6bcbf;
     margin: 0px;
+  }
+
+  @font-face {
+    font-family: "Roboto400";
+    src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
   }
