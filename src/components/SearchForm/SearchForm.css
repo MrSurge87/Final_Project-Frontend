@@ -12,19 +12,17 @@
   }
   
   .searchForm__title {
-    font-family: "Roboto-Slab", Arial, sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 60px;
     line-height: 64px;
-    font-weight: 400;
     color: white;
     margin: 80px 0 32px 0;
   }
   
   .searchForm__description {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 400;
     color: white;
     margin: 0 0 88px 0;
   }
@@ -35,10 +33,9 @@
   }
   
   .searchForm__searchbar-input {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 16px;
     line-height: 22px;
-    font-weight: 400;
     width: 608px;
     height: 64px;
     border-radius: 64px;
@@ -52,17 +49,15 @@
   }
   
   .searchForm__invalid {
-    font-family: "Roboto", Arial, sans-serif;
-    font-weight: 400;
+    font-family: "Roboto400", sans-serif;
     color: #ff0000;
     margin-left: 20px;
   }
   
   .searchForm__searchbar-button {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "Roboto500", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight: 500;
     color: white;
     background-color: #2f71e5;
     border: none;
@@ -82,6 +77,16 @@
   
   .searchForm__searchbar-button:active {
     background-color: #2a65cc;
+  }
+
+  @font-face {
+    font-family: "Roboto400";
+    src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
+  }
+
+  @font-face {
+    font-family: "Roboto500";
+    src: local("Roboto500"), url(../../vendor/Fonts/roboto-500.woff);
   }
   
   
