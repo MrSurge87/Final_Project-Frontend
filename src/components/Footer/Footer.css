@@ -22,10 +22,10 @@
     border: none;
     background-color: rgba(255,255,255,1);
     margin-right: 40px;
-    font-family: "Roboto-slab", sans-serif;
+    font-family: "Roboto400", sans-serif;
     font-size: 18px;
-    font-weight: 400;
     line-height: 24px;
+    color: rgba(26,27,34,1);
 }
 
 .footer__button-home:hover {
@@ -33,11 +33,13 @@
 }
 
 .footer__button-tripleten {
-    width: 74px;
-    height: 24px;
-    border: none;
-    background-color: rgba(255,255,255,1);
     margin-right: 40px;
+    font-family: "Roboto400", sans-serif;
+    color: rgba(26,27,34,1);
+    line-height: 24px;
+    font-size: 18px;
+    text-decoration: none;
+    border:none;
 }
 
 .Footer-TripleTen__button {
@@ -64,4 +66,9 @@
 
 .footer__button-facebook:hover {
     cursor: pointer;
+}
+
+@font-face {
+    font-family: "Roboto400";
+    src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
 }
