@@ -9,10 +9,10 @@
 .Header__title {
   width: 200px;
   height: 24px;
-  font-weight: 700;
+
   font-size: 20px;
   line-height: 24px;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto700", sans-serif;
   margin-left: 104px;
   margin-top: 30px;
 }
@@ -34,7 +34,7 @@
   width: 49px;
   padding: 20px 20px 20px 20px;
   margin-right: 10px;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto400", sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   border-width: medium;
 }
@@ -52,7 +52,7 @@
   border: 1px solid white;
   padding: 0;
   margin-right: 104px;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto700", sans-serif;
   margin-bottom: 13px;
 }
 .SignIn__button:hover {
@@ -86,9 +86,9 @@
 .profile__username {
   color: white;
   margin: 0;
-  font-family: "Roboto-slab", sans-serif;
+  font-family: "Roboto500", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+
   line-height: 24px;
   padding-left: 19px;
 }
@@ -96,18 +96,17 @@
 .profile__username-savedNews {
   color: black;
   margin: 0;
-  font-family: "Roboto-slab", sans-serif;
+  font-family: "Roboto500", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+
   line-height: 24px;
   padding-left: 19px;
 }
 
 .profile__savedArticles {
-  font-family: "Roboto-slab", sans-serif;
+  font-family: "Roboto500", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 500;
   margin-left: 76px;
 }
 
@@ -125,4 +124,19 @@
 .profile__signOut {
   width: 24px;
   height: 24px;
+}
+
+@font-face {
+  font-family: "Roboto400";
+  src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
+}
+
+@font-face {
+  font-family: "Roboto500";
+  src: local("Roboto500"), url(../../vendor/Fonts/roboto-500.woff);
+}
+
+@font-face {
+  font-family: "Roboto700";
+  src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
 }

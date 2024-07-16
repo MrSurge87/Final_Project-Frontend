@@ -1,49 +1,45 @@
 .about {
-    display: flex;
-    
-    min-height: 624px;
-    
+  display: flex;
+
+  min-height: 624px;
 }
 
 .about__container {
-    display: flex;
-    align-items: center;
-    margin-left: 104px;
+  display: flex;
+  align-items: center;
+  margin-left: 104px;
 }
 
 .about__image {
-    width: 464px;
-    height: 464px;
-    border-radius: 50%;
-    
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
 }
 
 .about__text {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 56px;
-    margin-bottom: 13px;
-    max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 56px;
+  margin-bottom: 13px;
+  max-width: 600px;
 }
 
 .about__text-author {
-    font-family: Roboto, sans-serif;
-    font-size: 40px;
-    line-height: 46px;
-    font-weight: 400;
-   
+  font-family: "Roboto400", sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
 }
 
 .about__text-description {
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-    
+  font-family: "Roboto400", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: Roboto;
-    src: url(../../vendor/Fonts/roboto-400-regular.woff)
+  font-family: "Roboto400";
+  src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
 }
