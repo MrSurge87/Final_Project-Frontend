@@ -1,5 +1,6 @@
 import "./NewsCardList.css";
 import NewsCard from "../NewsCard/NewsCard";
+import NothingFound from "../NothingFound/NothingFound";
 import { useContext, useState } from "react";
 import { SearchResultContext } from "../../context/SearchResultContext";
 import { HasSearchedContext } from "../../context/HasSearchedContext";
