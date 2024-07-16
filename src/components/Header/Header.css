@@ -110,7 +110,11 @@
   font-size: 18px;
   line-height: 24px;
   margin-left: 76px;
+  border-bottom: 1px solid rgba(26,27,34,1);
+  border-width: medium;
+  padding: 20px 20px 20px 20px;
 }
+
 
 .profile__rectangle {
   height: 50px;

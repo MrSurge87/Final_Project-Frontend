@@ -43,11 +43,10 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           <Link to="/" className="Home__button">
             <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
           </Link>
-          <Link to="/saved-news">
+          <Link to="/saved-news" className="profile__savedArticles">
             <img
               src={isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite}
               alt="Saved Articles Title"
-              className="profile__savedArticles"
             />
           </Link>
           <div className="profile">
