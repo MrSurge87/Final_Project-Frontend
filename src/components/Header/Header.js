@@ -27,11 +27,11 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
 
   return (
     <header
-      className={`Header ${
-        isSavedNewsHeader ? "Header--saved" : "Header--main"
+      className={`header ${
+        isSavedNewsHeader ? "header--saved" : "header--main"
       }`}
     >
-      <Link to="/" className="Header__title">
+      <Link to="/" className="header__title">
         <img
           src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhtie}
           alt="News Explorer"
@@ -39,8 +39,8 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
       </Link>
 
       {signedIn ? (
-        <div className="Header__buttons">
-          <Link to="/" className="Home__button">
+        <div className="header__buttons">
+          <Link to="/" className="home__button">
             <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
           </Link>
           <Link to="/saved-news" className="profile__savedArticles">
@@ -76,15 +76,15 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           </div>
         </div>
       ) : (
-        <div className="Header__buttons">
-          <div className="Home__button__sect">
-            <div className="Home__button">
+        <div className="header__buttons">
+          <div className="home__button__sect">
+            <div className="home__button">
               <Link to="/">
                 <img src={HomeWhite} alt="home" />
               </Link>
             </div>
           </div>
-          <button className="SignIn__button" type="button" onClick={onSignIn}>
+          <button className="signIn__button" type="button" onClick={onSignIn}>
             Sign In
           </button>
         </div>

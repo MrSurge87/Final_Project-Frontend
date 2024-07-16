@@ -3,7 +3,7 @@ import AboutAuthorImage from "../../images/about-author.jpg";
 
 const About = () => {
   return (
-    <section className="about" id="about-section">
+    <section className="about" >
       <div className="about__container">
         <img src={AboutAuthorImage} className="about__image" alt="Author" />
         <div className="about__text">

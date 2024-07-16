@@ -1,4 +1,4 @@
-.Header {
+.header {
   display: flex;
   justify-content: space-between;
   color: white;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.Header__title {
+.header__title {
   width: 200px;
   height: 24px;
 
@@ -17,17 +17,15 @@
   margin-top: 30px;
 }
 
-.Header__buttons {
+.header__buttons {
   margin-top: 19px;
   display: flex;
   align-items: center;
 }
 
-.Home__button__height {
-  height: 100%;
-}
 
-.Home__button {
+
+.home__button {
   background: none;
   color: white;
   border: none;
@@ -39,11 +37,11 @@
   border-width: medium;
 }
 
-.Home__button:hover {
+.home__button:hover {
   cursor: pointer;
 }
 
-.SignIn__button {
+.signIn__button {
   background: none;
   color: white;
   border-radius: 25px;
@@ -57,7 +55,7 @@
   font-size: 18px;
   line-height: 24px;
 }
-.SignIn__button:hover {
+.signIn__button:hover {
   cursor: pointer;
 }
 

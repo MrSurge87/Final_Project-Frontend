@@ -7,7 +7,7 @@ const Footer = () => {
 
     const currentYear = new Date().getFullYear();
     return (
-        <footer className="Footer">
+        <footer className="footer">
             <p className="footer__text">{currentYear} © Sergio A Mendoza, Powered by News Api</p>
 
             <div className="footer__links">
