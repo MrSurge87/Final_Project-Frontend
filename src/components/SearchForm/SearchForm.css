@@ -88,5 +88,22 @@
     font-family: "Roboto500";
     src: local("Roboto500"), url(../../vendor/Fonts/roboto-500.woff);
   }
+
+  @font-face {
+    font-family: "RobotoSlab400";
+    src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
+  }
+
+  @media screen and (max-width: 770px) {
+    .searchForm__title {
+      font-family: "RobotoSlab400", sans-serif;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .searchForm__description {
+      margin-bottom: 40px;
+    }
+  }
   
   
