@@ -23,6 +23,9 @@
   margin-left: 56px;
   margin-bottom: 13px;
   max-width: 600px;
+  font-family: "Roboto400", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .about__text-author {
@@ -41,4 +44,32 @@
 @font-face {
   font-family: "RobotoSlab400";
   src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
+}
+
+@media screen and (max-width: 770px) {
+  
+  .about__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__image {
+    margin-right: 32px;
+    width: 272px;
+    height: 272px;
+  }
+
+  .about__text {
+    margin: 0;
+    width: 424px;
+    
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+  .about__image {
+    max-width: calc(100% - 10%);
+    max-height: calc(100% - 10%);
+  }
 }

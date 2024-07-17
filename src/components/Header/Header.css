@@ -144,3 +144,31 @@
   font-family: "Roboto700";
   src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
 }
+
+@media screen and (max-width: 700px) {
+  .header__title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .header__buttons {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .header__title {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+
+}
