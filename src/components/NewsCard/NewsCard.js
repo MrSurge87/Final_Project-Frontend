@@ -73,18 +73,20 @@ const NewsCard = ({
           >
             Remove From Saved Articles
           </div>
-          <button
-            className="card__button-delete"
-            onClick={handleRemoveClick}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          >
-            <img src={RemoveBookmark} alt="Remove bookmark" />
-          </button>
+    
+            <img
+              src={RemoveBookmark}
+              alt="Remove bookmark"
+              className="card__button-delete"
+              onClick={handleRemoveClick}
+              onMouseEnter={() => {
+                setIsHovered(true);
+              }}
+              onMouseLeave={() => {
+                setIsHovered(false);
+              }}
+            />
+          
         </>
       )}
       .
