@@ -1,7 +1,7 @@
 import "./Footer.css";
 import GitHubIcon from "../../images/github-image.svg";
 import FacebookIcon from "../../images/Facebook-image.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
 
@@ -11,9 +11,9 @@ const Footer = () => {
             <p className="footer__text">{currentYear} © Sergio A Mendoza, Powered by News Api</p>
 
             <div className="footer__links">
-                <Link to="/">
+                <NavLink to="/">
                 <button className="footer__button-home" type="button">Home</button>
-                </Link>
+                </NavLink>
                 <a href="https://tripleten.com/" target="_blank" className="footer__button-tripleten" >
                 TripleTen
                 </a>

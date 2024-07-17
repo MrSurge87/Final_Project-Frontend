@@ -2,7 +2,7 @@ import "./Header.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 //Import React-Router-Dom
-import { Link, useLocation } from "react-router-dom";
+import { NavLink,Link, useLocation } from "react-router-dom";
 
 //Import Context
 import { useContext } from "react";
@@ -31,26 +31,26 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
         isSavedNewsHeader ? "header--saved" : "header--main"
       }`}
     >
-      <Link to="/" className="header__title">
+      <NavLink to="/" className="header__title">
         <img
           src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhtie}
           alt="News Explorer"
         />
-      </Link>
+      </NavLink>
 
       {signedIn ? (
         <div className="header__buttons">
-          <Link to="/" className="home__button">
+          <NavLink to="/" className="home__button">
             <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
-          </Link>
-          <Link to="/saved-news" className="profile__savedArticles">
+          </NavLink>
+          <NavLink to="/saved-news" className="profile__savedArticles">
             <img
               src={isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite}
               alt="Saved Articles Title"
             />
-          </Link>
+          </NavLink>
           <div className="profile">
-            <Link
+            <NavLink
               to="/saved-news"
               className={` ${
                 isSavedNewsHeader ? "profile__logo-savedNews" : "profile__logo"
@@ -72,16 +72,16 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
                   className="profile__signOut"
                 />
               </div>
-            </Link>
+            </NavLink>
           </div>
         </div>
       ) : (
         <div className="header__buttons">
           <div className="home__button__sect">
             <div className="home__button">
-              <Link to="/">
+              <NavLink to="/">
                 <img src={HomeWhite} alt="home" />
-              </Link>
+              </NavLink>
             </div>
           </div>
           <button className="signIn__button" type="button" onClick={onSignIn}>
