@@ -147,6 +147,18 @@
     font-size: 30px;
     margin-left: 40px;
   }
+
+  .home__button {
+    margin: 0;
+  }
+
+  .profile__savedArticles {
+    margin-left: 16px;
+  }
+
+  .profile {
+    margin: 0 40px 0 16px;
+  }
 }
 
 @media screen and (max-width: 320px) {

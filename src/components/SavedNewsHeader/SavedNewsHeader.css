@@ -63,3 +63,19 @@
     font-family: "RobotoSlab400";
     src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
   }
+
+  @media screen and (max-width: 770px){
+    .header {
+      justify-content: space-between;
+    }
+
+    .header__title {
+
+    }
+
+    .header__buttons {
+
+    }
+
+   
+  }
