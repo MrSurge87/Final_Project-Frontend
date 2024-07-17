@@ -12,7 +12,7 @@
   }
   
   .searchForm__title {
-    font-family: "Roboto400", sans-serif;
+    font-family: "RobotoSlab400", sans-serif;
     font-size: 60px;
     line-height: 64px;
     color: white;
@@ -103,6 +103,17 @@
 
     .searchForm__description {
       margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .searchForm {
+      margin-top: 30px;
+    }
+    
+    .searchForm__title {
+      margin: 0;
+
     }
   }
   
