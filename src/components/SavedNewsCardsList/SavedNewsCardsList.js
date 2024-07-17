@@ -34,16 +34,7 @@ const SavedNewsCardsList = ({ handleRemoveArticle, handleOpenSignUpModal }) => {
          
        
       </div>
-      <button
-            className={`newsCards__button ${
-              cardsShown >= searchResults.length
-                ? "newsCards__button_hidden"
-                : ""
-            }`}
-            onClick={increaseShownCards}
-          >
-            Show More
-          </button>
+   
   
     </section>
     
