@@ -15,8 +15,7 @@ const About = () => {
             React, Trello for work flow management, Figma, and others.
           </p>
           <p className="about__text-description">
-            {" "}
-            have learned full stack web development from TripleTen. I loved
+            I have learned full stack web development from TripleTen. I loved
             learning new skills and new ways to apply old ones. It was exciting
             to learn how to jump into the world of software engineering so that
             I can be a part of building future applications for the business I
