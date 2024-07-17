@@ -113,7 +113,7 @@
   }
   
   .card__title {
-    font-family: "Roboto400", sans-serif;
+    font-family: "RobotoSlab400", sans-serif;
     font-size: 26px;
     line-height: 30px;
     color: black;
@@ -152,6 +152,11 @@
   }
 
   @font-face {
+    font-family: "RobotoSlab400";
+    src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
+  }
+
+  @font-face {
     font-family: "Roboto500";
     src: local("Roboto500"), url(../../vendor/Fonts/roboto-500.woff);
   }
@@ -164,4 +169,21 @@
   @font-face {
     font-family: "SourceSansPro400";
     src: local("SourceSansPro400"), url(../../vendor/Fonts/SourceSansPro-Regular.ttf.woff);
+  }
+
+  @media screen and (max-width: 770px) {
+    .card {
+      width: 224px;
+      height: 420px;
+    }
+
+    .card__title {
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 10px
+    }
+
+    .card__content {
+      
+    }
   }

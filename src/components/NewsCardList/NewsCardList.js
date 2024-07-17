@@ -22,7 +22,7 @@ const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp, handl
           <div className="newsCards__container">
             {searchResults.slice(0, cardsShown).map((result) => {
               return (
-                <ul>
+                <ul className="newsCards__list">
                     <NewsCard
                   newsData={result}
                   key={result.url}
