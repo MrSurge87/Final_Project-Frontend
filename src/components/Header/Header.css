@@ -23,8 +23,6 @@
   align-items: center;
 }
 
-
-
 .home__button {
   background: none;
   color: white;
@@ -33,7 +31,7 @@
   padding: 20px 20px 20px 20px;
   margin-right: 10px;
   font-family: "Roboto400", sans-serif;
-  border-bottom: 1px solid rgba(255,255,255,1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
   border-width: medium;
 }
 
@@ -108,11 +106,10 @@
   font-size: 18px;
   line-height: 24px;
   margin-left: 76px;
-  border-bottom: 1px solid rgba(26,27,34,1);
+  border-bottom: 1px solid rgba(26, 27, 34, 1);
   border-width: medium;
   padding: 20px 20px 20px 20px;
 }
-
 
 .profile__rectangle {
   height: 50px;
@@ -145,13 +142,14 @@
   src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 770px) {
   .header__title {
     font-size: 30px;
+    margin-left: 40px;
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 320px) {
   .header {
     flex-direction: column;
     margin: 0;
@@ -169,6 +167,4 @@
     margin-left: 0px;
     margin-right: 0px;
   }
-
-
 }

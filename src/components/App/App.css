@@ -11,3 +11,9 @@
   min-height: 50vh;
   width: 100%;
 }
+
+@media screen and (max-width: 770px) {
+  .Search {
+    background-image: url(../../images/background-tablet.jpg);
+  }
+}
