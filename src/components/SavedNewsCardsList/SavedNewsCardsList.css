@@ -11,6 +11,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin-left: 104px;
+    max-width: 1440px
   }
 
   .newsCards__button {
