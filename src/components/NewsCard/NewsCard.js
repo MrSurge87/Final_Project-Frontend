@@ -30,39 +30,29 @@ const NewsCard = ({
     setCurrentPage(location.pathname);
   }, [location.pathname, setCurrentPage]);
 
-  if (newsData) {
-    const publishedAt = newsData.publishedAt || "No Date Available";
-    const formatDate = new Date(
-      newsData.publihsedAt || newsData.date || Date.now()
-    ).toLocaleString("default", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    });
-  } else {
-    console.error("newsData is undefined");
-  }
+  const formatDate = new Date(
+    newsData.publishedAt || newsData.date || Date.now()
+  ).toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
 
   useEffect(() => {
     const isSaved = savedArticles.some(
       (article) => article.id === newsData.url
     );
     setIsBookmarked(isSaved);
-    
   }, [savedArticles, newsData.url]);
-
 
   const handleBookmarkClick = () => {
     const token = localStorage.getItem("jwt");
     if (token) {
-     
       handleSaveArticle({ newsData, keyword, token });
       setIsBookmarked((prev) => {
-        
         return !prev;
       });
     } else {
-     
     }
   };
 
@@ -106,8 +96,7 @@ const NewsCard = ({
               : "card__button-bookmark-notSignedIn"
           }`}
           onClick={handleBookmarkClick}
-        >
-        </button>
+        ></button>
       ) : (
         !signedIn && (
           <button
@@ -118,7 +107,6 @@ const NewsCard = ({
           ></button>
         )
       )}
-
       {!signedIn && (
         <>
           <div
@@ -146,14 +134,12 @@ const NewsCard = ({
         className="card__image"
       />
       <div className="card__text">
-        <p className="card__date-published"> {newsData.formatDate} </p>
-        <h3 className="card__title">{newsData.title}</h3>
+        <p className="card__date-published"> {formatDate} </p>
+        <h3 className="card__title">{newsData.description}</h3>
         <p className="card__content">{newsData.text || newsData.description}</p>
-        {newsData.source && (
-          <p className="card__source">
-            {newsData.source.name || newsData.source}
-          </p>
-        )}
+      </div>
+      <div className="card__source">
+        <p>{newsData.author}</p>
       </div>
     </div>
   );

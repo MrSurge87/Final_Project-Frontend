@@ -105,10 +105,10 @@
   }
   
   .card__date-published {
-    font-family: "Roboto400", sans-serif;
+    font-family: "SourceSansPro400", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    color: #b6bcbf;
+    color: rgba(182,188,191,1);
     margin-top: 17px;
   }
   
@@ -131,7 +131,6 @@
     line-height: 22px;
     color: black;
     margin-top: 16px;
-    height: 6.9em;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -139,11 +138,12 @@
   }
   
   .card__source {
-    font-family: "Roboto700", sans-serif;
+    font-family: "RobotoSlab700", sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-    color: #b6bcbf;
+    color: rgba(182, 188, 191, 1);
+    margin: 0 0 0 24px;
   }
   
   @font-face {
@@ -157,6 +157,11 @@
   }
 
   @font-face {
-    font-family: "Roboto700";
-    src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
+    font-family: "RobotoSlab700";
+    src: local("RobotoSlab700"), url(../../vendor/Fonts/roboto-slab-700.woff);
+  }
+
+  @font-face {
+    font-family: "SourceSansPro400";
+    src: local("SourceSansPro400"), url(../../vendor/Fonts/SourceSansPro-Regular.ttf.woff);
   }
