@@ -201,5 +201,11 @@
     .card {
       max-width: 288px;
       width: 100%;
+      margin: auto;
+    }
+
+    .card__image {
+      width: 288px;
+     
     }
   }
