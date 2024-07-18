@@ -127,6 +127,14 @@
       margin: 16px auto 122px auto;
       width: 288px;
     }
+
+    .searchForm__container {
+      display: flex;
+    }
+    
+    .searchForm__searchbar {
+
+    }
   }
   
   
