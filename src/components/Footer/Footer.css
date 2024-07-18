@@ -16,7 +16,9 @@
 }
 
 .footer__links {
-    margin-right: 106px
+    margin-right: 106px;
+    display: flex;
+    flex-direction: row;
 }
 
 .footer__button-home {
@@ -87,7 +89,7 @@
 
     .footer__links {
         margin-right:20px;
-        
+       
     }
 }
 

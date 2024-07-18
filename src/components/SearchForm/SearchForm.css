@@ -55,10 +55,7 @@
   }
   
   .searchForm__searchbar-button {
-    font-family: "Roboto500", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    color: white;
+    
     background-color: #2f71e5;
     border: none;
     width: 168px;
@@ -69,6 +66,15 @@
     top: -64px;
     left: calc(75% + -16px);
     cursor: pointer;
+  }
+
+  .searchForm__searchbar-button-text {
+    font-family: "Roboto500", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-align: center;
+    margin: auto;
   }
   
   .searchForm__searchbar-button:hover {
@@ -120,7 +126,19 @@
       flex-direction: column;
     }
     .searchForm__searchbar-input {
-      width: 288px;
+      max-width: 288px;
+      width: 100%;
+      padding-left: 16px;
+      display: flex;
+      margin: auto;
+    }
+
+    .searchForm__searchbar-button {
+      position: static;
+      max-width: 288px;
+      width: 100%;
+      margin: 16px auto;
+      display: flex;
     }
 
     .searchForm__description {
@@ -128,10 +146,10 @@
       width: 288px;
     }
 
-    .searchForm__container {
-      display: flex;
+    .searchForm__container {      
+     
     }
-    
+
     .searchForm__searchbar {
 
     }
