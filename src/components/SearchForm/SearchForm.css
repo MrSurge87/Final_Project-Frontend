@@ -112,7 +112,8 @@
     }
     
     .searchForm__title {
-      margin: 0;
+      margin: 0 auto 0 auto;
+      width: 285px;
     }
 
     .searchForm__searchbar {
@@ -122,8 +123,9 @@
       width: 288px;
     }
 
-    .searchForm__searchbar-button {
-      
+    .searchForm__description {
+      margin: 16px auto 122px auto;
+      width: 288px;
     }
   }
   
