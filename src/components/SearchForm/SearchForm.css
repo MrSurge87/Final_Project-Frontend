@@ -113,7 +113,17 @@
     
     .searchForm__title {
       margin: 0;
+    }
 
+    .searchForm__searchbar {
+      flex-direction: column;
+    }
+    .searchForm__searchbar-input {
+      width: 288px;
+    }
+
+    .searchForm__searchbar-button {
+      
     }
   }
   
