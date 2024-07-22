@@ -9,7 +9,7 @@ const About = () => {
         <div className="about__text">
           <h2 className="about__text-author">About The Author</h2>
           <p className="about__text-description">
-            Hello! My name is Sergio A Mendoza. Welcome to my TripleTen final
+            Hello! My name is Sergio A Mendoza Gutierrez. Welcome to my TripleTen final
             project. I am a full stack web developer. I have learned how to
             create online apps such as this one with tools like JavaScript,
             React, Trello for work flow management, Figma, and others.
