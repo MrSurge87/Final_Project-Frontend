@@ -31,28 +31,44 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
         isSavedNewsHeader ? "header--saved" : "header--main"
       }`}
     >
-      <NavLink to="/" className="header__title">
-        <img
-          src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhtie}
-          alt="News Explorer"
-        />
-      </NavLink>
+      <nav>
+        <NavLink to="/" className="header__title">
+          <img
+            src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhtie}
+            alt="News Explorer"
+          />
+        </NavLink>
+      </nav>
 
       {signedIn ? (
-        <div className="header__buttons">
-          <NavLink to="/" className="home__button">
-            <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
-          </NavLink>
-          <NavLink to="/saved-news" className="profile__savedArticles">
-            <img
-              src={isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite}
-              alt="Saved Articles Title"
-            />
-          </NavLink>
+        //Using Nav links and ul for links
+        <nav className="header__buttons">
+          <ul className="header__buttons_list">
+            <li>
+              <NavLink to="/" className="home__button">
+                <img
+                  src={isSavedNewsHeader ? HomeBlack : HomeWhite}
+                  alt="home"
+                  
+                                  />
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/saved-news" className="profile__savedArticles">
+                <img
+                  src={
+                    isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite
+                  }
+                  alt="Saved Articles Title"
+                  
+                />
+              </NavLink>
+            </li>
+          </ul>
           <div className="profile">
             <NavLink
               to="/saved-news"
-              className={` ${
+              className={`${
                 isSavedNewsHeader ? "profile__logo-savedNews" : "profile__logo"
               }`}
             >
@@ -64,30 +80,69 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
                 ) : (
                   <p className="profile__username">{currentUser.name}</p>
                 )}
-
-                <img
-                  src={isSavedNewsHeader ? SignOutBlack : SignOutWhite}
-                  alt="Sign Out Button"
-                  onClick={onSignOut}
-                  className="profile__signOut"
-                />
               </div>
+              <img
+                src={isSavedNewsHeader ? SignOutBlack : SignOutWhite}
+                alt="Sign Out Button"
+                onClick={onSignOut}
+                className="profile__signOut"
+              />
             </NavLink>
           </div>
-        </div>
+        </nav>
       ) : (
+        // <div className="header__buttons">
+        //   <NavLink to="/" className="home__button">
+        //     <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
+        //   </NavLink>
+        //   <NavLink to="/saved-news" className="profile__savedArticles">
+        //     <img
+        //       src={isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite}
+        //       alt="Saved Articles Title"
+        //     />
+        //   </NavLink>
+        //   <div className="profile">
+        //     <NavLink
+        //       to="/saved-news"
+        //       className={` ${
+        //         isSavedNewsHeader ? "profile__logo-savedNews" : "profile__logo"
+        //       }`}
+        //     >
+        //       <div className="profile__details">
+        //         {isSavedNewsHeader ? (
+        //           <p className="profile__username-savedNews">
+        //             {currentUser.name}
+        //           </p>
+        //         ) : (
+        //           <p className="profile__username">{currentUser.name}</p>
+        //         )}
 
-        <nav to="/" >
+        //         <img
+        //           src={isSavedNewsHeader ? SignOutBlack : SignOutWhite}
+        //           alt="Sign Out Button"
+        //           onClick={onSignOut}
+        //           className="profile__signOut"
+        //         />
+        //       </div>
+        //     </NavLink>
+        //   </div>
+        // </div>
+        <nav>
           <ul className="header__buttons">
             <li className="header__buttons_list">
-            <img src={HomeWhite} alt="home" className="home__button"/>
+              <NavLink to="/">
+                <img src={HomeWhite} alt="home" className="home__button" />
+              </NavLink>
             </li>
-           <li className="header__buttons_list">
-           <button className="signIn__button" type="button" onClick={onSignIn}>
-              Sign In
-            </button>
-           </li>
-          
+            <li className="header__buttons_list">
+              <button
+                className="signIn__button"
+                type="button"
+                onClick={onSignIn}
+              >
+                Sign In
+              </button>
+            </li>
           </ul>
         </nav>
 

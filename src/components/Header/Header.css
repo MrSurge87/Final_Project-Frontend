@@ -25,6 +25,8 @@
 
 .header__buttons_list {
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .home__button {
@@ -32,8 +34,7 @@
   color: white;
   border: none;
   width: 49px;
-  padding: 20px 20px 20px 20px;
-  margin-right: 10px;
+  padding: 20px 20px 15px 20px;
   font-family: "Roboto400", sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   border-width: medium;
@@ -115,6 +116,10 @@
   padding: 20px 20px 20px 20px;
 }
 
+.profile__savedArticles:hover {
+  cursor: pointer;
+}
+
 .profile__rectangle {
   height: 50px;
   width: 150px;
@@ -129,6 +134,10 @@
 .profile__signOut {
   width: 24px;
   height: 24px;
+}
+
+.profile__signout:hover {
+  cursor: pointer;
 }
 
 @font-face {
