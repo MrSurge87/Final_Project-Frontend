@@ -22,8 +22,9 @@ const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp, handl
           <div className="newsCards__container">
             {searchResults.slice(0, cardsShown).map((result) => {
               return (
-                <ul className="newsCards__list">
+              
                     <NewsCard
+                  className="newsCards__list"
                   newsData={result}
                   key={result.url}
                   handleSaveArticle={handleSaveArticle}
@@ -31,7 +32,7 @@ const NewsCardsList = ({ handleSaveArticle, handleRemoveArticle, onSignUp, handl
                   onSignUp={onSignUp}
                   handleOpenSignUpModal={handleOpenSignUpModal}
                 />
-                </ul>
+                
               );
             })}
           </div>

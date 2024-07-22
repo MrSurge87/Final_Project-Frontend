@@ -2,7 +2,7 @@ import "./Header.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 //Import React-Router-Dom
-import { NavLink,Link, useLocation } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 //Import Context
 import { useContext } from "react";
@@ -76,18 +76,31 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           </div>
         </div>
       ) : (
-        <div className="header__buttons">
-          <div className="home__button__sect">
-            <div className="home__button">
-              <NavLink to="/">
-                <img src={HomeWhite} alt="home" />
-              </NavLink>
-            </div>
-          </div>
-          <button className="signIn__button" type="button" onClick={onSignIn}>
-            Sign In
-          </button>
-        </div>
+
+        <nav to="/" >
+          <ul className="header__buttons">
+            <li className="header__buttons_list">
+            <img src={HomeWhite} alt="home" className="home__button"/>
+            </li>
+           <li className="header__buttons_list">
+           <button className="signIn__button" type="button" onClick={onSignIn}>
+              Sign In
+            </button>
+           </li>
+          
+          </ul>
+        </nav>
+
+        // <div className="header__buttons">
+        //   <div className="home__button">
+        //     <NavLink to="/">
+        //       <img src={HomeWhite} alt="home" />
+        //     </NavLink>
+        //   </div>
+        //   <button className="signIn__button" type="button" onClick={onSignIn}>
+        //     Sign In
+        //   </button>
+        // </div>
       )}
     </header>
   );

@@ -23,6 +23,10 @@
   align-items: center;
 }
 
+.header__buttons_list {
+  list-style-type: none;
+}
+
 .home__button {
   background: none;
   color: white;
@@ -49,7 +53,7 @@
   padding: 0;
   margin-right: 104px;
   font-family: "Roboto500", sans-serif;
-  margin-bottom: 13px;
+ 
   font-size: 18px;
   line-height: 24px;
 }

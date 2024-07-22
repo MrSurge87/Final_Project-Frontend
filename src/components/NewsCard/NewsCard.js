@@ -62,7 +62,7 @@ const NewsCard = ({
   };
 
   return (
-    <div className="card">
+    <article className="card">
       {currentPage === "/saved-news" && (
         <>
           <div className="card__keyword">{newsData.keyword}</div>
@@ -143,7 +143,7 @@ const NewsCard = ({
       <div className="card__source">
         <p>{newsData.author}</p>
       </div>
-    </div>
+    </article>
   );
 };
 
