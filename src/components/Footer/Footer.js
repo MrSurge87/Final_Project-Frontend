@@ -10,8 +10,43 @@ const Footer = () => {
       <p className="footer__text">
         {currentYear} © Sergio A Mendoza, Powered by News Api
       </p>
+      <nav className="footer__links">
+        <div className="footer__links-A">
+          <NavLink to="/">
+            <button className="footer__button-home" type="button">
+              Home
+            </button>
+          </NavLink>
+          <a
+            href="https://tripleten.com/"
+            target="_blank"
+            className="footer__button-tripleten"
+            rel="noopener noreferrer"
+          >
+            TripleTen
+          </a>
+        </div>
+        <div className="footer__links-B">
+          <a
+            href="https://github.com/MrSurge87"
+            target="_blank"
+            className="footer__button-github"
+            rel="noopener noreferrer"
+          >
+            <img src={GitHubIcon} alt="GitHub" />
+          </a>
+          <a
+            href="https://www.facebook.com/sergio.a.mendoza.54/"
+            target="_blank"
+            className="footer__button-facebook"
+            rel="noopener noreferrer"
+          >
+            <img src={FacebookIcon} alt="Facebook" />
+          </a>
+        </div>
+      </nav>
 
-      <div className="footer__links">
+      {/* <div className="footer__links">
         <div className="footer__links-A">
           <NavLink to="/">
             <button className="footer__button-home" type="button">
@@ -42,7 +77,7 @@ const Footer = () => {
             <img src={FacebookIcon} alt="Facebook" />
           </a>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
