@@ -11,7 +11,7 @@ const Footer = () => {
         {currentYear} © Sergio A Mendoza, Powered by News Api
       </p>
       <nav className="footer__links">
-        <div className="footer__links-A">
+        <div className="footer__link">
           <NavLink to="/">
             <button className="footer__button-home" type="button">
               Home
@@ -26,7 +26,7 @@ const Footer = () => {
             TripleTen
           </a>
         </div>
-        <div className="footer__links-B">
+        <div className="footer__link">
           <a
             href="https://github.com/MrSurge87"
             target="_blank"

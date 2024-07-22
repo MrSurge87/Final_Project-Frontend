@@ -38,6 +38,7 @@
   font-family: "Roboto400", sans-serif;
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   border-width: medium;
+  margin-right: 42px;
 }
 
 .home__button:hover {

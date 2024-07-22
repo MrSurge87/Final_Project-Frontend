@@ -5,6 +5,7 @@
     background-color: transparent;
     color: rgba(47,113,229,1);
     padding: 0;
+    margin-bottom: 28px;
 }
 
 .modal__signIn:hover {

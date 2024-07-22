@@ -104,7 +104,7 @@
         justify-content: space-between;
     }
 
-    .footer__links-A {
+    .footer__link{
         flex-direction: column;
         display: flex;
         width: 200px;
