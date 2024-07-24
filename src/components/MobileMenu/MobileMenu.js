@@ -3,27 +3,35 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { CurrentPageContext } from "../../context/CurrentPageContext";
+
+//Icons
 import NewsExplorerWhite from "../../images/NewsExplorer-White.svg";
+import HomeWhite from "../../images/Home-White.svg";
 
 const MobileMenu = ({ onSignIn, signedIn }) => {
   return (
-    <header className="mobile__menu__header" name="mobileMenu">
+    <header className="mobile__menu" name="mobileMenu">
+      <div className="mobile__menu__header">
       <NavLink to="/">
         <img src={NewsExplorerWhite} alt="News Explorer" />
       </NavLink>
+      </div>
+     
       <nav>
-        <ul>
-          <li>
+        <ul className="mobile__menu__list">
+          <li className="mobile__menu__list__home__link">
             <NavLink to="/" >
-            <button
-              className="signIn__button__mobile"
+              <img src={HomeWhite} alt="Home" />
+            </NavLink>
+          </li>
+          <li className="mobile__menu__list__signIn">
+          <button 
               type="button"
               onClick={onSignIn}
+              className="mobile__menu__list__signIn__button"
             >
               Sign In
             </button>
-            </NavLink>
-           
           </li>
         </ul>
       </nav>
