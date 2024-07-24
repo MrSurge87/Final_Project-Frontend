@@ -20,7 +20,7 @@ import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 import SavedArticlesBlack from "../../images/Saved-Articles-Black.svg";
 import MobileMenu from "../../images/mobile-menu.svg";
 
-const Header = ({ onSignIn, signedIn, onSignOut }) => {
+const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
   const { currentUser } = useContext(CurrentUserContext);
   const { currentPage } = useContext(CurrentPageContext);
   const location = useLocation();
@@ -115,12 +115,12 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           <div className="mobile">
             <div className="mobile__content">
               <nav className="mobile__links">
-                <Link to="/" className="mobile__link">
+                <NavLink to="/" className="mobile__link">
                   Home
-                </Link>
-                <Link to="/saved-news" className="mobile__link">
+                </NavLink>
+                <NavLink to="/saved-news" className="mobile__link">
                   Saved Articles
-                </Link>
+                </NavLink>
               </nav>
               <button className="mobile__button-signedIn" onClick={onSignOut}>
                 <p className="mobile__username-signedIn">
@@ -161,7 +161,7 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           <nav>
             <div className="mobile__header">
               <div className="mobile__menu">
-              <img src={MobileMenu} />
+              <img src={MobileMenu} onClick={handleOpenMobileMenu}/>
               </div>
             </div>
           </nav>

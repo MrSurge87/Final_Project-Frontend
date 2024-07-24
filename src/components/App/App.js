@@ -4,6 +4,7 @@ import Header from "../Header/Header.js";
 import Main from "../Main/Main.js";
 import Footer from "../Footer/Footer.js";
 import About from "../About/About.js";
+import MobileMenu from "../MobileMenu/MobileMenu.js";
 
 
 // CONTEXT IMPORTS
@@ -71,6 +72,10 @@ function App() {
   const handleSuccessModal = () => {
     setActiveModal("successModal");
   };
+
+  const handleOpenMobileMenu = () => {
+    setActiveModal("mobileMenu");
+  }
 
   // Function To Register User
   // const handleSignUpUser = (values) => {
@@ -281,8 +286,10 @@ function App() {
                     signUpUser={signUpUser}
                     signedIn={signedIn}
                     onSignOut={signOutUser}
+                    handleOpenMobileMenu={handleOpenMobileMenu}
                   />
-            
+
+                  <MobileMenu />
                   
                  
                       <Routes>
