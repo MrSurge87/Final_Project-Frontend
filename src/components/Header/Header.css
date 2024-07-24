@@ -1,9 +1,13 @@
-.header {
+.header__desktop {
   display: flex;
   justify-content: space-between;
   color: white;
   border-bottom: 1px solid grey;
   align-items: center;
+}
+
+.header__mobile {
+  display: none;
 }
 
 .header__title {
@@ -166,11 +170,12 @@
 }
 
 @media screen and (max-width: 320px) {
-  .header {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile {
+    display: flex;
   }
 
   .header__buttons {

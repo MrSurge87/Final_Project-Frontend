@@ -7,11 +7,11 @@ import { CurrentPageContext } from "../../context/CurrentPageContext";
 import signOutWhite from "../../images/signout-white.svg";
 import signOutBlack from "../../images/signout-black.svg";
 
-const MobileMenu =({ onSignIn, onSignOut }) => {
+const MobileMenu =({ onSignIn, onSignOut, signedIn }) => {
     const { isSignedIn, currentUser } = useContext(CurrentUserContext);
     const { currentPage } = useContext(CurrentPageContext);
 
-    return isSignedIn && currentPage === "/" ? (
+    return signedIn && currentPage === "/" ? (
         <div className="mobile">
             <div className="mobile__content">
                 <nav className="mobile__links">
@@ -28,7 +28,7 @@ const MobileMenu =({ onSignIn, onSignOut }) => {
                 </button>
             </div>
         </div>
-    ) : isSignedIn && currentPage === "/saved-news" ? (
+    ) : signedIn && currentPage === "/saved-news" ? (
         <div className="mobile">
             <div className="mobile__content-savedNews">
                 <nav className="mobile__links">
