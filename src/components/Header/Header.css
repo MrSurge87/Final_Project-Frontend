@@ -21,6 +21,12 @@
   margin-top: 30px;
 }
 
+.header__title_mobile {
+  font-family: "RobotoSlab700";
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .header__buttons {
   margin-top: 19px;
   display: flex;
@@ -160,6 +166,11 @@
   src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
 }
 
+@font-face {
+  font-family: "RobotoSlab700";
+  src: local("RobotoSlab700"), url(../../vendor/Fonts/roboto-slab-700.woff);
+}
+
 @media screen and (max-width: 770px) {
   .header__title {
     font-size: 30px;
@@ -186,6 +197,7 @@
 
   .header__mobile {
     display: flex;
+    border-bottom: 1px solid gray;
   }
 
   .header__buttons {
@@ -195,7 +207,14 @@
   }
 
   .header__title {
-    margin-left: 0px;
-    margin-right: 0px;
+    font-family: "RobotoSlab700";
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px auto 16px 16px;
+  }
+
+  .mobile__menu {
+    margin-top: 16px;
+    margin-right: 16px;
   }
 }

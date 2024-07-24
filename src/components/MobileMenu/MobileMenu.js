@@ -8,56 +8,11 @@ import signOutWhite from "../../images/signout-white.svg";
 import signOutBlack from "../../images/signout-black.svg";
 
 const MobileMenu =({ onSignIn, onSignOut, signedIn }) => {
-    const { isSignedIn, currentUser } = useContext(CurrentUserContext);
+    const { signedIn, currentUser } = useContext(CurrentUserContext);
     const { currentPage } = useContext(CurrentPageContext);
 
-    return signedIn && currentPage === "/" ? (
-        <div className="mobile">
-            <div className="mobile__content">
-                <nav className="mobile__links">
-                    <Link to="/" className="mobile__link">
-                    Home
-                    </Link>
-                    <Link to="/saved-news" className="mobile__link">
-                    Saved Articles
-                    </Link>
-                </nav>
-                <button className="mobile__button-signedIn" onClick={onSignOut}>
-                    <p className="mobile__username-signedIn">{currentUser.username}</p>
-                    <img src={signOutWhite} alt="signOut" className="mobile__signOut"/>
-                </button>
-            </div>
-        </div>
-    ) : signedIn && currentPage === "/saved-news" ? (
-        <div className="mobile">
-            <div className="mobile__content-savedNews">
-                <nav className="mobile__links">
-                    <Link to="/" className="mobile__link-savedNews">
-                    Home
-                    </Link>
-                    <Link to="/saved-news" className="mobile__link-savedNews">
-                    Saved Articles
-                    </Link>
-                </nav>
-                <button className="mobile__button-savedNews" onClick={onSignOut}>
-                    <p className="mobile__username-savedNews">{currentUser.username}</p>
-                    <img src={signOutBlack} alt="signout" className="mobile__signOut-savedNews" />
-                </button>
-            </div>
-        </div>
-    ) : (
-        <div className="mobile">
-            <div className="mobile__content">
-                <nav className="mobile__links">
-                    <Link to="/" className="mobile__link" activeClassName="mobile__link-active">
-                    Home
-                    </Link>
-                </nav>
-                <button className="mobile__button" onClick={onSignIn}>
-                    Sign In
-                </button>
-            </div>
-        </div>
+    return  (
+       
     ); 
 };
 

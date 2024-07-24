@@ -4,7 +4,7 @@ import Header from "../Header/Header.js";
 import Main from "../Main/Main.js";
 import Footer from "../Footer/Footer.js";
 import About from "../About/About.js";
-import MobileMenu from "../MobileMenu/MobileMenu.js";
+
 
 // CONTEXT IMPORTS
 import { CurrentUserContext } from "../../context/CurrentUserContext.js";
