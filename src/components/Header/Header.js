@@ -26,8 +26,9 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
   const isSavedNewsHeader = location.pathname === "/saved-news";
 
   return (
+    <>
     <header
-      className={`header ${
+      className={`header__desktop ${
         isSavedNewsHeader ? "header--saved" : "header--main"
       }`}
     >
@@ -90,19 +91,59 @@ const Header = ({ onSignIn, signedIn, onSignOut }) => {
           
           </ul>
         </nav>
-
-        // <div className="header__buttons">
-        //   <div className="home__button">
-        //     <NavLink to="/">
-        //       <img src={HomeWhite} alt="home" />
-        //     </NavLink>
-        //   </div>
-        //   <button className="signIn__button" type="button" onClick={onSignIn}>
-        //     Sign In
-        //   </button>
-        // </div>
       )}
     </header>
+    <header className="header__mobile">
+    {signedIn && currentPage === "/" ? (
+        <div className="mobile">
+            <div className="mobile__content">
+                <nav className="mobile__links">
+                    <Link to="/" className="mobile__link">
+                    Home
+                    </Link>
+                    <Link to="/saved-news" className="mobile__link">
+                    Saved Articles
+                    </Link>
+                </nav>
+                <button className="mobile__button-signedIn" onClick={onSignOut}>
+                    <p className="mobile__username-signedIn">{currentUser.username}</p>
+                    <img src={SignOutWhite} alt="signOut" className="mobile__signOut"/>
+                </button>
+            </div>
+        </div>
+    ) : signedIn && currentPage === "/saved-news" ? (
+        <div className="mobile">
+            <div className="mobile__content-savedNews">
+                <nav className="mobile__links">
+                    <Link to="/" className="mobile__link-savedNews">
+                    Home
+                    </Link>
+                    <Link to="/saved-news" className="mobile__link-savedNews">
+                    Saved Articles
+                    </Link>
+                </nav>
+                <button className="mobile__button-savedNews" onClick={onSignOut}>
+                    <p className="mobile__username-savedNews">{currentUser.username}</p>
+                    <img src={SignOutBlack} alt="signout" className="mobile__signOut-savedNews" />
+                </button>
+            </div>
+        </div>
+    ) : (
+        <div className="mobile">
+            <div className="mobile__content">
+                <nav className="mobile__links">
+                    <Link to="/" className="mobile__link" activeClassName="mobile__link-active">
+                    Home
+                    </Link>
+                </nav>
+                <button className="mobile__button" onClick={onSignIn}>
+                    Sign In
+                </button>
+            </div>
+        </div>
+    )}; 
+    </header>
+    </>
   );
 };
 
