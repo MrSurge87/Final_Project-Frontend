@@ -20,6 +20,28 @@
   flex-direction: row;
 }
 
+.footer__links__text {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.footer__links__icons {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-right: 104px;
+}
+
+.footer__link {
+  list-style-type: none;
+}
+
+.footer__icon {
+  list-style-type: none;
+
+}
+
 .footer__button-home {
   width: 49px;
   height: 24px;
@@ -55,11 +77,9 @@
   width: 20px;
   height: 20px;
   margin-right: 24px;
-}
-
-.footer__button-github {
   cursor: pointer;
 }
+
 
 .footer__button-facebook {
   border: none;
