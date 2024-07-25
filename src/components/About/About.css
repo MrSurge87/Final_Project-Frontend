@@ -94,7 +94,7 @@
   .about__text-author {
     font-size: 30px;
     line-height: 40px;
-    margin: auto;
+    margin: 0;
   }
 
   .about__text-description {

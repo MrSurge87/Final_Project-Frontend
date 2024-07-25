@@ -289,7 +289,7 @@ function App() {
                     handleOpenMobileMenu={handleOpenMobileMenu}
                   />
 
-                  <MobileMenu />
+                  
                   
                  
                       <Routes>
