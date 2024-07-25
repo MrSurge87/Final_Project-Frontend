@@ -23,7 +23,10 @@
   .mobile__menu__list__home__link {
     width: 288px;
     height: 56px;
-    margin-left: 16px;
+    margin: 0 auto 22px;
+    font-family: "Roboto500";
+    font-size: 18px;
+    line-height: 56px;
   }
 
   .mobile__menu__list__signIn {
