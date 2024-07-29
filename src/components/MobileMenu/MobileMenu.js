@@ -10,7 +10,7 @@ import HomeWhite from "../../images/Home-White.svg";
 
 const MobileMenu = ({ onSignIn, signedIn }) => {
   return (
-    <header className="mobile__menu" name="mobileMenu">
+    <header className="mobile__menu" name="MobileMenu">
       <div className="mobile__menu__header">
       <NavLink to="/">
         <img src={NewsExplorerWhite} alt="News Explorer" />

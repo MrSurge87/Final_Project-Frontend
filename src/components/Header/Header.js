@@ -1,5 +1,6 @@
 import "./Header.css";
 import "../MobileMenu/MobileMenu.css";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 //Import React-Router-Dom
 import { NavLink, Link, useLocation } from "react-router-dom";
@@ -40,6 +41,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             alt="News Explorer"
           />
         </NavLink>
+        
 
         {signedIn ? (
           <div className="header__buttons">
@@ -112,7 +114,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             alt="News Explorer"
           />
         </NavLink>
-        {signedIn ? (
+        {signedIn ? (          
           <div className="mobile">
             <div className="mobile__content">
             <nav>

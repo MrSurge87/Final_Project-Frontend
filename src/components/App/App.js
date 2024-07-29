@@ -340,6 +340,14 @@ function App() {
                       />
                     )}
 
+                    {activeModal === "MobileMenu" && (
+                      <MobileMenu 
+                    isOpen={activeModal === "create"}
+                    onClose={handleCloseModal}
+                    handleOpenMobileMenu={handleOpenMobileMenu}
+                    />
+                    )}
+
                     <SuccessModal
                       isOpen={activeModal === "successModal"}
                       onClose={handleCloseModal}
