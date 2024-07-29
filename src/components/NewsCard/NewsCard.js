@@ -131,7 +131,7 @@ const NewsCard = ({
         </>
       )}
       <img
-        src={newsData.image || newsData.urlToImage}
+        src={ newsData.image || newsData.urlToImage}
         alt={newsData.link || newsData.url}
         className="card__image"
       />
@@ -141,7 +141,8 @@ const NewsCard = ({
         <p className="card__content">{newsData.text || newsData.description}</p>
       </div>
       <div className="card__source">
-        <p>{newsData.author}</p>
+        
+        <p>{newsData.source.name || newsData.source}</p>
       </div>
     </article>
   );

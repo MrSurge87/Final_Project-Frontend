@@ -18,7 +18,7 @@ export function getSavedArticles() {
     resolve([
       {
         id: "6678e946f2bbcb300c6d893d",
-        author: "Matt Giovanisci",
+        source: "Matt Giovanisci",
         description:
           "I spent three years brewing one style of beer: The Hazy IPA. My goal was to homebrew a perfect hazy IPA recipe.",
         link: "https://www.brewcabin.com/hazy-ipa/",
@@ -31,7 +31,7 @@ export function getSavedArticles() {
       },
       {
         id: "6678ea9895565c2b4e1bcafc",
-        author: "Angelo Kourkafas",
+        source: "Angelo Kourkafas",
         description:
           "Consumer Pulse Check: Lousy Mood, Tighter Budgets, but Spending Still Healthy.",
         link: "https://www.edwardjones.com/us-en/market-news-insights/stock-market-news/stock-market-weekly-update",
@@ -44,7 +44,7 @@ export function getSavedArticles() {
       },
       {
         id: "6678eb5bb5789a6ad965a4e4",
-        author: "The Outbound Collective",
+        source: "The Outbound Collective",
         description: "Discover the best views in Virginia",
         link: "https://www.theoutbound.com/theoutbound/the-top-25-hikes-in-virginia",
         urlToImage:
@@ -55,7 +55,7 @@ export function getSavedArticles() {
       },
       {
         id: "6678eb5bb5789a6ad965a4e5",
-        author: "Game From Sracth",
+        source: "Game From Sracth",
         description: "The Best Open Source Game Tools",
         link: "https://gamefromscratch.com/the-best-open-source-game-tools/",
         urlToImage: "https://ia601500.us.archive.org/21/items/godot_engine_350/Godot%20Engine%20logo%20vertical%20color%20light.png",
@@ -65,7 +65,7 @@ export function getSavedArticles() {
       },
       {
         id: "6678eb5bb5789a6ad965a4e4",
-        author: "Havard Health Publishing, Harvard Medical School",
+        source: "Havard Health Publishing, Harvard Medical School",
         description: "11 Foods that lower cholesterol",
         link: "https://www.health.harvard.edu/heart-health/11-foods-that-lower-cholesterol",
         urlToImage:
@@ -85,7 +85,7 @@ export function addSavedArticle(newsData, keyword) {
       title: newsData.title,
       text: newsData.description,
       date: newsData.publishedAt,
-      source: newsData.source.name,
+      source: newsData.name,
       link: newsData.url,
       image: newsData.urlToImage,
       keyword: keyword,

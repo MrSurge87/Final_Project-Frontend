@@ -208,7 +208,9 @@ function App() {
     setSearching(true);
     getSearchResults(keyword)
       .then((res) => {
+        console.log(res.articles);
         setSearchResults(res.articles);
+        
         setHasSearched(true);
         setSearching(false);
         setSearchError(false);
@@ -260,7 +262,7 @@ function App() {
         );
         setSavedArticles(removeNewsArticles);
       })
-      .catch((err) => console.err(err));
+      .catch((err) => console.error(err));
   };
 
   return (
