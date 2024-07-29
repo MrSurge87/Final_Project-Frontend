@@ -6,7 +6,6 @@ import Footer from "../Footer/Footer.js";
 import About from "../About/About.js";
 import MobileMenu from "../MobileMenu/MobileMenu.js";
 
-
 // CONTEXT IMPORTS
 import { CurrentUserContext } from "../../context/CurrentUserContext.js";
 import { CurrentPageContext } from "../../context/CurrentPageContext.js";
@@ -75,7 +74,7 @@ function App() {
 
   const handleOpenMobileMenu = () => {
     setActiveModal("mobileMenu");
-  }
+  };
 
   // Function To Register User
   // const handleSignUpUser = (values) => {
@@ -89,11 +88,10 @@ function App() {
   //   handleSubmit(makeRequest);
   // };
 
-    //Sign Up User
-    const signUpUser = (values) => {
-      handleSubmit(() => signUp(values).then(() => signInUser(values)));
-      
-    };
+  //Sign Up User
+  const signUpUser = (values) => {
+    handleSubmit(() => signUp(values).then(() => signInUser(values)));
+  };
 
   // Use Effects
 
@@ -152,7 +150,6 @@ function App() {
       })
       .catch(console.error)
       .finally(() => setIsLoading(false));
-      
   }
 
   //Sign In User
@@ -187,8 +184,6 @@ function App() {
     navigate("/");
   };
 
-
-
   //Check Sign In Token
   function checkSignedIn(token) {
     return checkToken(token)
@@ -208,9 +203,8 @@ function App() {
     setSearching(true);
     getSearchResults(keyword)
       .then((res) => {
-        console.log(res.articles);
         setSearchResults(res.articles);
-        
+
         setHasSearched(true);
         setSearching(false);
         setSearchError(false);
@@ -280,20 +274,16 @@ function App() {
                 value={{ savedArticles, setSavedArticles }}
               >
                 <KeyWordContext.Provider value={{ keyword, setKeyword }}>
-                <div className="App">
-                <div className="Search">
-                  <Header
-                    onSignIn={handleOpenSignInModal}
-                    onSignUp={handleOpenSignUpModal}
-                    signUpUser={signUpUser}
-                    signedIn={signedIn}
-                    onSignOut={signOutUser}
-                    handleOpenMobileMenu={handleOpenMobileMenu}
-                  />
-
-                  
-                  
-                 
+                  <div className="App">
+                    <div className="Search">
+                      <Header
+                        onSignIn={handleOpenSignInModal}
+                        onSignUp={handleOpenSignUpModal}
+                        signUpUser={signUpUser}
+                        signedIn={signedIn}
+                        onSignOut={signOutUser}
+                        handleOpenMobileMenu={handleOpenMobileMenu}
+                      />
                       <Routes>
                         <Route
                           exact
@@ -311,7 +301,6 @@ function App() {
                             />
                           }
                         />
-
                         <Route
                           exact
                           path="/saved-news"
@@ -350,14 +339,12 @@ function App() {
                         handleSuccessModal={handleSuccessModal}
                       />
                     )}
-                    
-                      <SuccessModal
-                        isOpen={activeModal === "successModal"}
-                        onClose={handleCloseModal}
-                        onSubmit={handleOpenSignInModal}
-                      />
-                     
 
+                    <SuccessModal
+                      isOpen={activeModal === "successModal"}
+                      onClose={handleCloseModal}
+                      onSubmit={handleOpenSignInModal}
+                    />
                     <About />
                     <Footer />
                   </div>

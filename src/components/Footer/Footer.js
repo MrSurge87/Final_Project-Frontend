@@ -15,7 +15,7 @@ const Footer = () => {
           <li className="footer__link">
             <NavLink to="/">
               <button className="footer__button-home" type="button">
-                Home
+              Home
               </button>
             </NavLink>
             </li>

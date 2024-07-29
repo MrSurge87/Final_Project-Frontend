@@ -29,6 +29,7 @@ const Main = ({
   return (
     <main className="main">
       <SearchForm
+      
         handleSearch={handleSearch}
         setSearchResults={setSearchResults}
       />
@@ -53,6 +54,7 @@ const Main = ({
         ) : (
           ""
         )}
+        
       </div>
     </main>
   );

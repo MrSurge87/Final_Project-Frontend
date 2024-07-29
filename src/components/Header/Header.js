@@ -18,7 +18,8 @@ import HomeWhite from "../../images/Home-White.svg";
 import HomeBlack from "../../images/Home-Black.svg";
 import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 import SavedArticlesBlack from "../../images/Saved-Articles-Black.svg";
-import MobileMenu from "../../images/mobile-menu.svg";
+import MobileMenuWhite from "../../images/MobileMenuWhite.svg";
+import MobileMenuBlack from "../../images/MobileMebuBlack.svg";
 
 const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
   const { currentUser } = useContext(CurrentUserContext);
@@ -114,7 +115,14 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
         {signedIn ? (
           <div className="mobile">
             <div className="mobile__content">
-              <nav className="mobile__links">
+            <nav>
+            <div className="mobile__header">
+              <div className="mobile__menu">
+              <img src={MobileMenuBlack} onClick={handleOpenMobileMenu}/>
+              </div>
+            </div>
+          </nav>
+              {/* <nav className="mobile__links">
                 <NavLink to="/" className="mobile__link">
                   Home
                 </NavLink>
@@ -131,7 +139,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                   alt="signOut"
                   className="mobile__signOut"
                 />
-              </button>
+              </button> */}
             </div>
           </div>
         ) : signedIn && currentPage === "/saved-news" ? (
@@ -161,12 +169,12 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           <nav>
             <div className="mobile__header">
               <div className="mobile__menu">
-              <img src={MobileMenu} onClick={handleOpenMobileMenu}/>
+              <img src={MobileMenuWhite} onClick={handleOpenMobileMenu}/>
               </div>
             </div>
           </nav>
         )}
-        ;
+        
       </header>
     </>
   );

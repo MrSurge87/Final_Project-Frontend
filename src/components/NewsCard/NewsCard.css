@@ -119,7 +119,7 @@
     line-height: 30px;
     color: black;
     margin-top: 15px;
-    height: 60px;
+ 
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -207,6 +207,7 @@
 
     .card__image {
       width: 288px;
-     
     }
+
+   
   }

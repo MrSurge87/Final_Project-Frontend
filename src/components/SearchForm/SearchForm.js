@@ -11,13 +11,11 @@ const SearchForm = ({ handleSearch }) => {
   } = useForm();
 
 
-
   const handleSearchSubmit = () => {
     const { keyword } = getValues();
     handleSearch(keyword);
   };
 
-  
 
   return (
     <form className="searchForm" onSubmit={handleSubmit(handleSearchSubmit)}>
@@ -36,12 +34,13 @@ const SearchForm = ({ handleSearch }) => {
             placeholder="Enter Topic"
             {...register("keyword", { required: "Please enter a keyword" })}
           />
-          {errors.keyword && (
-            <p className="searchForm__invalid">{errors.keyword.message}</p>
-          )}
           <button className="searchForm__searchbar-button" type="submit">
             <p className="searchForm__searchbar-button-text">Search</p>
           </button>
+          {errors.keyword && (
+            <p className="searchForm__invalid">{errors.keyword.message}</p>
+          )}
+          
         </div>
       </section>
     </form>
