@@ -41,19 +41,27 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             alt="News Explorer"
           />
         </NavLink>
-        
 
-        {signedIn ? (
+        {signedIn && currentPage === "/" ?(
           <div className="header__buttons">
             <NavLink to="/" className="home__button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
             </NavLink>
-            <NavLink to="/saved-news" className="profile__savedArticles">
+            <NavLink
+              to="/saved-news"
+              className="profile__savedArticles"
+              style={({ isActive, isPending, }) => {
+                return {
+                  borderBottom: isActive ? "none" : "",
+                };
+              }}
+            >
               <img
                 src={
                   isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite
                 }
                 alt="Saved Articles Title"
+                
               />
             </NavLink>
             <div className="profile">
@@ -84,7 +92,61 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
               </NavLink>
             </div>
           </div>
-        ) : (
+        ) : 
+        currentPage === "/saved-news" ? (
+          <div className="header__buttons">
+            <NavLink to="/" className="home__button">
+              <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
+            </NavLink>
+            <NavLink
+              to="/saved-news"
+              className="profile__savedArticles"
+              style={({ isActive, isPending, }) => {
+                return {
+                  borderBottom: isActive ? "1px solid rgba(26,27,34,1)" : "",
+                  borderWidth: isActive ? "medium" : "",
+               
+                };
+              }}
+            >
+              <img
+                src={
+                  isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite
+                }
+                alt="Saved Articles Title"
+                
+              />
+            </NavLink>
+            <div className="profile">
+              <NavLink
+                to="/saved-news"
+                className={` ${
+                  isSavedNewsHeader
+                    ? "profile__logo-savedNews"
+                    : "profile__logo"
+                }`}
+              >
+                <div className="profile__details">
+                  {isSavedNewsHeader ? (
+                    <p className="profile__username-savedNews">
+                      {currentUser.name}
+                    </p>
+                  ) : (
+                    <p className="profile__username">{currentUser.name}</p>
+                  )}
+
+                  <img
+                    src={isSavedNewsHeader ? SignOutBlack : SignOutWhite}
+                    alt="Sign Out Button"
+                    onClick={onSignOut}
+                    className="profile__signOut"
+                  />
+                </div>
+              </NavLink>
+            </div>
+          </div>
+        ) : 
+        (
           <nav to="/">
             <ul className="header__buttons">
               <li className="header__buttons_list">
@@ -103,6 +165,8 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           </nav>
         )}
       </header>
+
+      {/* HEADER MOBILE */}
       <header
         className={`header__mobile ${
           isSavedNewsHeader ? "header--saved" : "header--main"
@@ -114,16 +178,16 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             alt="News Explorer"
           />
         </NavLink>
-        {signedIn ? (          
+        {signedIn ? (
           <div className="mobile">
             <div className="mobile__content">
-            <nav>
-            <div className="mobile__header">
-              <div className="mobile__menu">
-              <img src={MobileMenuBlack} onClick={handleOpenMobileMenu}/>
-              </div>
-            </div>
-          </nav>
+              <nav>
+                <div className="mobile__header">
+                  <div className="mobile__menu">
+                    <img src={MobileMenuBlack} onClick={handleOpenMobileMenu} />
+                  </div>
+                </div>
+              </nav>
               {/* <nav className="mobile__links">
                 <NavLink to="/" className="mobile__link">
                   Home
@@ -171,12 +235,11 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           <nav>
             <div className="mobile__header">
               <div className="mobile__menu">
-              <img src={MobileMenuWhite} onClick={handleOpenMobileMenu}/>
+                <img src={MobileMenuWhite} onClick={handleOpenMobileMenu} />
               </div>
             </div>
           </nav>
         )}
-        
       </header>
     </>
   );

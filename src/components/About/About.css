@@ -1,7 +1,7 @@
 .about {
   display: flex;
-
   min-height: 624px;
+  background: white;
 }
 
 .about__container {

@@ -289,16 +289,19 @@ function App() {
                           exact
                           path="/"
                           element={
-                            <Main
-                              setSearchResults={setSearchResults}
-                              onSignUp={signUpUser}
-                              handleSaveArticle={handleSaveArticle}
-                              handleRemoveArticle={handleRemoveArticle}
-                              searchError={searchError}
-                              handleSearch={handleSearch}
-                              signedIn={signedIn}
-                              handleOpenSignUpModal={handleOpenSignUpModal}
-                            />
+                            <>
+                              <Main
+                                setSearchResults={setSearchResults}
+                                onSignUp={signUpUser}
+                                handleSaveArticle={handleSaveArticle}
+                                handleRemoveArticle={handleRemoveArticle}
+                                searchError={searchError}
+                                handleSearch={handleSearch}
+                                signedIn={signedIn}
+                                handleOpenSignUpModal={handleOpenSignUpModal}
+                              />
+                              <About />
+                            </>
                           }
                         />
                         <Route
@@ -341,11 +344,11 @@ function App() {
                     )}
 
                     {activeModal === "MobileMenu" && (
-                      <MobileMenu 
-                    isOpen={activeModal === "create"}
-                    onClose={handleCloseModal}
-                    handleOpenMobileMenu={handleOpenMobileMenu}
-                    />
+                      <MobileMenu
+                        isOpen={activeModal === "create"}
+                        onClose={handleCloseModal}
+                        handleOpenMobileMenu={handleOpenMobileMenu}
+                      />
                     )}
 
                     <SuccessModal
@@ -353,7 +356,6 @@ function App() {
                       onClose={handleCloseModal}
                       onSubmit={handleOpenSignInModal}
                     />
-                    <About />
                     <Footer />
                   </div>
                 </KeyWordContext.Provider>
