@@ -42,7 +42,7 @@
 }
 
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1000px) {
   .newsCards__title {
     font-family: "RobotoSlab400";
     font-size: 30px;
@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 720px) {
   .newsCards__list {
     margin: auto;
   }

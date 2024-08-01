@@ -46,7 +46,7 @@
   src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 970px) {
 
   .signIn__button {
     margin-right: 40px;
@@ -71,7 +71,7 @@
 
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 720px) {
   .about {
     display: block;
   }
@@ -101,3 +101,6 @@
     margin: 16px auto;
   }
 }
+
+
+

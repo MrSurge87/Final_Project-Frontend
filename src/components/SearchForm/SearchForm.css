@@ -86,7 +86,7 @@
   }
 
 
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: 1000px) {
     .searchForm__title {
       font-family: "RobotoSlab400", sans-serif;
       font-size: 36px;
@@ -98,7 +98,7 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 720px) {
     .searchForm {
       margin-top: 30px;
     }

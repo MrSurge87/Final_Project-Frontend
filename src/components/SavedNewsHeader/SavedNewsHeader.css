@@ -51,7 +51,7 @@
 
   
 
-  @media screen and (max-width: 770px){
+  @media screen and (max-width: 1000px){
     .header {
       justify-content: space-between;
     }
@@ -73,7 +73,7 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 720px) {
     .saved-articles__container {
       margin-left: 16px;
       max-width: 288px;

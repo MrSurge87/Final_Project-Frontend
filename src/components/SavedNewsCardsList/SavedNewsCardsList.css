@@ -19,7 +19,7 @@
     margin-top: 64px;
   }
 
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: 1000px) {
     .savedNews__newsCards {
       padding: 0;
     }
@@ -29,7 +29,7 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 720px) {
     .savedNews__newsCards {
       margin-top: 32px;
     }

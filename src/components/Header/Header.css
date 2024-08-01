@@ -151,7 +151,7 @@
 }
 
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1000px) {
   .header__title {
     font-size: 30px;
     margin-left: 40px;
@@ -170,7 +170,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 720px) {
   .header__desktop {
     display: none;
   }

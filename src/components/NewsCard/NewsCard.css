@@ -148,7 +148,8 @@
   }
   
 
-  @media screen and (max-width: 770px) {
+ 
+  @media screen and (max-width: 1350px) {
     .card {
       width: 224px;
       height: 420px;
@@ -174,7 +175,7 @@
     }
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 720px) {
     .card {
       max-width: 288px;
       width: 100%;
