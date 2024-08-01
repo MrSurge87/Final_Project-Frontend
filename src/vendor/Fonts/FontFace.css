@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Inter400";
+    src: local("Inter400"), url(../Fonts/inter-400-regular.woff);
+}
+
+@font-face {
+    font-family: "Inter500";
+    src: local("Inter500"), url(../Fonts/inter-500.woff);
+}
+
+@font-face {
+    font-family: "Roboto400";
+    src: local("Roboto400"), url(../Fonts/roboto-400-regular.woff);
+}
+
+@font-face {
+    font-family: "Roboto500";
+    src: local("Roboto500"), url(../Fonts/roboto-500.woff);
+}
+
+@font-face {
+    font-family: "Roboto700";
+    src: local("Roboto700"), url(../Fonts/roboto-700.woff);
+}
+
+@font-face {
+    font-family: "Roboto900";
+    src: local("Roboto900"), url(../Fonts/roboto-900.woff);
+}
+
+@font-face {
+    font-family: "RobotoSlab400";
+    src: local("RobotoSlab400"), url(../Fonts/roboto-slab-400-regular.woff);
+}
+
+@font-face {
+    font-family: "RobotoSlab700";
+    src: local("RobotoSlab700"), url(../Fonts/roboto-slab-700.woff);
+}
+
+@font-face {
+    font-family: "SourceSansPro400";
+    src: local("SourceSansPro400"), url(../Fonts/SourceSansPro-Regular.otf.woff);
+}

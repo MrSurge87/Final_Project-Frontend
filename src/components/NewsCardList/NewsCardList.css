@@ -41,16 +41,6 @@
   margin: 0;
 }
 
-@font-face {
-  font-family: "Roboto400";
-  src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
-}
-
-@font-face {
-  font-family: "RobotoSlab400";
-  src: local("RobotoSlab400"),
-    url(../../vendor/Fonts/roboto-slab-400-regular.woff);
-}
 
 @media screen and (max-width: 770px) {
   .newsCards__title {

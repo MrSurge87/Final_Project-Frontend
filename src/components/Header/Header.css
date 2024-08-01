@@ -150,25 +150,6 @@
   cursor: pointer;
 }
 
-@font-face {
-  font-family: "Roboto400";
-  src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
-}
-
-@font-face {
-  font-family: "Roboto500";
-  src: local("Roboto500"), url(../../vendor/Fonts/roboto-500.woff);
-}
-
-@font-face {
-  font-family: "Roboto700";
-  src: local("Roboto700"), url(../../vendor/Fonts/roboto-700.woff);
-}
-
-@font-face {
-  font-family: "RobotoSlab700";
-  src: local("RobotoSlab700"), url(../../vendor/Fonts/roboto-slab-700.woff);
-}
 
 @media screen and (max-width: 770px) {
   .header__title {

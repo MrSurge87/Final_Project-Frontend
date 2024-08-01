@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "../../vendor/Fonts/FontFace.css";
 import Header from "../Header/Header.js";
 import Main from "../Main/Main.js";
 import Footer from "../Footer/Footer.js";

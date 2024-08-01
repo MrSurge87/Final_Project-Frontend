@@ -27,7 +27,3 @@
     margin: 0px;
   }
 
-  @font-face {
-    font-family: "Roboto400";
-    src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
-  }

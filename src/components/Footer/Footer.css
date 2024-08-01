@@ -80,7 +80,6 @@
   cursor: pointer;
 }
 
-
 .footer__button-facebook {
   border: none;
   width: 20px;
@@ -91,10 +90,7 @@
   cursor: pointer;
 }
 
-@font-face {
-  font-family: "Roboto400";
-  src: local("Roboto400"), url(../../vendor/Fonts/roboto-400-regular.woff);
-}
+
 
 @media screen and (max-width: 770px) {
   .footer {

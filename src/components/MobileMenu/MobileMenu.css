@@ -46,7 +46,4 @@
   }
   }
 
-  @font-face {
-    font-family: "Roboto500";
-    src: local("Roboto500"), url("../../vendor/Fonts/roboto-500.woff");
-  }
+ 

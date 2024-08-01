@@ -62,12 +62,4 @@
     cursor: pointer;
   }
 
-  @font-face {
-    font-family: "Inter400";
-    src: local("Inter400"), url(../../vendor/Fonts/inter-400-regular.woff);
-  }
-
-  @font-face {
-    font-family: "Roboto900";
-    src: local("Roboto900"), url(../../vendor/Fonts/roboto-900.woff);
-  }
+ 
