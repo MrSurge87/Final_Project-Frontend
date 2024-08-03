@@ -50,6 +50,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [currentPage, setCurrentPage] = useState({});
   const [savedArticles, setSavedArticles] = useState([]);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate("");
 
@@ -74,7 +75,7 @@ function App() {
   };
 
   const handleOpenMobileMenu = () => {
-    setActiveModal("MobileMenu");
+    setMobileMenuOpen(prevState => !prevState);
   };
 
 
@@ -268,7 +269,19 @@ function App() {
                   <div className="App">
                     <div className="Search">
                       <>
-                      
+                      {isMobileMenuOpen && (
+                      <MobileMenu
+                        isOpen={isMobileMenuOpen}
+                        onClose={handleCloseModal}
+                        handleOpenMobileMenu={handleOpenMobileMenu}
+                        signUpUser={signUpUser}
+                        onSubmit={handleOpenSignInModal}
+                        signInUser={signInUser}
+                        openSignInModal={handleOpenSignInModal}
+                        openSignUpModal={handleOpenSignUpModal}
+                        onSignIn={handleOpenSignInModal}
+                      />
+                    )}
                       <Header
                         onSignIn={handleOpenSignInModal}
                         onSignUp={handleOpenSignUpModal}
@@ -279,7 +292,7 @@ function App() {
                         
                       />
                     
-                      
+                
                       </>
                       <Routes>
                         <Route
@@ -340,19 +353,7 @@ function App() {
                       />
                     )}
 
-                    {activeModal === "MobileMenu" && (
-                      <MobileMenu
-                        isOpen={activeModal === "MobileMenu"}
-                        onClose={handleCloseModal}
-                        handleOpenMobileMenu={handleOpenMobileMenu}
-                        signUpUser={signUpUser}
-                        onSubmit={handleOpenSignInModal}
-                        signInUser={signInUser}
-                        openSignInModal={handleOpenSignInModal}
-                        openSignUpModal={handleOpenSignUpModal}
-                        onSignIn={handleOpenSignInModal}
-                      />
-                    )}
+                 
                     
                     <SuccessModal
                       isOpen={activeModal === "successModal"}

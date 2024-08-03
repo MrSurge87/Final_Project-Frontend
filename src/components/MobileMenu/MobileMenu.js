@@ -9,9 +9,9 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import NewsExplorerWhite from "../../images/NewsExplorer-White.svg";
 import HomeWhite from "../../images/Home-White.svg";
 
-const MobileMenu = ({ onSignIn, onClose, signedIn }) => {
+const MobileMenu = ({ onSignIn, onClose, signedIn, isOpen }) => {
   return (
-   <header className="mobile__menu" name="MobileMenu" title="MobileMenu">
+   <header className={`mobile__menu ${isOpen ? "mobile__menu_open" : ""}`} name="MobileMenu" title="MobileMenu">
       <div className="mobile__menu__header">
       <NavLink to="/">
         <img src={NewsExplorerWhite} alt="News Explorer" />

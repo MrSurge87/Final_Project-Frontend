@@ -218,7 +218,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           <nav>
             <div className="mobile__header">
               <div className="mobile__menu">
-                <img src={MobileMenuWhite} onClick={handleOpenMobileMenu} />
+                <img src={MobileMenuWhite} onClick={handleOpenMobileMenu} alt="Mobile Menu" />
               </div>
             </div>
           </nav>
