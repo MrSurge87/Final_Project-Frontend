@@ -3,14 +3,15 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { CurrentPageContext } from "../../context/CurrentPageContext";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 //Icons
 import NewsExplorerWhite from "../../images/NewsExplorer-White.svg";
 import HomeWhite from "../../images/Home-White.svg";
 
-const MobileMenu = ({ onSignIn, signedIn }) => {
+const MobileMenu = ({ onSignIn, onClose, signedIn }) => {
   return (
-    <header className="mobile__menu" name="MobileMenu">
+   <header className="mobile__menu" name="MobileMenu" title="MobileMenu">
       <div className="mobile__menu__header">
       <NavLink to="/">
         <img src={NewsExplorerWhite} alt="News Explorer" />
@@ -36,6 +37,7 @@ const MobileMenu = ({ onSignIn, signedIn }) => {
         </ul>
       </nav>
     </header>
+    
   );
 };
 

@@ -74,20 +74,10 @@ function App() {
   };
 
   const handleOpenMobileMenu = () => {
-    setActiveModal("mobileMenu");
+    setActiveModal("MobileMenu");
   };
 
-  // Function To Register User
-  // const handleSignUpUser = (values) => {
-  //   const makeRequest = () => {
-  //     return signUp(values).then((user) => {
-  //       if (user) {
-  //         handleSuccessModal();
-  //       }
-  //     });
-  //   };
-  //   handleSubmit(makeRequest);
-  // };
+
 
   //Sign Up User
   const signUpUser = (values) => {
@@ -277,6 +267,8 @@ function App() {
                 <KeyWordContext.Provider value={{ keyword, setKeyword }}>
                   <div className="App">
                     <div className="Search">
+                      <>
+                      
                       <Header
                         onSignIn={handleOpenSignInModal}
                         onSignUp={handleOpenSignUpModal}
@@ -284,7 +276,11 @@ function App() {
                         signedIn={signedIn}
                         onSignOut={signOutUser}
                         handleOpenMobileMenu={handleOpenMobileMenu}
+                        
                       />
+                    
+                      
+                      </>
                       <Routes>
                         <Route
                           exact
@@ -346,12 +342,18 @@ function App() {
 
                     {activeModal === "MobileMenu" && (
                       <MobileMenu
-                        isOpen={activeModal === "create"}
+                        isOpen={activeModal === "MobileMenu"}
                         onClose={handleCloseModal}
                         handleOpenMobileMenu={handleOpenMobileMenu}
+                        signUpUser={signUpUser}
+                        onSubmit={handleOpenSignInModal}
+                        signInUser={signInUser}
+                        openSignInModal={handleOpenSignInModal}
+                        openSignUpModal={handleOpenSignUpModal}
+                        onSignIn={handleOpenSignInModal}
                       />
                     )}
-
+                    
                     <SuccessModal
                       isOpen={activeModal === "successModal"}
                       onClose={handleCloseModal}

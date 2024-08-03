@@ -42,6 +42,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           />
         </NavLink>
 
+        
         {signedIn && currentPage === "/" ?(
           <div className="header__buttons">
             <NavLink to="/" className="home__button">
@@ -188,24 +189,6 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                   </div>
                 </div>
               </nav>
-              {/* <nav className="mobile__links">
-                <NavLink to="/" className="mobile__link">
-                  Home
-                </NavLink>
-                <NavLink to="/saved-news" className="mobile__link">
-                  Saved Articles
-                </NavLink>
-              </nav>
-              <button className="mobile__button-signedIn" onClick={onSignOut}>
-                <p className="mobile__username-signedIn">
-                  {currentUser.username}
-                </p>
-                <img
-                  src={SignOutWhite}
-                  alt="signOut"
-                  className="mobile__signOut"
-                />
-              </button> */}
             </div>
           </div>
         ) : signedIn && currentPage === "/saved-news" ? (
