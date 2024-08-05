@@ -28,3 +28,9 @@
 .inactiveButton {
     background-color: rgba(230,232,252,1)
 }
+
+@media screen and (max-width: 320px) {
+    .modal__signUp {
+        width: 288px;
+    }
+}

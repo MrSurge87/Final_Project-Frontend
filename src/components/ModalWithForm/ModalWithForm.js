@@ -1,4 +1,5 @@
 import "./ModalWithForm.css";
+import "../../vendor/Fonts/FontFace.css";
 
 const ModalWithForm = ({ children, title, onClose, name, onSubmit }) => {
   return (

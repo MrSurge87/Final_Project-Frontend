@@ -117,3 +117,34 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 320px) {
+  .modal__content {
+    width: 100%;
+  }
+
+  .modal-form-title {
+    padding: 16px 17px 18px 17px;
+    
+  }
+
+  .modal-form {
+    padding-left: 17px;
+    
+  }
+
+  .modal-form-submit {
+    width: 288px;
+  }
+
+  .close__button {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images//close-small.svg");
+    right: 16px;
+  }
+
+}
