@@ -173,6 +173,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             alt="News Explorer"
           />
         </NavLink>
+        
         {signedIn ? (
           <div className="mobile">
             <div className="mobile__content">
@@ -210,7 +211,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           </div>
         ) : (
           <nav>
-            <div className="mobile__header">
+            {/* <div className="mobile__header">
               <div className="mobile__menu">
                 <nav>
                   <img
@@ -219,7 +220,6 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                     onClick={handleOpenMobileMenu}
                     alt="Mobile Menu"
                   />
-
                   <ul className="mobile__menu__list">
                     <li className="mobile__menu__list__home__link">
                       <NavLink to="/">
@@ -239,7 +239,13 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                   </ul>
                 </nav>
               </div>
-            </div>
+            </div> */}
+               <img
+                    src={MobileMenuWhite}
+                    className="mobile__menu_icon"
+                    onClick={handleOpenMobileMenu}
+                    alt="Mobile Menu"
+                  />
           </nav>
         )}
       </header>
