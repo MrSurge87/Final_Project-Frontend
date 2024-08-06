@@ -42,8 +42,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           />
         </NavLink>
 
-        
-        {signedIn && currentPage === "/" ?(
+        {signedIn && currentPage === "/" ? (
           <div className="header__buttons">
             <NavLink to="/" className="home__button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
@@ -51,7 +50,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             <NavLink
               to="/saved-news"
               className="profile__savedArticles"
-              style={({ isActive, isPending, }) => {
+              style={({ isActive, isPending }) => {
                 return {
                   borderBottom: isActive ? "none" : "",
                 };
@@ -62,7 +61,6 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                   isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite
                 }
                 alt="Saved Articles Title"
-                
               />
             </NavLink>
             <div className="profile">
@@ -93,8 +91,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
               </NavLink>
             </div>
           </div>
-        ) : 
-        currentPage === "/saved-news" ? (
+        ) : currentPage === "/saved-news" ? (
           <div className="header__buttons">
             <NavLink to="/" className="home__button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
@@ -102,11 +99,10 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             <NavLink
               to="/saved-news"
               className="profile__savedArticles"
-              style={({ isActive, isPending, }) => {
+              style={({ isActive, isPending }) => {
                 return {
                   borderBottom: isActive ? "1px solid rgba(26,27,34,1)" : "",
                   borderWidth: isActive ? "medium" : "",
-               
                 };
               }}
             >
@@ -115,7 +111,6 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                   isSavedNewsHeader ? SavedArticlesBlack : SavedArticlesWhite
                 }
                 alt="Saved Articles Title"
-                
               />
             </NavLink>
             <div className="profile">
@@ -146,8 +141,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
               </NavLink>
             </div>
           </div>
-        ) : 
-        (
+        ) : (
           <nav to="/">
             <ul className="header__buttons">
               <li className="header__buttons_list">
@@ -218,7 +212,32 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           <nav>
             <div className="mobile__header">
               <div className="mobile__menu">
-                <img src={MobileMenuWhite} onClick={handleOpenMobileMenu} alt="Mobile Menu" />
+                <nav>
+                  <img
+                    src={MobileMenuWhite}
+                    className="mobile__menu_icon"
+                    onClick={handleOpenMobileMenu}
+                    alt="Mobile Menu"
+                  />
+
+                  <ul className="mobile__menu__list">
+                    <li className="mobile__menu__list__home__link">
+                      <NavLink to="/">
+                        <img src={HomeWhite} alt="Home" />
+                      </NavLink>
+                    </li>
+
+                    <li className="mobile__menu__list__signIn">
+                      <button
+                        type="button"
+                        onClick={onSignIn}
+                        className="mobile__menu__list__signIn__button"
+                      >
+                        Sign In
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </nav>
