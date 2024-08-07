@@ -21,8 +21,15 @@ import SavedArticlesWhite from "../../images/Saved-Articles-White.svg";
 import SavedArticlesBlack from "../../images/Saved-Articles-Black.svg";
 import MobileMenuWhite from "../../images/MobileMenuWhite.svg";
 import MobileMenuBlack from "../../images/MobileMebuBlack.svg";
+import Close from "../../images/close-small.svg";
 
-const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
+const Header = ({
+  onSignIn,
+  signedIn,
+  onSignOut,
+  handleOpenMobileMenu,
+  onClose,
+}) => {
   const { currentUser } = useContext(CurrentUserContext);
   const { currentPage } = useContext(CurrentPageContext);
   const location = useLocation();
@@ -173,7 +180,7 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
             alt="News Explorer"
           />
         </NavLink>
-        
+
         {signedIn ? (
           <div className="mobile">
             <div className="mobile__content">
@@ -211,13 +218,14 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
           </div>
         ) : (
           <nav>
-            {/* <div className="mobile__header">
+            <div className="mobile__header">
               <div className="mobile__menu">
-                <nav>
+                {/* <nav>
                   <img
                     src={MobileMenuWhite}
                     className="mobile__menu_icon"
                     onClick={handleOpenMobileMenu}
+                    
                     alt="Mobile Menu"
                   />
                   <ul className="mobile__menu__list">
@@ -237,15 +245,21 @@ const Header = ({ onSignIn, signedIn, onSignOut, handleOpenMobileMenu }) => {
                       </button>
                     </li>
                   </ul>
-                </nav>
+                </nav> */}
               </div>
-            </div> */}
-               <img
-                    src={MobileMenuWhite}
-                    className="mobile__menu_icon"
-                    onClick={handleOpenMobileMenu}
-                    alt="Mobile Menu"
-                  />
+            </div>
+            <img
+              src={MobileMenuWhite}
+              className="mobile__menu_icon"
+              onClick={handleOpenMobileMenu}
+              alt="Mobile Menu"
+            />
+            {/* <img
+              src={Close}
+              alt="close"
+              className="close__button_mobile"
+              onClick={onClose}
+            /> */}
           </nav>
         )}
       </header>

@@ -17,8 +17,8 @@
     flex-direction: column;
     width:100%;
     background-color: rgba(26,27,34,1);
-    
     margin-right: 16px;
+    position: fixed;
   }
 
   .mobile__menu__header {
