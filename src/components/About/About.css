@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .About {
     display: flex;
@@ -32,3 +33,111 @@
     margin-top: 10px;
     margin-bottom: 0;
 }
+=======
+.about {
+  display: flex;
+  min-height: 624px;
+  background: white;
+}
+
+.about__container {
+  display: flex;
+  align-items: center;
+  margin-left: 104px;
+}
+
+.about__image {
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 56px;
+  margin-bottom: 13px;
+  max-width: 600px;
+  font-family: "Roboto400", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.about__text-author {
+  font-family: "RobotoSlab400", sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.about__text-description {
+  font-family: "Roboto400", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "RobotoSlab400";
+  src: local("RobotoSlab400"), url(../../vendor/Fonts/roboto-slab-400-regular.woff);
+}
+
+@media screen and (max-width: 970px) {
+
+  .signIn__button {
+    margin-right: 40px;
+  }
+  
+  .about__container {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .about__image {
+    margin-right: 32px;
+    width: 272px;
+    height: 272px;
+  }
+
+  .about__text {
+    margin: 0;
+    width: 424px;
+  }
+
+}
+
+@media screen and (max-width: 720px) {
+  .about {
+    display: block;
+  }
+  
+  .about__container {
+    flex-direction: column;
+  
+  }
+  
+  .about__image {
+    width: 272px;
+    height: 272px;
+    margin: 32px auto 24px auto;
+  }
+
+  .about__text {
+    width: 288px;
+  }
+
+  .about__text-author {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  .about__text-description {
+    margin: 16px auto;
+  }
+}
+
+
+
+>>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d

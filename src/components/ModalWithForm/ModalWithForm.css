@@ -26,9 +26,8 @@
   justify-content: space-between;
   padding: 34px 28px 22px 36px;
   color: rgba(0, 0, 0, 1);
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto900", sans-serif;
   font-size: 24px;
-  font-weight: 900;
   line-height: 28px;
   margin: 0;
 }
@@ -40,15 +39,16 @@
   width: 40px;
   border: none;
   padding: 0;
-  position: fixed;
+  position: relative;
   overflow: hidden;
-  top: 500px;
-  right: 1030px;
-}
-
-.close__button:hover {
+  top: -40px;
+  right: -40px;
+  display: flex;
+  margin-left: auto;
   cursor: pointer;
 }
+
+
 
 .inputs {
   list-style-type: none;
@@ -62,9 +62,8 @@
   margin-bottom: 31px;
   width: 358px;
   color: rgba(0, 0, 0, 1);
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto400", sans-serif;
   font-size: 14px;
-  font-weight: 400;
   line-height: 17px;
   padding: 0;
 }
@@ -74,10 +73,9 @@
   margin-bottom: 8px;
   padding: 0px;
   color: rgba(47, 113, 229, 1);
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Inter400", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
   line-height: 20px;
 }
 
@@ -88,9 +86,8 @@
   border: none;
   border-radius: 32px;
   color: rgba(182, 188, 191, 1);
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto500", sans-serif;
   font-size: 18px;
-  font-weight: 500;
   line-height: 24px;
   padding: 0;
   background-color: rgba(230, 232, 235, 1);
@@ -105,10 +102,9 @@
 .modal__signIn {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.5);
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Roboto500", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
   line-height: 20px;
   border: 0;
   padding: 10px;
@@ -119,4 +115,38 @@
 
 .modal-form-submit:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 320px) {
+  .modal__content {
+    width: 100%;
+    margin-top: 56px;
+    height: 560px;
+  }
+
+  .modal-form-title {
+    padding: 16px 17px 18px 17px;
+    
+  }
+
+  .modal-form {
+    padding-left: 17px;
+    
+  }
+
+  .modal-form-submit {
+    width: 288px;
+  }
+
+  .close__button {
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images//close-small.svg");
+    right: 16px;
+  }
+
 }

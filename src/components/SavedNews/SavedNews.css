@@ -1,0 +1,5 @@
+.saved-article {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245,246,247,1);
+}

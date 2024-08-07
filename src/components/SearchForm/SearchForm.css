@@ -1,0 +1,144 @@
+.searchForm {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 160px;
+    justify-content: center
+
+  }
+  
+  .searchForm__container {
+    height: 336px;
+    width: 608px;
+  }
+  
+  .searchForm__title {
+    font-family: "RobotoSlab400", sans-serif;
+    font-size: 60px;
+    line-height: 64px;
+    color: white;
+    margin: 80px 0 32px 0;
+  }
+  
+  .searchForm__description {
+    font-family: "Roboto400", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    margin: 0 0 88px 0;
+  }
+  
+  .searchForm__searchbar {
+    width: 100%;
+    height: 64px;
+  }
+  
+  .searchForm__searchbar-input {
+    font-family: "Roboto400", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    width: 608px;
+    height: 64px;
+    border-radius: 64px;
+    border: 1px solid #d1d2d6;
+    padding: 0 0 0 24px;
+    box-sizing: border-box;
+  }
+  
+  .searchForm__searchbar-input::placeholder {
+    color: #b6bcbf;
+  }
+  
+  .searchForm__invalid {
+    font-family: "Roboto400", sans-serif;
+    color: #ff0000;
+    margin-left: 20px;
+  }
+  
+  .searchForm__searchbar-button {
+    
+    background-color: #2f71e5;
+    border: none;
+    width: 168px;
+    height: 64px;
+    padding: 21px 56px;
+    border-radius: 64px;
+    position: relative;
+    top: -64px;
+    left: calc(75% + -16px);
+    cursor: pointer;
+  }
+
+  .searchForm__searchbar-button-text {
+    font-family: "Roboto500", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .searchForm__searchbar-button:hover {
+    background-color: #347eff;
+  }
+  
+  .searchForm__searchbar-button:active {
+    background-color: #2a65cc;
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .searchForm__title {
+      font-family: "RobotoSlab400", sans-serif;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    .searchForm__description {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .searchForm {
+      margin-top: 30px;
+    }
+    
+    .searchForm__title {
+      margin: 0 auto 0 auto;
+      width: 285px;
+    }
+
+    .searchForm__searchbar {
+      flex-direction: column;
+    }
+    .searchForm__searchbar-input {
+      max-width: 288px;
+      width: 100%;
+      padding-left: 16px;
+      display: flex;
+      margin: auto;
+    }
+
+    .searchForm__searchbar-button {
+      position: static;
+      max-width: 288px;
+      width: 100%;
+      margin: 16px auto;
+      display: flex;
+    }
+
+    .searchForm__description {
+      margin: 16px auto 122px auto;
+      width: 288px;
+    }
+
+    .searchForm__container {      
+     
+    }
+
+    .searchForm__searchbar {
+
+    }
+  }
+  
+  

@@ -1,64 +1,167 @@
-.Footer {
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__text {
+  margin-top: 32px;
+  margin-left: 104px;
+  margin-bottom: 26px;
+  color: rgba(182, 188, 191, 1);
+  font-family: "Roboto400";
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer__links {
+  margin-right: 106px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__links__text {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.footer__links__icons {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-right: 104px;
+}
+
+.footer__link {
+  list-style-type: none;
+}
+
+.footer__icon {
+  list-style-type: none;
+
+}
+
+.footer__button-home {
+  width: 49px;
+  height: 24px;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+  margin-right: 40px;
+  font-family: "Roboto400", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 1);
+}
+
+.footer__button-home:hover {
+  cursor: pointer;
+}
+
+.footer__button-tripleten {
+  margin-right: 40px;
+  font-family: "Roboto400", sans-serif;
+  color: rgba(26, 27, 34, 1);
+  line-height: 24px;
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+}
+
+.Footer-TripleTen__button {
+  cursor: pointer;
+}
+
+.footer__button-github {
+  border: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.footer__button-facebook {
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__button-facebook:hover {
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    align-items: center;
+  }
+
+  .footer__text {
+    margin-left: 40px;
+  }
+
+  .footer__links {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+
+  .footer__links {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
-}
+    margin: auto;
+    height: 74px;
+  }
 
-.Copyright {
-    margin-top: 32px;
-    margin-left: 104px;
-    margin-bottom: 26px;
-    color: rgba(182, 188, 191, 1);
-}
+  .footer__link {
+    flex-direction: column;
+    display: flex;
+    width: 200px;
+    height: 74px;
+    list-style-type: none;
+  }
 
-.Footer-buttons {
-    margin-right: 106px
-}
+  .footer__text {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 
-.Footer-home__button {
-    width: 49px;
-    height: 24px;
-    border: none;
-    background-color: rgba(255,255,255,1);
-    margin-right: 40px;
-}
+  .footer__links__text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 74px;
+  }
 
-.Footer-home__button:hover {
-    cursor: pointer;
-}
+  .footer__links__icons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+  }
 
-.Footer-TripleTen__button {
-    width: 74px;
-    height: 24px;
-    border: none;
-    background-color: rgba(255,255,255,1);
-    margin-right: 40px;
-}
+  .footer__icon {
+    list-style-type: none;
+  }
 
-.Footer-TripleTen__button {
-    cursor: pointer;
-}
+  .footer__button-home {
+  }
 
-.Github__button {
-    background-image: url(../../images/github-image.svg);
-    border: none;
-    width: 20px;
-    height: 20px;
-    margin-right: 24px;
-}
+  .footer__button-tripleten {
+  }
 
-.Github__button {
-    cursor: pointer;
-}
+  .footer__button-github {
+  }
 
-.Facebook__button {
-    background-image: url(../../images/Facebook-image.svg);
-    border: none;
-    width: 20px;
-    height: 20px;
-}
-
-.Facebook__button {
-    cursor: pointer;
+  .footer__button-facebook {
+  }
 }

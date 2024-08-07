@@ -1,3 +1,4 @@
+
 .App {
   width: 100%;
   height: 100%;
@@ -5,9 +6,12 @@
 }
 
 .Search {
-  background-image: url(../src/images/background-logo.svg);
+  background-image: url(../../images/background-logo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 50vh;
+ 
   width: 100%;
 }
+
+
+

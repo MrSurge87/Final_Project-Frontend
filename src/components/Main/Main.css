@@ -11,7 +11,7 @@
     width: 464px;
     height: 464px;
     display: flex;
-    background-image: url(../../images/about-author-image.svg);
+    background-image: url(../../images/about-author.jpg);
     margin-top: 80px;
     margin-left: 104px;
     border: none;
@@ -19,10 +19,11 @@
 
 .About-author__title {
     margin: 0;
-    
+    color: rgba(255,255,255,1);
 }
 
 .About-author__description {
     margin-top: 10px;
     margin-bottom: 0;
+    color: rgba(255,255,255,1);
 }

@@ -1,51 +1,62 @@
-.Header {
+.header__desktop {
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
   color: white;
   border-bottom: 1px solid grey;
-  
+  align-items: center;
 }
 
-.Header__title {
+.header__mobile {
+  display: none;
+}
+
+.header__title {
   width: 200px;
   height: 24px;
-  font-weight: 700;
+
   font-size: 20px;
   line-height: 24px;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto700", sans-serif;
   margin-left: 104px;
   margin-top: 30px;
   color: white;
 }
-.Header__buttons {
-  margin-top: 19px
+
+.header__title_mobile {
+  font-family: "RobotoSlab700";
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.Home__button {
+.header__buttons {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.header__buttons_list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__button {
   background: none;
   color: white;
   border: none;
   width: 49px;
-  height: 24px;
-  padding: 0;
+  padding: 20px 20px 20px 20px;
+  font-family: "Roboto400", sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-width: medium;
   margin-right: 42px;
-  font-family: "Roboto Slab", sans-serif;
-  
 }
 
-.Home__button:hover {
+.home__button:hover {
   cursor: pointer;
 }
 
-.Home__button-border-bottom {
-  border-bottom: 1px solid rgba(255,255,255,1);
-  border-width: medium;
-  width: 68px;
-  height: 3px;
-}
-
-.SignIn__button {
+.signIn__button {
   background: none;
   color: white;
   border-radius: 25px;
@@ -54,12 +65,16 @@
   border: 1px solid white;
   padding: 0;
   margin-right: 104px;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto500", sans-serif;
+ 
+  font-size: 18px;
+  line-height: 24px;
 }
-.SignIn__button:hover {
+.signIn__button:hover {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .saved-articles__button {
   border: none;
   background-color: transparent;
@@ -89,3 +104,129 @@
   color: white;
   cursor: pointer;
 }
+=======
+.profile {
+  display: flex;
+  margin-right: 104px;
+  margin-left: 64px;
+}
+
+.profile__logo {
+  display: flex;
+  align-items: center;
+  width: 112px;
+  height: 48px;
+  border: 1px solid white;
+  border-radius: 56px;
+}
+
+.profile__logo-savedNews {
+  display: flex;
+  align-items: center;
+  width: 112px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 56px;
+}
+
+.profile__username {
+  color: white;
+  margin: 0;
+  font-family: "Roboto500", sans-serif;
+  font-size: 18px;
+
+  line-height: 24px;
+  padding-left: 19px;
+}
+
+.profile__username-savedNews {
+  color: black;
+  margin: 0;
+  font-family: "Roboto500", sans-serif;
+  font-size: 18px;
+
+  line-height: 24px;
+  padding-left: 19px;
+}
+
+.profile__savedArticles {
+  font-family: "Roboto500", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 76px;
+  padding: 20px 20px 20px 20px;
+}
+
+
+.profile__savedArticles:hover {
+  cursor: pointer;
+}
+
+.profile__rectangle {
+  height: 50px;
+  width: 150px;
+}
+
+.profile__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile__signOut {
+  width: 24px;
+  height: 24px;
+}
+
+.profile__signout:hover {
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .header__title {
+    font-size: 30px;
+    margin-left: 40px;
+  }
+
+  .home__button {
+    margin: 0;
+  }
+
+  .profile__savedArticles {
+    margin-left: 16px;
+  }
+
+  .profile {
+    margin: 0 40px 0 16px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile {
+    display: flex;
+    border-bottom: 1px solid gray;
+  }
+
+  .header__buttons {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .header__title {
+    font-family: "RobotoSlab700";
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px auto 16px 16px;
+  }
+
+  .mobile__menu_icon {
+    
+  }
+}
+>>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
