@@ -11,7 +11,7 @@ import Close from "../../images/close-small.svg";
 import NewsExplorerWhite from "../../images/NewsExplorer-White.svg";
 import HomeWhite from "../../images/Home-White.svg";
 
-const MobileMenu = ({ onSignIn, onClose, signedIn, isOpen }) => {
+const MobileMenu = ({ onSignIn, signedIn, isOpen, handleOpenMobileMenu }) => {
   return (
     <header
       className={`mobile__menu ${isOpen ? "mobile__menu_open" : ""}`}
@@ -19,17 +19,18 @@ const MobileMenu = ({ onSignIn, onClose, signedIn, isOpen }) => {
       title="MobileMenu"
     >
       <div className="mobile__menu__header">
-        <nav>
+        <nav >
           <ul className="mobile__header">
             <NavLink to="/">
               <img src={NewsExplorerWhite} alt="News Explorer" />
             </NavLink>
-            <img src={Close} alt="close" className="close__button_mobile" onClick={onClose}/>
+         
           </ul>
+
         </nav>
       </div>
 
-      <nav className="">
+      <nav className="mobile__menu__header">
         <ul className="mobile__menu__list">
           <li className="mobile__menu__list__home__link">
             <NavLink to="/">

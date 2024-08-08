@@ -38,11 +38,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
       buttonText="Sign In"
       className="signIn__Modal"
     >
-<<<<<<< HEAD
-      <form className="signIn__Form">
-=======
       <div className="signIn__Form">
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
         <ul className="inputs">
           <label className="input-header" htmlFor="email">
             Email
@@ -75,20 +71,11 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
               maxLength="50"
               value={password}
               onChange={handlePasswordChange}
-<<<<<<< HEAD
-              requried
-=======
               required
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
             />
           </li>
         </ul>
         <div className="modal-form-buttons">
-<<<<<<< HEAD
-          <button className="modal-form-submit" type="submit">
-            {isLoading ? "Signing In..." : "Sign In"}
-          </button>
-=======
          
           <button
             className="modal-form-submit"
@@ -103,7 +90,6 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
             {isLoading ? "Signing In..." : "Sign In"}
           </button>
           
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
           <button
             className="modal__signUp"
             type="button"
@@ -111,14 +97,9 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
           >
             or Sign Up
           </button>
-<<<<<<< HEAD
-        </div>
-      </form>
-=======
           
         </div>
       </div>
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
     </ModalWithForm>
   );
 };

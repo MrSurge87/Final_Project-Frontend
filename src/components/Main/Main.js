@@ -1,39 +1,6 @@
 import "./Main.css";
 import SearchForm from "../SearchForm/SearchForm";
 import About from "../About/About";
-<<<<<<< HEAD
-import PreLoader from "../Preloader/Preloader";
-import NewsCardList from "../NewCardList/NewCardList";
-import NotFound from "../NotFound/NotFound";
-
-import { useContext } from "react";
-import { hasSearchedContext } from "../../context/HasSearchedContext";
-import { SearchResultContext } from "../../context/SearchResultContext";
-
-const Main = ({
-  isLoading,
-  handleSearch,
-  onSignUp,
-  searchError,
-  handleSaveArticle,
-  handleRemoveArticle,
-}) => {
-  const { hasSearched } = useContext(HasSearchedContext);
-  const { searchResult } = useContext(SearchResultContext);
-
-  return (
-    <Main className="main">
-      <SearchForm handleSearch={handleSearch} />
-      <div>
-        {hasSearched && searchResult.length > 0 ? (
-          <NewCardsList
-            onSignUp={onSignUp}
-            handleSaveArticle={handleSaveArticle}
-            handleRemoveArticle={handleRemoveArticle}
-          />
-        ) : hasSearched && searchResults.length === 0 ? (
-          <NotFound />
-=======
 import Preloader from "../Preloader/Preloader";
 import NewsCardList from "../NewsCardList/NewsCardList";
 import NothingFound from "../NothingFound/NothingFound";
@@ -77,7 +44,6 @@ const Main = ({
           />
         ) : hasSearched && searchResults.length === 0 ? (
           <NothingFound />
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
         ) : isLoading ? (
           <Preloader />
         ) : searchError === true ? (
@@ -88,15 +54,9 @@ const Main = ({
         ) : (
           ""
         )}
-<<<<<<< HEAD
-      </div>
-      <About />
-    </Main>
-=======
         
       </div>
     </main>
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
   );
 };
 

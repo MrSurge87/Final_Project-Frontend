@@ -1,75 +1,4 @@
 import "./Header.css";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import NewsExplorerWhite from "../../images/NewsExplorer-White.svg";
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-
-const currentDate = new Date().toLocaleString("default", {
-  month: "long",
-  day: "numeric",
-});
-
-const Header = ({ onSignIn, signedIn }) => {
-  const currentUser = useContext(CurrentUserContext);
-
-  return (
-    <header className="Header">
-      <div>
-        <NavLink to="/" className="Header__title">
-          <img src={ NewsExplorerWhite } alt="logo" />
-        </NavLink>
-        
-      </div>
-=======
-import { NavLink } from "react-router-dom";
-import logoutWhite from "../../images/logout-white.svg";
-import logoutBlack from "../../images/logout-black.svg";
-import { CurrentPageContext } from "../../context/CurrentPageContext";
-import { CurrentUserContext } from "../../context/CurrentUserContext";
-import { useContext } from "react";
-
-const Header = ({ onSignIn, onSignOut }) => {
-
-  const { currentPage, activeModal } = useContext(CurrentPageContext);
-  const { currentUser, isSignedIn } = useContext(CurrentUserContext);
-
-  
-  return isSignedIn && currenPage ==="/" ? (
-    <header className="Header">
-      <NavLink to="/" className="Header__title" type="text" activeClassName="Header__title-active">
-      News Explorer
-      </NavLink>
-      <NavLink to="saved-news" className="saved-articles__button">
-        Saved Articles
-      </NavLink>
-      <button className="Header__button-signedIn" type="text" onClick={onSignOut}>
-        <p className="Header__username">{ currentUser.name }</p>
-        <img src={ logoutWhite } alt="logout white" className="Header__logout"/>
-      </button>
-        
-        <button className="Home__button" type="button" >Home</button>
-        
-        <button className="SignIn__button" type="button" onClick={onSignIn}>Sign In</button>
-        <div className="Home__button-border-bottom"></div>
-      
->>>>>>> a5e8fea308325a92628558749c68ba5b4c88b314
-      
-      
- <div className="Header__buttons">
- <button className="Home__button" type="button" >Home</button>
- <button className="SignIn__button" type="button" onClick={onSignIn}>Sign In</button>
- <div className="Home__button-border-bottom"></div>
-</div>
-      
-     
-      
-      
-      
-    </header>
-    
-=======
 import "../MobileMenu/MobileMenu.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
@@ -100,6 +29,7 @@ const Header = ({
   onSignOut,
   handleOpenMobileMenu,
   onClose,
+  isMobileMenuOpen
 }) => {
   const { currentUser } = useContext(CurrentUserContext);
   const { currentPage } = useContext(CurrentPageContext);
@@ -289,9 +219,9 @@ const Header = ({
           </div>
         ) : (
           <nav>
-            <div className="mobile__header">
+            {/* <div className="mobile__header">
               <div className="mobile__menu">
-                {/* <nav>
+                <nav>
                   <img
                     src={MobileMenuWhite}
                     className="mobile__menu_icon"
@@ -316,15 +246,16 @@ const Header = ({
                       </button>
                     </li>
                   </ul>
-                </nav> */}
+                </nav>
               </div>
-            </div>
-            <img
+            </div> */}
+            {/* <img
               src={MobileMenuWhite}
               className="mobile__menu_icon"
               onClick={handleOpenMobileMenu}
               alt="Mobile Menu"
-            />
+            /> */}
+         
             {/* <img
               src={Close}
               alt="close"
@@ -332,10 +263,13 @@ const Header = ({
               onClick={onClose}
             /> */}
           </nav>
+          
         )}
+           <button onClick={handleOpenMobileMenu} className="mobile__menu__button">
+            <img src={isMobileMenuOpen? Close: MobileMenuWhite} alt="close" className="close__button_mobile" />
+            </button>
       </header>
     </>
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
   );
 };
 

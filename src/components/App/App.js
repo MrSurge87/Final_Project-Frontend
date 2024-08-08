@@ -289,6 +289,7 @@ function App() {
                         signedIn={signedIn}
                         onSignOut={signOutUser}
                         handleOpenMobileMenu={handleOpenMobileMenu}
+                        isMobileMenuOpen={isMobileMenuOpen}
                         
                       />
                     
