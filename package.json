@@ -9,19 +9,10 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     "react-hook-form": "^7.52.0",
->>>>>>> a5e8fea308325a92628558749c68ba5b4c88b314
-    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-=======
-    "react-hook-form": "^7.52.0",
     "react-router": "^6.23.1",
     "react-router-dom": "^6.24.0",
-    "react-scripts": "^5.0.1",
->>>>>>> 00579ad6e93d6dc635f6883e60131bdce6620f9d
     "web-vitals": "^2.1.4"
   },
   "scripts": {
