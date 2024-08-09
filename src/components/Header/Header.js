@@ -219,49 +219,7 @@ const Header = ({
           </div>
         ) : (
           <nav>
-            {/* <div className="mobile__header">
-              <div className="mobile__menu">
-                <nav>
-                  <img
-                    src={MobileMenuWhite}
-                    className="mobile__menu_icon"
-                    onClick={handleOpenMobileMenu}
-                    
-                    alt="Mobile Menu"
-                  />
-                  <ul className="mobile__menu__list">
-                    <li className="mobile__menu__list__home__link">
-                      <NavLink to="/">
-                        <img src={HomeWhite} alt="Home" />
-                      </NavLink>
-                    </li>
-
-                    <li className="mobile__menu__list__signIn">
-                      <button
-                        type="button"
-                        onClick={onSignIn}
-                        className="mobile__menu__list__signIn__button"
-                      >
-                        Sign In
-                      </button>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div> */}
-            {/* <img
-              src={MobileMenuWhite}
-              className="mobile__menu_icon"
-              onClick={handleOpenMobileMenu}
-              alt="Mobile Menu"
-            /> */}
-         
-            {/* <img
-              src={Close}
-              alt="close"
-              className="close__button_mobile"
-              onClick={onClose}
-            /> */}
+           
           </nav>
           
         )}

@@ -154,7 +154,8 @@ function App() {
           checkToken(res.token).then((data) => {
             setCurrentUser(data);
             setSignedIn(true);
-            navigate("/");
+            setMobileMenuOpen(false);
+            navigate("/saved-news");
           });
         }
         handleCloseModal();
@@ -175,18 +176,6 @@ function App() {
     setCurrentUser({});
     navigate("/");
   };
-
-  //Check Sign In Token
-  function checkSignedIn(token) {
-    return checkToken(token)
-      .then((res) => {
-        setSignedIn(true);
-        setCurrentUser(res.data);
-      })
-      .catch((e) => {
-        console.error(e);
-      });
-  }
 
   //Search
   const handleSearch = (keyword) => {
