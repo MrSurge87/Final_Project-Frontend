@@ -30,6 +30,7 @@
   .searchForm__searchbar {
     width: 100%;
     height: 64px;
+    position: relative;
   }
   
   .searchForm__searchbar-input {
@@ -52,6 +53,8 @@
     font-family: "Roboto400", sans-serif;
     color: #ff0000;
     margin-left: 20px;
+    position: absolute;
+    bottom: 5px;
   }
   
   .searchForm__searchbar-button {

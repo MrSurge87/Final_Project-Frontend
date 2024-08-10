@@ -1,8 +1,14 @@
 import "./SearchForm.css";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import { getSearchResults } from "../../utils/NewsApi";
 
+
+
 const SearchForm = ({ handleSearch }) => {
+  const [ isError, setIsError ] = useState(false)
+
+
   const {
     register,
     handleSubmit,
@@ -16,6 +22,14 @@ const SearchForm = ({ handleSearch }) => {
     handleSearch(keyword);
   };
 
+  const onSubmit = (data) => {
+    if (!data.keyword) {
+      setIsError(true);
+    } else {
+      setIsError(false);
+      // Handle the search logic
+    }
+  };
 
   return (
     <form className="searchForm" onSubmit={handleSubmit(handleSearchSubmit)}>
@@ -31,10 +45,11 @@ const SearchForm = ({ handleSearch }) => {
             id="searchForm-search"
             type="text"
             name="keyword"
-            placeholder="Enter Topic"
+            placeholder={isError ? "" : "Enter Topic"}
             {...register("keyword", { required: "Please enter a keyword" })}
+            aria-invalid={errors.keyword ? "true" : "false"}
           />
-          <button className="searchForm__searchbar-button" type="submit">
+          <button className="searchForm__searchbar-button" type="submit" onClick={onSubmit}>
             <p className="searchForm__searchbar-button-text">Search</p>
           </button>
           {errors.keyword && (
