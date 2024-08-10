@@ -5,6 +5,7 @@
     width: 400px;
     height: 576px;
     position: relative;
+  
   }
   
   .card__keyword {
@@ -98,6 +99,7 @@
     width: 400px;
     height: 272px;
     margin-top: -20px;
+    
   }
   
   .card__text {
@@ -183,7 +185,9 @@
     }
 
     .card__image {
-      width: 288px;
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
     }
 
    
