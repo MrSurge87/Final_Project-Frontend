@@ -183,7 +183,9 @@
     }
 
     .card__image {
-      width: 288px;
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
     }
 
    

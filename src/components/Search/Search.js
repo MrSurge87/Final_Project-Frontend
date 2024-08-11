@@ -21,16 +21,15 @@ const Search = ({ handleSearch }) => {
           account
         </p>
         <div className="Search__input">
+    
           <input
             className="Search__bar-input"
             placeholder="Enter Topic"
             name="keyword"
             id="searchForm-item"
             {...register("keyword", { required: "Please enter a keyword" })}
+           
           />
-          {errors?.keyword && (
-            <p className="searchForm__invalid">{errors.keyword.message}</p>
-          )}
         </div>
         <button type="submit" className="search-button">
           Search

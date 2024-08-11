@@ -3,14 +3,14 @@
     flex-direction: column;
     background-color: rgba(245,246,247,1);
     padding: 62px 102px;
-    margin: auto;
+    /* margin: auto; */
   }
   
   .savedNews__newsCards_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
-    margin-left: 104px;
+    margin: auto;
     max-width: 1440px
   }
 
