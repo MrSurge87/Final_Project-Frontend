@@ -1,9 +1,9 @@
 import "./Header.css";
 import "../MobileMenu/MobileMenu.css";
-import MobileMenu from "../MobileMenu/MobileMenu";
+// import MobileMenu from "../MobileMenu/MobileMenu";
 
 //Import React-Router-Dom
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 //Import Context
 import { useContext } from "react";
@@ -182,7 +182,7 @@ const Header = ({
           />
           
         </NavLink>
-        <img src={isSavedNewsHeader ? MobileMenuBlack : ""} onClick={handleOpenMobileMenu} />
+        <img src={isSavedNewsHeader ? MobileMenuBlack : ""}  onClick={handleOpenMobileMenu} />
 
         {signedIn && currentPage === "/saved-news" ? (
           <div className="mobile">
@@ -204,48 +204,6 @@ const Header = ({
             </button> 
 
 
-        {/* {signedIn && currentPage === "/saved-news" ? (
-          <div className="mobile">
-            <div className="mobile__content">
-              <nav>
-                <div className="mobile__header">
-                  <div className="mobile__menu">
-                    <img src={MobileMenuBlack} onClick={handleOpenMobileMenu} />
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        ) : signedIn && currentPage === "/saved-news" ? (
-          <div className="mobile">
-            <div className="mobile__content-savedNews">
-              <nav className="mobile__links">
-                <Link to="/" className="mobile__link-savedNews">
-                  Home
-                </Link>
-                <Link to="/saved-news" className="mobile__link-savedNews">
-                  Saved Articles
-                </Link>
-              </nav>
-              <button className="mobile__button-savedNews" onClick={onSignOut}>
-                <p className="mobile__username-savedNews">
-                  {currentUser.username}
-                </p>
-                <img
-                  src={SignOutBlack}
-                  alt="signout"
-                  className="mobile__signOut-savedNews"
-                />
-              </button>
-            </div>
-          </div>
-        ) : (
-          <nav>
-          </nav>
-        )}
-           <button onClick={handleOpenMobileMenu} className="mobile__menu__button">
-            <img src={isMobileMenuOpen ? Close :  MobileMenuWhite} alt="close" className="close__button_mobile" />
-            </button> */}
       </header>
     </>
   );

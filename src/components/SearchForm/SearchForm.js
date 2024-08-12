@@ -1,7 +1,7 @@
 import "./SearchForm.css";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { getSearchResults } from "../../utils/NewsApi";
+
 
 
 

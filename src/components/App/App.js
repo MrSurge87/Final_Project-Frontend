@@ -34,13 +34,13 @@ import SignUpModal from "../SignUpModal/SignUpModal.js";
 import SuccessModal from "../SuccessModal/SuccessModal.js";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.js";
 import SavedNews from "../SavedNews/SavedNews.js";
-import SearchForm from "../SearchForm/SearchForm.js";
-import NewsCard from "../NewsCard/NewsCard.js";
+// import SearchForm from "../SearchForm/SearchForm.js";
+// import NewsCard from "../NewsCard/NewsCard.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [token, setToken] = useState(localStorage.getItem("jwt") || "");
+  // const [token, setToken] = useState(localStorage.getItem("jwt") || "");
   const [keyword, setKeyword] = useState("");
   const [searching, setSearching] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
@@ -54,9 +54,9 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate("");
 
-  const handleCreateModal = () => {
-    setActiveModal("create");
-  };
+  // const handleCreateModal = () => {
+  //   setActiveModal("create");
+  // };
 
   const handleOpenSignInModal = () => {
     setActiveModal("SignIn");
