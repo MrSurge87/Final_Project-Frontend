@@ -1,17 +1,23 @@
 import "./MobileMenu.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import { CurrentPageContext } from "../../context/CurrentPageContext";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import MobileMenuWhite from "../../images/MobileMenuWhite.svg";
+import MobileMenuBlack from "../../images/MobileMebuBlack.svg";
 import Close from "../../images/close-small.svg";
 
 //Icons
 import NewsExplorerWhite from "../../images/NewsExplorer-White.svg";
 import HomeWhite from "../../images/Home-White.svg";
 
+
+
 const MobileMenu = ({ onSignIn, signedIn, isOpen, handleOpenMobileMenu }) => {
+  const location = useLocation();
+  const isSavedNewsHeader = location.pathname === "/saved-news";
+
   return (
     <header
       className={`mobile__menu ${isOpen ? "mobile__menu_open" : ""}`}
@@ -24,7 +30,7 @@ const MobileMenu = ({ onSignIn, signedIn, isOpen, handleOpenMobileMenu }) => {
             <NavLink to="/">
               <img src={NewsExplorerWhite} alt="News Explorer" />
             </NavLink>
-         
+
           </ul>
 
         </nav>

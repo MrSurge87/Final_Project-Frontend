@@ -180,9 +180,31 @@ const Header = ({
             src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhite}
             alt="News Explorer"
           />
+          
         </NavLink>
+        <img src={isSavedNewsHeader ? MobileMenuBlack : ""} onClick={handleOpenMobileMenu} />
 
-        {signedIn ? (
+        {signedIn && currentPage === "/saved-news" ? (
+          <div className="mobile">
+          <div className="mobile__content">
+            <nav>
+              <div className="mobile__header">
+                <div className="mobile__menu">
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        ) : (
+          <nav></nav>
+
+        )}
+          <button onClick={handleOpenMobileMenu} className="mobile__menu__button">
+            <img src={isMobileMenuOpen ? Close :  MobileMenuWhite} alt="close" className="close__button_mobile" />
+            </button> 
+
+
+        {/* {signedIn && currentPage === "/saved-news" ? (
           <div className="mobile">
             <div className="mobile__content">
               <nav>
@@ -219,13 +241,11 @@ const Header = ({
           </div>
         ) : (
           <nav>
-           
           </nav>
-          
         )}
            <button onClick={handleOpenMobileMenu} className="mobile__menu__button">
-            <img src={isMobileMenuOpen? Close: MobileMenuWhite} alt="close" className="close__button_mobile" />
-            </button>
+            <img src={isMobileMenuOpen ? Close :  MobileMenuWhite} alt="close" className="close__button_mobile" />
+            </button> */}
       </header>
     </>
   );

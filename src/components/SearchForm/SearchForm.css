@@ -135,13 +135,10 @@
       width: 288px;
     }
 
-    .searchForm__container {      
-     
+    .searchForm__invalid {
+      left: 100px;
     }
 
-    .searchForm__searchbar {
-
-    }
   }
   
   
