@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   color: white;
-  border-bottom: 1px solid grey;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   align-items: center;
 }
 
@@ -48,8 +49,9 @@
   width: 49px;
   padding: 20px 20px 20px 20px;
   font-family: "Roboto400", sans-serif;
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
-  border-width: medium;
+  border-bottom-width: medium;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 1);
   margin-right: 42px;
 }
 
@@ -179,7 +181,9 @@
 
   .header__mobile {
     display: flex;
-    border-bottom: 1px solid gray;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: grey;
   }
 
   .header__buttons {

@@ -58,7 +58,9 @@
 
 .modalForm__input {
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0,0,0,0.5);
   margin-bottom: 31px;
   width: 358px;
   color: rgba(0, 0, 0, 1);
