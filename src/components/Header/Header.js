@@ -60,7 +60,9 @@ const Header = ({
               className="header__savedArticles"
               style={({ isActive, isPending }) => {
                 return {
-                  borderBottom: isActive ? "none" : "",
+                  borderBottomWidth: isActive ? "none" : "",
+                  borderBottomStyle: isActive ? "none" : "",
+                  borderBottomColor: isActive ? "none" : ""
                 };
               }}
             >
@@ -109,8 +111,9 @@ const Header = ({
               className="header__savedArticles"
               style={({ isActive, isPending }) => {
                 return {
-                  borderBottom: isActive ? "1px solid rgba(26,27,34,1)" : "",
-                  borderWidth: isActive ? "medium" : "",
+                  borderBottomWidth: isActive ? "medium" : "",
+                  borderBottomStyle: isActive ? "solid" : "",
+                  borderBottomColor: isActive ? "rgba(26,27,34,1)" : ""
                 };
               }}
             >
