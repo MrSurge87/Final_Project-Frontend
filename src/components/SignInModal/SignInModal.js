@@ -36,16 +36,16 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
       onClose={onClose}
       onSubmit={onSignIn}
       buttonText="Sign In"
-      className="signIn__Modal"
+      className="signIn__modal"
     >
-      <div className="signIn__Form">
-        <ul className="inputs">
-          <label className="input-header" htmlFor="email">
+      <div className="signIn__form">
+        <ul className="modalForm__inputs">
+          <label className="signIn__input_header" htmlFor="email">
             Email
           </label>
           <li>
             <input
-              className="input"
+              className="modalForm__input"
               type="email"
               name="email"
               minLength="1"
@@ -57,12 +57,12 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
               required
             />
           </li>
-          <label className="input-header" htmlFor="password">
+          <label className="modalForm__input_header" htmlFor="password">
             Password
           </label>
           <li>
             <input
-              className="input"
+              className="modalForm__input"
               type="password"
               name="password"
               placeholder="Enter Password"
@@ -75,10 +75,10 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
             />
           </li>
         </ul>
-        <div className="modal-form-buttons">
+        <div className="modalForm__buttons">
          
           <button
-            className="modal-form-submit"
+            className="modalForm__submit"
             type="submit"
             style={{
               backgroundColor: allFieldsFilledIn

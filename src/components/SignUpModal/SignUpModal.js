@@ -47,17 +47,17 @@ const SignUpModal = ({
         onClose={onClose}
         onSubmit={onSignUp}
         buttonText="Sign Up"
-        className="signup__Modal"
+        className="signup__modal"
       >
-        <div className="signup__Form">
-          <ul className="inputs">
+        <div className="signup__form">
+          <ul className="modalForm__inputs">
             <li>
-              <label className="input-header" htmlFor="email">
+              <label className="modalForm__input_header" htmlFor="email">
                 Email
               </label>
               <input
                 id="email"
-                className="input"
+                className="modalForm__input"
                 type="email"
                 name="email"
                 placeholder="Enter Email"
@@ -69,12 +69,12 @@ const SignUpModal = ({
               />
             </li>
             <li>
-              <label className="input-header" htmlFor="password">
+              <label className="modalForm__input_header" htmlFor="password">
                 Password
               </label>
               <input
                 id="password"
-                className="input"
+                className="modalForm__input"
                 type="password"
                 name="password"
                 placeholder="Enter Password"
@@ -86,12 +86,12 @@ const SignUpModal = ({
               />
             </li>
             <li>
-              <label className="input-header" htmlFor="name">
+              <label className="modalForm__input_header" htmlFor="name">
                 Username
               </label>
               <input
                 id="name"
-                className="input"
+                className="modalForm__input"
                 type="text"
                 name="username"
                 placeholder="Enter Username"
@@ -106,7 +106,7 @@ const SignUpModal = ({
           <div className="modal-form-buttons">
             
             <button
-              className="modal-form-submit"
+              className="modalForm__submit"
               type="submit"
               onClick={signUpUser}
               onSubmit={handleSuccessModal}

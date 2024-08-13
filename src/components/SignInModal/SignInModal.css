@@ -1,8 +1,8 @@
-.signUp__Modal {
+.signUp__modal {
     max-height: 383px;
 }
 
-.signIn__Modal {
+.signIn__modal {
     width: 430px;
     height: 380px;
 }
@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 
-.modal-form-submit:active {
+.modalForm__submit:active {
     background-color: rgba(47,113,229,1);
 }
 

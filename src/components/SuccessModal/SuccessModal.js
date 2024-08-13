@@ -10,22 +10,22 @@ const SuccessModal = ({
 }) => {
   return (
     <div
-      className={`success-modal ${isOpen ? "success-modal_visible" : ""}`}
+      className={`successModal ${isOpen ? "successModal_visible" : ""}`}
       onClick={handleOverlay}
     >
-      <div className="success-modal__container">
+      <div className="successModal__container">
         <button
           type="button"
           onClick={onClose}
-          className="success-modal__close-button"
+          className="successModal__close-button"
         />
-        <div className="success-modal__form" onSubmit={handleSignInModal}>
-          <h3 className="success-modal__title">
+        <div className="successModal__form" onSubmit={handleSignInModal}>
+          <h3 className="succesModal__title">
             Registration successfully completed!
           </h3>
 
           <button
-            className="success-modal__alt-button"
+            className="succesModal__alt-button"
             type="button"
             onClick={onSubmit}
           >

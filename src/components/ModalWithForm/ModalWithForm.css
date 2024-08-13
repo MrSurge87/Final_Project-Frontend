@@ -17,11 +17,11 @@
   margin: auto;
 }
 
-.modal__form {
+.modalForm {
   padding-left: 36px;
 }
 
-.modal__form_title {
+.modalForm__title {
   display: flex;
   justify-content: space-between;
   padding: 34px 28px 22px 36px;
@@ -50,13 +50,13 @@
 
 
 
-.inputs {
+.modalForm__inputs {
   list-style-type: none;
   margin: 0px;
   padding: 0;
 }
 
-.input {
+.modalForm__input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 31px;
@@ -68,7 +68,7 @@
   padding: 0;
 }
 
-.input-header {
+.modalForm__input_header {
   margin-top: 0;
   margin-bottom: 8px;
   padding: 0px;
@@ -79,7 +79,7 @@
   line-height: 20px;
 }
 
-.modal-form-submit {
+.modalForm__submit {
   width: 358px;
   height: 64px;
   background: rgba(0, 0, 0, 0.3);
@@ -94,7 +94,7 @@
   margin-bottom: 16px;
 }
 
-.modal-form-buttons {
+.modalForm__buttons {
   display: flex;
   flex-direction: column;
 }
@@ -113,7 +113,7 @@
   cursor: pointer;
 }
 
-.modal-form-submit:hover {
+.modalForm__submit:hover {
   cursor: pointer;
 }
 
@@ -128,7 +128,7 @@
     height: 560px;
   }
 
-  .modal__form_title {
+  .modalForm__title {
     padding: 16px 17px 18px 17px;
     
   }
