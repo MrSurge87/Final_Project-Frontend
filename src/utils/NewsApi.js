@@ -1,4 +1,4 @@
-import { APIkey, parseCurrentDate, parsePreviousWeek } from "./constants";
+import { APIkey } from "./constants";
 import { processServerResponse } from "./utils";
 
 export const getSearchResults = ({ keyword }) => {

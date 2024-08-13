@@ -1,6 +1,6 @@
-import { processServerResponse } from "./utils";
+// import { processServerResponse } from "./utils";
 
-const baseUrl = "http://localhost:3001";
+// const baseUrl = "http://localhost:3001";
 
 export const authorization = (email, password ) => {
   return new Promise((resolve, reject) => {

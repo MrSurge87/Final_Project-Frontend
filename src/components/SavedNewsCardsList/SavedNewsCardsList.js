@@ -1,20 +1,20 @@
 import "./SavedNewsCardsList.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import NewsCard from "../NewsCard/NewsCard";
 
 import { SavedArticlesContext } from "../../context/SavedArticlesContext";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
-import { SearchResultContext } from "../../context/SearchResultContext";
+// import { SearchResultContext } from "../../context/SearchResultContext";
 
 const SavedNewsCardsList = ({ handleRemoveArticle, handleOpenSignUpModal }) => {
   const { savedArticles } = useContext(SavedArticlesContext);
   const { currentUser } = useContext(CurrentUserContext);
 
-  const [ cardsShown, setCardsShown ] = useState(3);
-  const { searchResults } = useContext(SearchResultContext);
-  const increaseShownCards = () => {
-    setCardsShown(cardsShown);
-  }
+  // const [ cardsShown, setCardsShown ] = useState(3);
+  // const { searchResults } = useContext(SearchResultContext);
+  // const increaseShownCards = () => {
+  //   setCardsShown(cardsShown);
+  // }
  
   
 

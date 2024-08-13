@@ -5,11 +5,11 @@ import { CurrentPageContext } from "../../context/CurrentPageContext";
 import { KeyWordContext } from "../../context/KeyWordContext";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import NormalBookmark from "../../images/bookmark-normal.svg";
-import HoverBookmark from "../../images/bookmark-hover.svg";
-import SavedBookmark from "../../images/bookmark-saved.svg";
 import RemoveBookmark from "../../images/RemoveBookmark.svg";
-import RemoveBookmarkHover from "../../images/RemoveBookmark-hover.svg";
+// import NormalBookmark from "../../images/bookmark-normal.svg";
+// import HoverBookmark from "../../images/bookmark-hover.svg";
+// import SavedBookmark from "../../images/bookmark-saved.svg";
+// import RemoveBookmarkHover from "../../images/RemoveBookmark-hover.svg";
 
 const NewsCard = ({
   onSignUp,
