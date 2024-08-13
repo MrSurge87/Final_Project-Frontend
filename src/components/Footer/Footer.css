@@ -20,7 +20,7 @@
   flex-direction: row;
 }
 
-.footer__links__text {
+.footer__links__description {
   flex-direction: row;
   display: flex;
   align-items: center;

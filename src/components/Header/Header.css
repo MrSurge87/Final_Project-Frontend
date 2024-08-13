@@ -38,9 +38,10 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  
 }
 
-.home__button {
+.header__home__button {
   background: none;
   color: white;
   border: none;
@@ -52,7 +53,7 @@
   margin-right: 42px;
 }
 
-.home__button:hover {
+.header__home__button:hover {
   cursor: pointer;
 }
 

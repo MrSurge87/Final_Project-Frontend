@@ -11,7 +11,7 @@ const Footer = () => {
         {currentYear} © Sergio A Mendoza, Powered by News Api
       </p>
       <nav className="footer__links">
-        <ul className="footer__links__text">
+        <ul className="footer__links__description">
           <li className="footer__link">
             <NavLink to="/">
               <button className="footer__button-home" type="button">
