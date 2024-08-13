@@ -1,4 +1,4 @@
-.not-found {
+.notFound {
     display: flex;
     flex-direction: column;
     background-color: #f5f6f7;
@@ -6,12 +6,12 @@
     padding: 86px 0 80px;
 }
 
-.not-found__image{
+.notFound__image{
     height: 82px;
     width: 82px;
 }
 
-.not-found__header {
+.notFound__header {
     font-family: "Roboto-Slab", sans-serif;
     font-weight: 400;
     font-size: 26px;
@@ -20,7 +20,7 @@
     margin: 31.5px 0 16px;
 }
 
-.not-found__description {
+.notFound__description {
     font-family: "Roboto-Slab", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;

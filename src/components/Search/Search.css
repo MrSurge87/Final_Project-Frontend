@@ -2,14 +2,14 @@
   display:flex
 }
 
-.Search__box {
+.searchForm__box {
   
   margin: auto;
   width: 608px;
   flex-wrap: wrap;
 }
 
-.Search__title {
+.searchForm__title {
   color: white;
   width: 608px;
   height: 128px;
@@ -21,7 +21,7 @@
   line-height: 64px;
 }
 
-.Search__description {
+.searchForm__description {
   color: white;
   margin-bottom: 88px;
   font-family: "Robot Slab", sans-serif;
@@ -30,11 +30,11 @@
   line-height: 24px;
 }
 
-.Search__input {
+.searchForm__input {
   display: flex;
 }
 
-.Search__bar-input {
+.searchForm__bar-input {
   width: 608px;
   height: 64px;
   border: 1px;
@@ -47,7 +47,7 @@
   line-height: 22px;
 }
 
-.search-button {
+.searchForm-button {
   width: 168px;
   height: 64px;
   background-color: rgba(47, 113, 229, 1);
@@ -64,7 +64,7 @@
   top: -64px;
 }
 
-.search-button:hover {
+.searchForm__button:hover {
   cursor: pointer;
 }
 

@@ -14,16 +14,16 @@ const Search = ({ handleSearch }) => {
 
   return (
     <form className="searchForm" onSubmit={handleSubmit(handleSearchSubmit)}>
-      <section className="Search__box">
-        <h1 className="Search__title">What's going on in the world?</h1>
-        <p className="Search__description">
+      <section className="searchForm__box">
+        <h1 className="searchForm__title">What's going on in the world?</h1>
+        <p className="searchForm__description">
           Find the latest news on any topic and save them in your personal
           account
         </p>
-        <div className="Search__input">
+        <div className="searchForm__input">
     
           <input
-            className="Search__bar-input"
+            className="searchForm__bar-input"
             placeholder="Enter Topic"
             name="keyword"
             id="searchForm-item"
@@ -31,7 +31,7 @@ const Search = ({ handleSearch }) => {
            
           />
         </div>
-        <button type="submit" className="search-button">
+        <button type="submit" className="searchForm__button">
           Search
         </button>
       </section>

@@ -64,15 +64,15 @@ const SavedNewsHeader = () => {
   const keywordString = getKeywordString(keyWordArray);
 
   return (
-    <div className="saved-articles">
-        <div className="saved-articles__container">
-            <div className="saved-articles__title">Saved Articles</div>
-            <h1 className="saved-articles__header">
+    <div className="savedArticles">
+        <div className="savedArticles__container">
+            <div className="savedArticles__title">Saved Articles</div>
+            <h1 className="savedArticles__header">
                 {currentUser.name}, you have {userArticles.length} saved artcile{userArticles.length !== 1 ? "s": ""}
             </h1>
-            <div className="saved-articles__keywords_container">
-                <p className="saved-articles__keywords_title">By Keywords:</p>
-                <p className="saved-articles__keywords">{keywordString}</p>
+            <div className="savedArticles__keywords_container">
+                <p className="savedArticles__keywords_title">By Keywords:</p>
+                <p className="savedArticles__keywords">{keywordString}</p>
             </div>
         </div>
     </div>

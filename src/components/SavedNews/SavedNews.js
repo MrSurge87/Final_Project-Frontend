@@ -4,7 +4,7 @@ import SavedNewsCardsList from "../SavedNewsCardsList/SavedNewsCardsList";
 
 const SavedNews = ({ handleRemoveArticle }) => {
   return (
-    <section className="saved-article">
+    <section className="savedArticle">
       <SavedNewsHeader />
       <SavedNewsCardsList handleRemoveArticle={handleRemoveArticle} />
     </section>
