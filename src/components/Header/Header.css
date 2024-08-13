@@ -59,7 +59,7 @@
   cursor: pointer;
 }
 
-.header__signIn__button {
+.header__signIn-button {
   background: none;
   color: white;
   border-radius: 25px;
@@ -73,7 +73,7 @@
   font-size: 18px;
   line-height: 24px;
 }
-.header__signIn__button:hover {
+.header__signIn-button:hover {
   cursor: pointer;
 }
 

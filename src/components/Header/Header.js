@@ -104,7 +104,7 @@ const Header = ({
           </div>
         ) : currentPage === "/saved-news" ? (
           <div className="header__buttons">
-            <NavLink to="/" className="header__home__button">
+            <NavLink to="/" className="header__home-button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
             </NavLink>
             <NavLink
@@ -157,11 +157,11 @@ const Header = ({
           <nav to="/">
             <ul className="header__buttons">
               <li className="header__buttons_list">
-                <img src={HomeWhite} alt="home" className="header__home__button" />
+                <img src={HomeWhite} alt="home" className="header__home-button" />
               </li>
               <li className="header__buttons_list">
                 <button
-                  className="header__signIn__button"
+                  className="header__signIn-button"
                   type="button"
                   onClick={onSignIn}
                 >

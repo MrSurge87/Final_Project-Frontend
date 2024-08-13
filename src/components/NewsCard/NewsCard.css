@@ -56,7 +56,7 @@
     cursor: pointer;
   }
   
-  .newsCard__button-bookmark {
+  .newsCard__button--bookmark {
     width: 40px;
     height: 40px;
     border: none;
@@ -69,11 +69,11 @@
     background-image: url('../../images//bookmark-normal.svg');
   }
 
-  .newsCard__button-bookmark:hover {
+  .newsCard__button--bookmark:hover {
     background-image: url('../../images/bookmark-hover.svg');
   }
 
-  .newsCard__button-bookmark-notSignedIn {
+  .newsCard__button--notSignedIn {
     width: 40px;
     height: 40px;
     border: none;
@@ -86,11 +86,11 @@
     background-image: url("../../images/bookmark-normal.svg");
   }
   
-  .newsCard__button-bookmark-notSignedIn:hover {
+  .newsCard__button--notSignedIn:hover {
     background-image: url("../../images//bookmark-hover.svg");
   }
   
-  .newsCard__button-bookmark_marked {
+  .newsCard__button--marked {
     background-image: url("../../images//bookmark-saved.svg");
   }
   

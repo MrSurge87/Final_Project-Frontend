@@ -77,7 +77,7 @@ const NewsCard = ({
             <img
               src={RemoveBookmark}
               alt="Remove bookmark"
-              className="newsCard__button-delete"
+              className="newsCard__button newsCard__button-delete"
               onClick={handleRemoveClick}
               onMouseEnter={() => {
                 setIsHovered(true);
@@ -92,17 +92,17 @@ const NewsCard = ({
       .
       {signedIn && currentPage === "/" ? (
         <button
-          className={`newsCard__button-bookmark ${
+          className={`newsCard__button newsCard__button--bookmark ${
             isBookmarked
-              ? "newsCard__button-bookmark_marked"
-              : "newsCard__button-bookmark-notSignedIn"
+              ? "newsCard__button--marked"
+              : "newsCard__button--notSignedIn"
           }`}
           onClick={handleBookmarkClick}
         ></button>
       ) : (
         !signedIn && (
           <button
-            className="newsCard__button-bookmark-notSignedIn"
+            className="newsCard__button--notSignedIn"
             onClick={onSignUp}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -119,7 +119,7 @@ const NewsCard = ({
             Sign in to save articles
           </div>
           <button
-            className="newsCard__button-bookmark-notSignedIn"
+            className="newsCard__button newsCard__button--notSignedIn"
             onClick={handleOpenSignUpModal}
             onMouseEnter={() => {
               setIsHovered(true);
