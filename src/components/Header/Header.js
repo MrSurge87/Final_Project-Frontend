@@ -47,13 +47,14 @@ const Header = ({
           <img
             src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhite}
             alt="News Explorer"
+            className="header__logo"
           />
         </NavLink>
 
         {signedIn && currentPage === "/" ? (
           <div className="header__buttons">
-            <NavLink to="/" className="header__home__button">
-              <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
+            <NavLink to="/" className="header__home-button">
+              <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" className="header__home-icon" />
             </NavLink>
             <NavLink
               to="/saved-news"

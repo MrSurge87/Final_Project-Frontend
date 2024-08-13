@@ -42,7 +42,7 @@
   
 }
 
-.header__home__button {
+.header__home-button {
   background: none;
   color: white;
   border: none;
@@ -55,7 +55,7 @@
   margin-right: 42px;
 }
 
-.header__home__button:hover {
+.header__home-button:hover {
   cursor: pointer;
 }
 
@@ -161,7 +161,7 @@
     margin-left: 40px;
   }
 
-  .header__home__button {
+  .header__home-button {
     margin: 0;
   }
 
