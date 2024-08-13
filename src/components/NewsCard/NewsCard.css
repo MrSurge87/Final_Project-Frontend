@@ -1,4 +1,4 @@
-.card {
+.NewsCard {
     background-color: white;
     border-radius: 25px;
     overflow: hidden;
@@ -8,7 +8,7 @@
   
   }
   
-  .card__keyword {
+  .newsCard__keyword {
     background-color: white;
     padding: 8px 22px;
     text-align: center;
@@ -22,7 +22,7 @@
     left: 24px;
   }
   
-  .card__popup-text {
+  .newsCard__popup-text {
     background-color: white;
     padding: 8px 22px;
     border-radius: 8px;
@@ -36,11 +36,11 @@
     text-align: center;
   }
   
-  .card__popup-text_hidden {
+  .newsCard__popup-text_hidden {
     display: none;
   }
   
-  .card__button-delete {
+  .newsCard__button-delete {
     /* background: url(../../images/card-delete.svg); */
     width: 40px;
     height: 40px;
@@ -52,12 +52,12 @@
     right: 24px;
   }
   
-  .card__button-delete:hover {
+  .newsCard__button-delete:hover {
     
     cursor: pointer;
   }
   
-  .card__button-bookmark {
+  .newsCard__button-bookmark {
     width: 40px;
     height: 40px;
     border: none;
@@ -70,11 +70,11 @@
     background-image: url('../../images//bookmark-normal.svg');
   }
 
-  .card__button-bookmark:hover {
+  .newsCard__button-bookmark:hover {
     background-image: url('../../images/bookmark-hover.svg');
   }
 
-  .card__button-bookmark-notSignedIn {
+  .newsCard__button-bookmark-notSignedIn {
     width: 40px;
     height: 40px;
     border: none;
@@ -87,27 +87,27 @@
     background-image: url("../../images/bookmark-normal.svg");
   }
   
-  .card__button-bookmark-notSignedIn:hover {
+  .newsCard__button-bookmark-notSignedIn:hover {
     background-image: url("../../images//bookmark-hover.svg");
   }
   
-  .card__button-bookmark_marked {
+  .newsCard__button-bookmark_marked {
     background-image: url("../../images//bookmark-saved.svg");
   }
   
-  .card__image {
+  .newsCard__image {
     width: 400px;
     height: 272px;
     margin-top: -20px;
     
   }
   
-  .card__text {
+  .newsCard__text {
     text-align: left;
     margin: 0 24px;
   }
   
-  .card__date-published {
+  .newsCard__date-published {
     font-family: "SourceSansPro400", sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -115,7 +115,7 @@
     margin-top: 17px;
   }
   
-  .card__title {
+  .newsCard__title {
     font-family: "RobotoSlab400", sans-serif;
     font-size: 26px;
     line-height: 30px;
@@ -128,7 +128,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .card__content {
+  .newsCard__content {
     font-family: "Roboto400", sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -140,7 +140,7 @@
     -webkit-box-orient: vertical;
   }
   
-  .card__source {
+  .newsCard__source {
     font-family: "RobotoSlab700", sans-serif;
     font-size: 16px;
     line-height: 20px;
@@ -152,40 +152,36 @@
 
  
   @media screen and (max-width: 1350px) {
-    .card {
+    .newsCard {
       width: 224px;
       height: 420px;
     }
 
-    .card__title {
+    .newsCard__title {
       font-size: 22px;
       line-height: 24px;
       margin-bottom: 10px
     }
 
-    .card__content {
-
-    }
-
-    .card__image {
+    .newsCard__image {
       width: 224px;
       height: 150px;
       object-fit: cover;
     }
 
-    .card__keyword {
+    .newsCard__keyword {
       left: 8px;
     }
   }
 
   @media screen and (max-width: 720px) {
-    .card {
+    .newsCard {
       max-width: 288px;
       width: 100%;
       margin: auto;
     }
 
-    .card__image {
+    .newsCard__image {
       width: 100%;
       max-width: 100%;
       object-fit: cover;

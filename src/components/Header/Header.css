@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 
-.signIn__button {
+.header__signIn__button {
   background: none;
   color: white;
   border-radius: 25px;
@@ -70,7 +70,7 @@
   font-size: 18px;
   line-height: 24px;
 }
-.signIn__button:hover {
+.header__signIn__button:hover {
   cursor: pointer;
 }
 
@@ -118,7 +118,7 @@
   padding-left: 19px;
 }
 
-.profile__savedArticles {
+.header__savedArticles {
   font-family: "Roboto500", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -158,7 +158,7 @@
     margin-left: 40px;
   }
 
-  .home__button {
+  .header__home__button {
     margin: 0;
   }
 

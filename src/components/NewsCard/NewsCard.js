@@ -62,13 +62,13 @@ const NewsCard = ({
   };
 
   return (
-    <article className="card">
+    <article className="NewsCard">
       {currentPage === "/saved-news" && (
         <>
-          <div className="card__keyword">{newsData.keyword}</div>
+          <div className="newsCard__keyword">{newsData.keyword}</div>
           <div
-            className={`card__popup-text ${
-              isHovered ? "" : "card__popup-text_hidden"
+            className={`newsCard__popup-text ${
+              isHovered ? "" : "newsCard__popup-text_hidden"
             }`}
           >
             Remove From Saved Articles
@@ -77,7 +77,7 @@ const NewsCard = ({
             <img
               src={RemoveBookmark}
               alt="Remove bookmark"
-              className="card__button-delete"
+              className="newsCard__button-delete"
               onClick={handleRemoveClick}
               onMouseEnter={() => {
                 setIsHovered(true);
@@ -92,17 +92,17 @@ const NewsCard = ({
       .
       {signedIn && currentPage === "/" ? (
         <button
-          className={`card__button-bookmark ${
+          className={`newsCard__button-bookmark ${
             isBookmarked
-              ? "card__button-bookmark_marked"
-              : "card__button-bookmark-notSignedIn"
+              ? "newsCard__button-bookmark_marked"
+              : "newsCard__button-bookmark-notSignedIn"
           }`}
           onClick={handleBookmarkClick}
         ></button>
       ) : (
         !signedIn && (
           <button
-            className="card__button-bookmark-notSignedIn"
+            className="newsCard__button-bookmark-notSignedIn"
             onClick={onSignUp}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -112,14 +112,14 @@ const NewsCard = ({
       {!signedIn && (
         <>
           <div
-            className={`card__popup-text ${
-              isHovered ? "" : "card__popup-text_hidden"
+            className={`newsCard__popup-text ${
+              isHovered ? "" : "newsCard__popup-text_hidden"
             }`}
           >
             Sign in to save articles
           </div>
           <button
-            className="card__button-bookmark-notSignedIn"
+            className="newsCard__button-bookmark-notSignedIn"
             onClick={handleOpenSignUpModal}
             onMouseEnter={() => {
               setIsHovered(true);
@@ -133,14 +133,14 @@ const NewsCard = ({
       <img
         src={ newsData.image || newsData.urlToImage}
         alt={newsData.link || newsData.url}
-        className="card__image"
+        className="newsCard__image"
       />
-      <div className="card__text">
-        <p className="card__date-published"> {formatDate} </p>
-        <h3 className="card__title">{newsData.description}</h3>
-        <p className="card__content">{newsData.text || newsData.description}</p>
+      <div className="newsCard__text">
+        <p className="newsCard__date-published"> {formatDate} </p>
+        <h3 className="newsCard__title">{newsData.description}</h3>
+        <p className="newsCard__content">{newsData.text || newsData.description}</p>
       </div>
-      <div className="card__source">
+      <div className="newsCard__source">
         
         <p>{newsData.source.name || newsData.source}</p>
       </div>

@@ -52,12 +52,12 @@ const Header = ({
 
         {signedIn && currentPage === "/" ? (
           <div className="header__buttons">
-            <NavLink to="/" className="home__button">
+            <NavLink to="/" className="header__home__button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
             </NavLink>
             <NavLink
               to="/saved-news"
-              className="profile__savedArticles"
+              className="header__savedArticles"
               style={({ isActive, isPending }) => {
                 return {
                   borderBottom: isActive ? "none" : "",
@@ -101,12 +101,12 @@ const Header = ({
           </div>
         ) : currentPage === "/saved-news" ? (
           <div className="header__buttons">
-            <NavLink to="/" className="home__button">
+            <NavLink to="/" className="header__home__button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
             </NavLink>
             <NavLink
               to="/saved-news"
-              className="profile__savedArticles"
+              className="header__savedArticles"
               style={({ isActive, isPending }) => {
                 return {
                   borderBottom: isActive ? "1px solid rgba(26,27,34,1)" : "",
@@ -153,11 +153,11 @@ const Header = ({
           <nav to="/">
             <ul className="header__buttons">
               <li className="header__buttons_list">
-                <img src={HomeWhite} alt="home" className="home__button" />
+                <img src={HomeWhite} alt="home" className="header__home__button" />
               </li>
               <li className="header__buttons_list">
                 <button
-                  className="signIn__button"
+                  className="header__signIn__button"
                   type="button"
                   onClick={onSignIn}
                 >

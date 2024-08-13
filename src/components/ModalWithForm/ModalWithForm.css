@@ -17,11 +17,11 @@
   margin: auto;
 }
 
-.modal-form {
+.modal__form {
   padding-left: 36px;
 }
 
-.modal-form-title {
+.modal__form_title {
   display: flex;
   justify-content: space-between;
   padding: 34px 28px 22px 36px;
@@ -32,7 +32,7 @@
   margin: 0;
 }
 
-.close__button {
+.modal__close__button {
   background-image: url("../../images/close.svg");
   background-color: transparent;
   height: 40px;
@@ -128,12 +128,12 @@
     height: 560px;
   }
 
-  .modal-form-title {
+  .modal__form_title {
     padding: 16px 17px 18px 17px;
     
   }
 
-  .modal-form {
+  .modal__form {
     padding-left: 17px;
     
   }
@@ -142,7 +142,7 @@
     width: 288px;
   }
 
-  .close__button {
+  .modal__close__button {
     width: 24px;
     height: 24px;
     background-image: url("../../images//close-small.svg");
