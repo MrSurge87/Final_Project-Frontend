@@ -20,13 +20,13 @@
   flex-direction: row;
 }
 
-.footer__links-description {
+.footer__links_description {
   flex-direction: row;
   display: flex;
   align-items: center;
 }
 
-.footer__links-icons {
+.footer__links_type_icons {
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -37,12 +37,12 @@
   list-style-type: none;
 }
 
-.footer__icon {
+.footer__links_icon {
   list-style-type: none;
 
 }
 
-.footer__button-home {
+.footer__button_home {
   width: 49px;
   height: 24px;
   border: none;
@@ -54,11 +54,11 @@
   color: rgba(26, 27, 34, 1);
 }
 
-.footer__button-home:hover {
+.footer__button_home:hover {
   cursor: pointer;
 }
 
-.footer__button--tripleten {
+.footer__button_tripleten {
   margin-right: 40px;
   font-family: "Roboto400", sans-serif;
   color: rgba(26, 27, 34, 1);
@@ -68,7 +68,7 @@
   border: none;
 }
 
-.footer__button--github {
+.footer__button_github {
   border: none;
   width: 20px;
   height: 20px;
@@ -76,13 +76,13 @@
   cursor: pointer;
 }
 
-.footer__button--facebook {
+.footer__button_facebook {
   border: none;
   width: 20px;
   height: 20px;
 }
 
-.footer__button--facebook:hover {
+.footer__button_facebook:hover {
   cursor: pointer;
 }
 
@@ -126,7 +126,7 @@
     margin-right: 16px;
   }
 
-  .footer__links-description {
+  .footer__links_description {
     margin: 0;
     padding: 0;
     display: flex;
@@ -135,7 +135,7 @@
     height: 74px;
   }
 
-  .footer__links-icons {
+  .footer__links_icons {
     margin: 0;
     padding: 0;
     display: flex;

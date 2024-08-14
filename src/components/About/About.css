@@ -28,13 +28,13 @@
   line-height: 24px;
 }
 
-.about__text-title {
+.about__text_title {
   font-family: "RobotoSlab400", sans-serif;
   font-size: 40px;
   line-height: 46px;
 }
 
-.about__text-description {
+.about__text_description {
   font-family: "Roboto400", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -47,7 +47,6 @@
 }
 
 @media screen and (max-width: 970px) {
-
   .signIn__button {
     margin-right: 40px;
   }
@@ -89,12 +88,6 @@
 
   .about__text {
     width: 288px;
-  }
-
-  .about__text-author {
-    font-size: 30px;
-    line-height: 40px;
-    margin: 0;
   }
 
   .about__text-description {
