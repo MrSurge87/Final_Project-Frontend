@@ -43,6 +43,7 @@ const Header = ({
           isSavedNewsHeader ? "header--saved" : "header--main"
         }`}
       >
+        
         <NavLink to="/" className="header__title">
           <img
             src={isSavedNewsHeader ? NewsExplorerBlack : NewsExplorerWhite}
@@ -51,8 +52,11 @@ const Header = ({
           />
         </NavLink>
 
+        
         {signedIn && currentPage === "/" ? (
+          <nav>
           <div className="header__buttons">
+            
             <NavLink to="/" className="header__home-button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" className="header__home-icon" />
             </NavLink>
@@ -102,7 +106,9 @@ const Header = ({
               </NavLink>
             </div>
           </div>
+          </nav>
         ) : currentPage === "/saved-news" ? (
+          <nav>
           <div className="header__buttons">
             <NavLink to="/" className="header__home-button">
               <img src={isSavedNewsHeader ? HomeBlack : HomeWhite} alt="home" />
@@ -151,8 +157,10 @@ const Header = ({
                   />
                 </div>
               </NavLink>
+              
             </div>
           </div>
+          </nav>
         ) : (
           <nav to="/">
             <ul className="header__buttons">
@@ -171,6 +179,7 @@ const Header = ({
             </ul>
           </nav>
         )}
+        
       </header>
 
       {/* HEADER MOBILE */}
