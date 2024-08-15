@@ -130,7 +130,7 @@
 }
 
 
-.profile__savedArticles:hover {
+.header__savedArticles:hover {
   cursor: pointer;
 }
 
@@ -165,7 +165,7 @@
     margin: 0;
   }
 
-  .profile__savedArticles {
+  .header__savedArticles {
     margin-left: 16px;
   }
 
