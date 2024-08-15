@@ -113,7 +113,7 @@ const NewsCard = ({
         <>
           <div
             className={`newsCard__popup-text ${
-              isHovered ? "" : "newsCard__popup-text-hidden"
+              isHovered ? "" : "newsCard__popup-text_hidden"
             }`}
           >
             Sign in to save articles

@@ -41,7 +41,7 @@ const SearchForm = ({ handleSearch }) => {
         <div className="searchForm__searchbar">
        
           <input
-            className="searchForm__searchbar_input"
+            className="searchForm__searchbar-input"
             id="searchForm-search"
             type="text"
             name="keyword"
@@ -49,8 +49,8 @@ const SearchForm = ({ handleSearch }) => {
             {...register("keyword", { required: "Please enter a keyword" })}
             aria-invalid={errors.keyword ? "true": "false"}
           />
-          <button className="searchForm__searchbar_button" type="submit" onClick={onSubmit}>
-            <p className="searchForm__searchbar_button_text">Search</p>
+          <button className="searchForm__searchbar-button" type="submit" onClick={onSubmit}>
+            <p className="searchForm__searchbar-button-text">Search</p>
           </button>
           {errors.keyword && (
             <p className="searchForm__invalid">{errors.keyword.message}</p>

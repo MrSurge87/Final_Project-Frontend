@@ -33,7 +33,7 @@
     position: relative;
   }
   
-  .searchForm__searchbar_input {
+  .searchForm__searchbar-input {
     font-family: "Roboto400", sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -57,8 +57,7 @@
     bottom: 0;
   }
   
-  .searchForm__searchbar_button {
-    
+  .searchForm__searchbar-button {
     background-color: #2f71e5;
     border: none;
     width: 168px;
@@ -71,7 +70,7 @@
     cursor: pointer;
   }
 
-  .searchForm__searchbar_button_text {
+  .searchForm__searchbar-button-text {
     font-family: "Roboto500", sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -80,11 +79,11 @@
     margin: auto;
   }
   
-  .searchForm__searchbar_button:hover {
+  .searchForm__searchbar-button:hover {
     background-color: #347eff;
   }
   
-  .searchForm__searchbar_button:active {
+  .searchForm__searchbar-button:active {
     background-color: #2a65cc;
   }
 
@@ -114,7 +113,7 @@
     .searchForm__searchbar {
       flex-direction: column;
     }
-    .searchForm__searchbar_input {
+    .searchForm__searchbar-input {
       max-width: 288px;
       width: 100%;
       padding-left: 16px;
@@ -122,7 +121,7 @@
       margin: auto;
     }
 
-    .searchForm__searchbar_button {
+    .searchForm__searchbar-button {
       position: static;
       max-width: 288px;
       width: 100%;

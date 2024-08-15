@@ -25,7 +25,7 @@
     color: rgba(26, 27, 34, 1);
   }
   
-  .savedArticles__keywords_container {
+  .savedArticles__keywords-container {
     display: flex;
     align-items: center;
     font-family: "Roboto400", sans-serif;
@@ -35,7 +35,7 @@
     height: 24px;
   }
   
-  .savedArticles__keywords_title {
+  .savedArticles__keywords-title {
     font-family: "Roboto400";
     font-weight: 400;
   }
@@ -89,14 +89,14 @@
       line-height: 34px;
     }
 
-    .savedArticles__keywords_container {
+    .savedArticles__keywords-container {
       font-family: "Roboto700";
       height: 48px;
       flex-wrap: wrap;
       margin-bottom: 32px;
     }
 
-    .savedArticles__keywords_title {
+    .savedArticles__keywords-title {
       flex-wrap: wrap;
     }
 

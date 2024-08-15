@@ -20,7 +20,7 @@ const SavedNewsCardsList = ({ handleRemoveArticle, handleOpenSignUpModal }) => {
 
   return (
     <section className="savedNews__newsCards">
-      <div className="savedNews__newsCards_container">
+      <div className="savedNews__newsCards-container">
         {savedArticles
           .filter((article) => article.owner === currentUser._id)
           .map((article) => (
