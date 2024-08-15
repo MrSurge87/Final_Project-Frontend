@@ -40,7 +40,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
     >
       <div className="signIn__form">
         <ul className="modalForm__inputs">
-          <label className="signIn__input_header" htmlFor="email">
+          <label className="modalForm__input-header" htmlFor="email">
             Email
           </label>
           <li>
@@ -57,7 +57,7 @@ const SignInModal = ({ onClose, openSignUpModal, isLoading, signInUser }) => {
               required
             />
           </li>
-          <label className="modalForm__input_header" htmlFor="password">
+          <label className="modalForm__input-header" htmlFor="password">
             Password
           </label>
           <li>

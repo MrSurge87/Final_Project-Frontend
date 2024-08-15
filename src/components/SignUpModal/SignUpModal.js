@@ -52,7 +52,7 @@ const SignUpModal = ({
         <div className="signup__form">
           <ul className="modalForm__inputs">
             <li>
-              <label className="modalForm__input_header" htmlFor="email">
+              <label className="modalForm__input-header" htmlFor="email">
                 Email
               </label>
               <input
@@ -69,7 +69,7 @@ const SignUpModal = ({
               />
             </li>
             <li>
-              <label className="modalForm__input_header" htmlFor="password">
+              <label className="modalForm__input-header" htmlFor="password">
                 Password
               </label>
               <input
@@ -86,7 +86,7 @@ const SignUpModal = ({
               />
             </li>
             <li>
-              <label className="modalForm__input_header" htmlFor="name">
+              <label className="modalForm__input-header" htmlFor="name">
                 Username
               </label>
               <input
