@@ -15,16 +15,13 @@ import HomeWhite from "../../images/Home-White.svg";
 
 
 const MobileMenu = ({ onSignIn, signedIn, isOpen, handleOpenMobileMenu }) => {
-  // const location = useLocation();
-  // const isSavedNewsHeader = location.pathname === "/saved-news";
-
   return (
     <header
       className={`mobile__menu ${isOpen ? "mobile__menu_open" : ""}`}
       name="MobileMenu"
       title="MobileMenu"
     >
-      <div className="mobile__menu__header">
+      <div className="mobile__menu--header">
         <nav >
           <ul className="mobile__header">
             <NavLink to="/">
@@ -36,19 +33,19 @@ const MobileMenu = ({ onSignIn, signedIn, isOpen, handleOpenMobileMenu }) => {
         </nav>
       </div>
 
-      <nav className="mobile__menu__header">
-        <ul className="mobile__menu__list">
-          <li className="mobile__menu__list__home__link">
+      <nav className="mobile__menu--header">
+        <ul className="mobile__menu--list">
+          <li className="mobile__menu--list-home-link">
             <NavLink to="/">
               <img src={HomeWhite} alt="Home" />
             </NavLink>
           </li>
 
-          <li className="mobile__menu__list__signIn">
+          <li className="mobile__menu--list-signin">
             <button
               type="button"
               onClick={onSignIn}
-              className="mobile__menu__list__signIn__button"
+              className="mobile__menu--list-signin-button"
             >
               Sign In
             </button>

@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.footer__links_icons {
+.footer__links-icons {
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -37,12 +37,8 @@
   list-style-type: none;
 }
 
-.footer__links_icon {
-  list-style-type: none;
 
-}
-
-.footer__button_home {
+.footer__button--home {
   width: 49px;
   height: 24px;
   border: none;
@@ -54,11 +50,11 @@
   color: rgba(26, 27, 34, 1);
 }
 
-.footer__button_home:hover {
+.footer__button--home:hover {
   cursor: pointer;
 }
 
-.footer__link_tripleten {
+.footer__link--tripleten {
   margin-right: 40px;
   font-family: "Roboto400", sans-serif;
   color: rgba(26, 27, 34, 1);
@@ -68,7 +64,7 @@
   border: none;
 }
 
-.footer__link_icon_github {
+.footer__link-icon--github {
   border: none;
   width: 20px;
   height: 20px;
@@ -76,13 +72,13 @@
   cursor: pointer;
 }
 
-.footer__link_icon_facebook {
+.footer__link-icon--facebook {
   border: none;
   width: 20px;
   height: 20px;
 }
 
-.footer__button_facebook:hover {
+.footer__link-icon--facebook:hover {
   cursor: pointer;
 }
 
@@ -116,7 +112,6 @@
   .footer__link {
     flex-direction: column;
     display: flex;
-    /* width: 200px; */
     height: 74px;
     list-style-type: none;
   }
@@ -135,7 +130,7 @@
     height: 74px;
   }
 
-  .footer__links_icons {
+  .footer__links-icons {
     margin: 0;
     padding: 0;
     display: flex;

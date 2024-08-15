@@ -1,12 +1,6 @@
   .mobile__menu {
     display: none;
   }
-
-  .close__button_mobile {
-    width: 24px;
-    height: 24px;
-  }
-
  
   @media screen and (max-width: 720px) {
     .Search {
@@ -21,7 +15,7 @@
     position: fixed;
   }
 
-  .mobile__menu__header {
+  .mobile__menu--header {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: grey;
@@ -36,20 +30,20 @@
     padding: 0;
   }
 
-  .mobile__menu__button {
+  .mobile__menu-button {
     z-index: 999;
     border: none;
     background-color: transparent;
   }  
 
-  .mobile__menu__list {
+  .mobile__menu--list {
     list-style-type: none;
     padding: 0;
     margin-left: 16px;
     margin-bottom: 24px;
   }
 
-  .mobile__menu__list__home__link {
+  .mobile__menu--list-home-link {
     width: 288px;
     height: 56px;
     
@@ -58,11 +52,11 @@
     line-height: 56px;
   }
 
-  .mobile__menu__list__signIn {
+  .mobile__menu--list-signin {
    margin: auto;
   }
 
-  .mobile__menu__list__signIn__button{
+  .mobile__menu--list-signin-button{
     width: 288px;
     height: 56px;
     border-radius: 28px;

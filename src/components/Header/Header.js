@@ -157,7 +157,6 @@ const Header = ({
                   />
                 </div>
               </NavLink>
-              
             </div>
           </div>
           </nav>
@@ -212,7 +211,7 @@ const Header = ({
           <nav></nav>
 
         )}
-          <button onClick={handleOpenMobileMenu} className="mobile__menu__button">
+          <button onClick={handleOpenMobileMenu} className="mobile__menu-button">
             <img src={isMobileMenuOpen ? Close :  MobileMenuWhite} alt="close" className="close__button_mobile" />
             </button> 
 
