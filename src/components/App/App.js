@@ -255,8 +255,8 @@ function App() {
                 value={{ savedArticles, setSavedArticles }}
               >
                 <KeyWordContext.Provider value={{ keyword, setKeyword }}>
-                  <div className="App">
-                    <div className="Search">
+                  <div className="app">
+                    <div className="search">
                       <>
                       {isMobileMenuOpen && (
                       <MobileMenu

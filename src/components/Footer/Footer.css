@@ -38,7 +38,7 @@
 }
 
 
-.footer__button--home {
+.footer__link--home {
   width: 49px;
   height: 24px;
   border: none;
@@ -50,9 +50,11 @@
   color: rgba(26, 27, 34, 1);
 }
 
-.footer__button--home:hover {
+.footer__link--home:hover {
   cursor: pointer;
 }
+
+
 
 .footer__link--tripleten {
   margin-right: 40px;

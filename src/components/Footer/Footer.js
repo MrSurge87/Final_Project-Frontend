@@ -2,6 +2,7 @@ import "./Footer.css";
 import GitHubIcon from "../../images/github-image.svg";
 import FacebookIcon from "../../images/Facebook-image.svg";
 import { NavLink } from "react-router-dom";
+import HomeBlack from "../../images/Home-Black.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,9 +15,10 @@ const Footer = () => {
         <ul className="footer__links-description">
           <li className="footer__link">
             <NavLink to="/">
-              <button className="footer__button footer__button--home" type="button">
+              <button className="footer__link footer__link--home" type="button">
               Home
               </button>
+              
             </NavLink>
             </li>
             <li className="footer__link">

@@ -3,7 +3,7 @@
   }
  
   @media screen and (max-width: 720px) {
-    .Search {
+    .search {
       background-color: (0,0,0,0.5);
     }
     .mobile__menu {
